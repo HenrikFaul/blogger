@@ -15,12 +15,17 @@ import { siteConfig } from '../config/site.config';
 const posts = await getCardPosts();
 const home = siteConfig.home;
 const latest = posts.slice(0, 3);
+const blogPosts = posts.slice(0, 20).map((p) => ({
+  headline: p.title,
+  url: new URL(`/posts/${p.slug}/`, siteConfig.siteUrl).href,
+  datePublished: p.date,
+}));
 
 const authors = await getCollection('authors');
 const author = authors.find((a) => a.id === siteConfig.content.defaultAuthor);
 const authorName = author?.data.name || 'Nóra';
 ---
-<BaseLayout title={siteConfig.name} description={home.lede}>
+<BaseLayout title={siteConfig.name} description={home.lede} type="blog" blogPosts={blogPosts}>
   <div class="container">
 
     <section class="editorial-hero" aria-labelledby="editorial-heading">

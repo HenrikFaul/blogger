@@ -7,7 +7,7 @@ import SiteHeader from '../components/chrome/SiteHeader.astro';
 import SiteFooter from '../components/chrome/SiteFooter.astro';
 import SearchDialog from '../components/chrome/SearchDialog.astro';
 import SeoHead from '../components/seo/SeoHead.astro';
-interface Props {title?:string;description?:string;image?:string;canonical?:string;type?:'website'|'article';publishedAt?:Date|string;updatedAt?:Date|string;author?:string;noindex?:boolean;themeOverride?:string;}
+interface Props {title?:string;description?:string;image?:string;canonical?:string;type?:'website'|'article'|'blog'|'person';publishedAt?:Date|string;updatedAt?:Date|string;author?:string;noindex?:boolean;themeOverride?:string;breadcrumbs?:{name:string;href:string}[];blogPosts?:{headline:string;url:string;datePublished?:string}[];person?:{name:string;jobTitle?:string;bio?:string};}
 const {title=siteConfig.name,themeOverride,...seo}=Astro.props;
 const theme=getTheme(themeOverride||siteConfig.theme);
 const themeMap=Object.fromEntries(themeRegistry.map(t=>[t.key,{layout:t.layoutVariant,mode:t.defaultMode}]));

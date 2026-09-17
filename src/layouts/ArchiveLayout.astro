@@ -5,12 +5,12 @@ import Pagination from '../components/chrome/Pagination.astro';
 import Icon from '../components/ui/Icon.astro';
 import type {CardPost} from '../lib/content';
 import {siteConfig} from '../config/site.config';
-interface Props{title:string;description:string;eyebrow?:string;posts:CardPost[];page?:number;paginate?:boolean;categoryFilter?:boolean;noindex?:boolean;}
-const {title,description,eyebrow='A MAGAZIN',posts,page=1,paginate=false,categoryFilter=false,noindex=false}=Astro.props;
+interface Props{title:string;description:string;eyebrow?:string;posts:CardPost[];page?:number;paginate?:boolean;categoryFilter?:boolean;noindex?:boolean;type?:'website'|'article'|'blog'|'person';person?:{name:string;jobTitle?:string;bio?:string};}
+const {title,description,eyebrow='A MAGAZIN',posts,page=1,paginate=false,categoryFilter=false,noindex=false,type='website',person}=Astro.props;
 const perPage=paginate?siteConfig.content.postsPerPage:Math.max(1,posts.length);
 const totalPages=Math.ceil(posts.length/perPage);const categories=[...new Map(posts.flatMap(p=>p.categoryIds.map((id,i)=>[id,p.categoryNames[i]] as const))).entries()];
 ---
-<BaseLayout title={title} description={description} noindex={noindex}>
+<BaseLayout title={title} description={description} noindex={noindex} type={type} person={person}>
  <div class="container">
   <section class="page-heading"><div><p class="eyebrow">{eyebrow}</p><h1>{title}</h1><p>{description}</p></div><a class="text-link" href="/rss.xml"><Icon name="rss" size={15}/>Kövesd RSS-en</a></section>
   <section data-archive data-page={page} data-per-page={perPage} aria-label="Történetek">

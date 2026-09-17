@@ -6449,3 +6449,31 @@ button:disabled {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* --- Code block copy button (progressive enhancement) --- */
+.code-block {
+  position: relative;
+  margin: 1.5em 0;
+}
+.code-block pre {
+  margin: 0;
+  overflow-x: auto;
+}
+.code-copy {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.code-copy:hover,
+.code-copy.copied {
+  color: var(--primary);
+  border-color: var(--primary);
+}

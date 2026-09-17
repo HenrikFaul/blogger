@@ -10,6 +10,11 @@
 - A korábbi marketing-jellegű landing-komponensek (hero-mozaik, galériasáv, mérőszám-sor stb.) törölve, mert nem szerepelnek a szerkesztőségi tervben.
 - Új E2E-lefedettség: `e2e/landing.spec.ts` a szerkesztőségi főoldalra (hero, illusztráció, cikkrács, márka, overflow).
 
+### Strukturált adatok, tartalommodell és kódmásolás
+- JSON-LD kibővítve: `BreadcrumbList` a cikkoldalakon, `Blog` a főoldalon, `Person` a szerzőoldalakon (a meglévő `WebSite`/`BlogPosting` mellé). A `SeoHead` mostantól típus szerint generálja a sémát.
+- Új opcionális `recipe` (recept: név, hozzávalók, lépések, adagszám, idő, tápérték) és `location` (hely: név, cím, ország, koordináták) mező a tartalomsémában — a főzéses és utazási perszónákhoz.
+- Kódblokk-másoló gomb a cikkekben (progresszív fejlesztés; vágólap-másolás, hibánál jelölés, billentyűzet-hozzáférhető).
+
 ### Javítások
 - `tests/update.test.mjs`: a Git-fixture repo mostantól rögzíti a sorvége-politikát (`core.autocrlf=false`), így a teszt Windows alatt is zöld (korábban a globális `core.autocrlf=true` CRLF-fé konvertálta a fájlokat). 92/92 unit teszt sikeres.
 - A natív `astro build` ebben a környezetben sikeres (52 oldal); a korábbi „blokkolt build” a hiányzó `node_modules` és a lezárt native-binding fájl miatt volt, `npm ci`-vel helyreáll.

@@ -589,4 +589,37 @@
       }
     }),
   );
+  // Code blocks: copy button is a progressive enhancement, never required for reading.
+  $$(".article-prose pre").forEach((block) => {
+    const wrap = document.createElement("div");
+    wrap.className = "code-block";
+    block.parentNode.insertBefore(wrap, block);
+    wrap.appendChild(block);
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "code-copy";
+    button.setAttribute("aria-label", "Kód másolása");
+    button.textContent = "Másolás";
+    wrap.appendChild(button);
+    button.addEventListener("click", async () => {
+      const text = block.innerText;
+      let copied = false;
+      try {
+        await navigator.clipboard.writeText(text);
+        copied = true;
+      } catch {
+        const range = document.createRange();
+        range.selectNodeContents(block);
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(range);
+      }
+      button.textContent = copied ? "Másolva" : "Jelölve";
+      button.classList.add("copied");
+      setTimeout(() => {
+        button.textContent = "Másolás";
+        button.classList.remove("copied");
+      }, 2000);
+    });
+  });
 })();

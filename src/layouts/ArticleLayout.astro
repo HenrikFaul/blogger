@@ -9,8 +9,14 @@ const allPosts=await getPublishedPosts();const cards=await getCardPosts();const 
 const series=data.series?(await getCollection('series')).find(s=>s.id===data.series):undefined;
 const seriesPosts=series?allPosts.filter(p=>p.data.series===series.id).sort((a,b)=>(a.data.seriesOrder||0)-(b.data.seriesOrder||0)):[];
 const toc=headings.filter(h=>h.depth>=2&&h.depth<=3);const image=data.heroTreatment==='hidden'?undefined:data.heroImage;
+const baseUrl=siteConfig.siteUrl;
+const breadcrumbs=[
+ {name:'Kezdőlap',href:new URL('/',baseUrl).href},
+ {name:isProject?'Projektek':category?.data.title||'Történetek',href:new URL(isProject?'/projects/':`/category/${data.categories[0]}/`,baseUrl).href},
+ {name:data.title,href:new URL(`/${isProject?'projects':'posts'}/${slug}/`,baseUrl).href},
+];
 ---
-<BaseLayout title={data.seo?.title||data.title} description={data.seo?.description||data.excerpt} image={data.seo?.ogImage||image?.src} canonical={data.seo?.canonicalUrl} type="article" publishedAt={data.publishedAt} updatedAt={data.updatedAt} author={author?.data.name||data.author} noindex={data.seo?.noindex} themeOverride={data.themeOverride}>
+<BaseLayout title={data.seo?.title||data.title} description={data.seo?.description||data.excerpt} image={data.seo?.ogImage||image?.src} canonical={data.seo?.canonicalUrl} type="article" publishedAt={data.publishedAt} updatedAt={data.updatedAt} author={author?.data.name||data.author} noindex={data.seo?.noindex} themeOverride={data.themeOverride} breadcrumbs={breadcrumbs}>
  <div class="reading-progress" data-reading-progress aria-hidden="true"></div>
  <article class="container article-top" data-reading-article>
   <nav class="breadcrumb" aria-label="Morzsanavigáció"><a href="/">Kezdőlap</a><Icon name="chevron"/>{isProject?<a href="/projects/">Projektek</a>:<a href={`/category/${data.categories[0]}/`}>{category?.data.title||'Történetek'}</a>}<Icon name="chevron"/><span aria-current="page">{data.title}</span></nav>

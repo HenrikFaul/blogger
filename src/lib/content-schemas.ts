@@ -42,6 +42,36 @@ const slugSchema = z
   .string()
   .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)
   .max(100);
+export const recipeSchema = z
+  .object({
+    name: z.string().min(1).max(120).optional(),
+    description: z.string().max(500).optional(),
+    servings: z.number().int().positive().optional(),
+    prepTime: z.string().max(50).optional(),
+    cookTime: z.string().max(50).optional(),
+    totalTime: z.string().max(50).optional(),
+    cuisine: z.string().max(80).optional(),
+    ingredients: z.array(z.string().min(1)).optional(),
+    instructions: z.array(z.string().min(1)).optional(),
+    nutrition: z
+      .object({
+        calories: z.string().max(30).optional(),
+        protein: z.string().max(30).optional(),
+        carbohydrates: z.string().max(30).optional(),
+        fat: z.string().max(30).optional(),
+      })
+      .optional(),
+  })
+  .optional();
+export const locationSchema = z
+  .object({
+    name: z.string().min(1).max(120),
+    address: z.string().max(300).optional(),
+    country: z.string().max(100).optional(),
+    latitude: z.number().min(-90).max(90).optional(),
+    longitude: z.number().min(-180).max(180).optional(),
+  })
+  .optional();
 export const postSchema = z
   .object({
     title: z.string().trim().min(1).max(100),
@@ -72,6 +102,8 @@ export const postSchema = z
     seriesOrder: z.number().int().positive().optional(),
     gallery: z.array(imageSchema).max(50).optional(),
     relatedPosts: z.array(slugSchema).default([]),
+    recipe: recipeSchema,
+    location: locationSchema,
     seo: seoSchema,
   })
   .refine((v) => v.status !== "published" || !!v.publishedAt, {
