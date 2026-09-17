@@ -9,15 +9,15 @@ import {
   cookieValue,
   requireOrigin,
   HttpError,
-} from "../src/server/security";
+} from "../src/server/security.js";
 import {
   github,
   saveDraftToGit,
   type GitConfig,
   type GitSession,
-} from "../src/server/github";
+} from "../src/server/github.js";
 import instance from "../src/config/site.json";
-import type { Draft, ImageAsset } from "../src/lib/creator/model";
+import type { Draft, ImageAsset } from "../src/lib/creator/model.js";
 type Request = IncomingMessage & {
   query?: Record<string, string | string[] | undefined>;
   body?: unknown;

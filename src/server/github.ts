@@ -5,12 +5,12 @@ import {
   publishErrors,
   type Draft,
   type ImageAsset,
-} from "../lib/creator/model";
-import { draftToMdx } from "../lib/creator/serializer";
-import { sniffImage } from "../lib/creator/media";
-import { slugify } from "../lib/safety";
-import { postSchema } from "../lib/content-schemas";
-import { HttpError } from "./security";
+} from "../lib/creator/model.js";
+import { draftToMdx } from "../lib/creator/serializer.js";
+import { sniffImage } from "../lib/creator/media.js";
+import { slugify } from "../lib/safety.js";
+import { postSchema } from "../lib/content-schemas.js";
+import { HttpError } from "./security.js";
 export type GitSession = {
   token: string;
   login: string;
@@ -212,10 +212,10 @@ export async function saveDraftToGit(
           .join("; "),
     );
   const requestedAssets = documentAssets(draft),
-    needed = new Map(
+    needed = new Map<string, ImageAsset>(
       requestedAssets
         .filter((a) => !a.demo && a.src.startsWith("/media/uploads/"))
-        .map((a) => [a.id, a]),
+        .map((a): [string, ImageAsset] => [a.id, a]),
     );
   const media = input.media || [];
   if (!Array.isArray(media) || media.length > 50)

@@ -1,6 +1,6 @@
 import { z } from "astro/zod";
-import { safeImageUrl } from "./safety";
-import { themeRegistry } from "../themes/registry";
+import { safeImageUrl } from "./safety.js";
+import { themeRegistry } from "../themes/registry.js";
 export const seoSchema = z
   .object({
     title: z.string().max(60).optional(),

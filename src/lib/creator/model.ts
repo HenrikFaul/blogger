@@ -1,5 +1,5 @@
 /** The editable document is JSON, never executable HTML or MDX. IDs never depend on titles/slugs. */
-import { slugify, safeUrl, safeImageUrl } from "../safety";
+import { slugify, safeUrl, safeImageUrl } from "../safety.js";
 export const STORAGE_KEY = "forgeblog.workspace.v3";
 export const LAYOUTS = [
   "editorial-grid",

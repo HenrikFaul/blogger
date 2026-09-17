@@ -5,7 +5,17 @@ import ts from 'typescript';
 export async function resolve(specifier, context, next) {
  try { return await next(specifier, context); }
  catch (error) {
-  if(specifier.startsWith('.')&&context.parentURL){const base=fileURLToPath(new URL(specifier,context.parentURL));for(const suffix of ['.ts','.tsx','.mjs','.js','/index.ts'])if(fs.existsSync(base+suffix))return {url:pathToFileURL(base+suffix).href,shortCircuit:true};}
+  if(specifier.startsWith('.')&&context.parentURL){
+   const base=fileURLToPath(new URL(specifier,context.parentURL));
+   /* Node ESM (and the serverless function) uses explicit ".js" specifiers that map
+      back to ".ts" sources here, so the same import works under both bundler and
+      node16/nodenext resolution. */
+   const candidates=[base];
+   if(base.endsWith('.js')) candidates.push(base.slice(0,-3));
+   for(const candidate of candidates){
+    for(const suffix of ['.ts','.tsx','.mjs','.js','/index.ts'])if(fs.existsSync(candidate+suffix))return {url:pathToFileURL(candidate+suffix).href,shortCircuit:true};
+   }
+  }
   throw error;
  }
 }

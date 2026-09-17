@@ -1,4 +1,4 @@
-import { safeUrl } from "../safety";
+import { safeUrl } from "../safety.js";
 import {
   assertDraft,
   documentAssets,
@@ -6,7 +6,7 @@ import {
   type Draft,
   type DocNode,
   type ImageAsset,
-} from "./model";
+} from "./model.js";
 // Escape Markdown before introducing HTML entities; otherwise numeric entities get broken.
 // ESM-looking prose must not become executable MDX imports/exports at the start of a line.
 const escapeText = (s: string) =>

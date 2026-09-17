@@ -1,5 +1,5 @@
-import { slugify } from "../safety";
-import type { ImageAsset } from "./model";
+import { slugify } from "../safety.js";
+import type { ImageAsset } from "./model.js";
 const DB = "forgeblog-media-v1",
   STORE = "assets";
 export const MAX_IMAGE_BYTES = 10 * 1024 * 1024;
