@@ -2,12 +2,13 @@
 
 ## 0.3.0 — 2026-09-17
 
-### A designplan szerinti nyitóoldal
-- A nyitóoldal a csatolt `designplan.png` szerinti ForgeBlog termékoldal lett: bejelentősáv, hero-mozaik (kiemelt történet + csempék + idézet + eszközsáv), „Kiemelt történetek” sáv, „Fedezd fel téma szerint” chip-sor, munkatér-bemutató, galériasáv, mérőszám-sor és záró CTA-sáv.
-- Az oldal kizárólag a valós, publikált tartalomgyűjteményből táplálkozik; nincs kitalált statisztika vagy működés nélküli gomb. A bemutatószámok és a landing-szöveg a `src/config/site.json` `home` blokkjából jönnek, így white-label instance felül tudja írni.
-- A nyitóoldal a kanonikus témajelzőket használja, így mind a 26 téma és a világos/sötét mód automatikusan átszínezi. Mobilnézetben nincs vízszintes túlcsordulás.
-- Új séma: `announcement` és `home` blokk az `InstanceConfigSchema`-ban, teljes alapértelmezéssel; a régi konfigurációk érvényesek maradnak.
-- Új E2E-lefedettség: `e2e/landing.spec.ts` (6 eset × 2 viewport) a tervezett szekciókra.
+### A Studio v2 szerinti szerkesztőségi főoldal
+- A nyitóoldal a `ForgeBlog_Studio_v2` átadási csomag `01-editorial-home` terve szerinti **szerkesztőségi blogfőoldal** lett: nagy serif hero („A gondolatnak tér kell.”), absztrakt vektor-illusztráció, szerzői megjegyzés és a legfrissebb írások rácsos listája.
+- A publikus márka **folio.** (a white-label példa), a motor továbbra is ForgeBlog. A hero-szöveg, a navigáció és a márka a `src/config/site.json`-ból jön.
+- A `minimal-editorial` téma a Studio v2 tokenekhez igazítva: meleg papírszín `#F7F5EF`, erdőzöld `#294C3B`, tégla akcentus `#BB412B`, serif `EB Garamond`/Georgia címsorok.
+- A hat vektor-illusztráció a Studio v2 `assets/` mappájából a `public/media/illustrations/` alá került; a hero az `abstract.svg`-et használja.
+- A korábbi marketing-jellegű landing-komponensek (hero-mozaik, galériasáv, mérőszám-sor stb.) törölve, mert nem szerepelnek a szerkesztőségi tervben.
+- Új E2E-lefedettség: `e2e/landing.spec.ts` a szerkesztőségi főoldalra (hero, illusztráció, cikkrács, márka, overflow).
 
 ### Javítások
 - `tests/update.test.mjs`: a Git-fixture repo mostantól rögzíti a sorvége-politikát (`core.autocrlf=false`), így a teszt Windows alatt is zöld (korábban a globális `core.autocrlf=true` CRLF-fé konvertálta a fájlokat). 92/92 unit teszt sikeres.

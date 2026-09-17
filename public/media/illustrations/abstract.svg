@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-labelledby="doc-title doc-desc" xml:lang="hu">
+<title id="doc-title">ForgeBlog original vector illustration / abstract</title>
+<desc id="doc-desc">ForgeBlog v2: szerkeszthető SVG felületterv. Minden szöveg valódi text elem, az illusztrációk is vektorosak. Mintaadatok, nem működő alkalmazás.</desc>
+<metadata id="design-metadata">{&quot;name&quot;: &quot;asset-abstract&quot;, &quot;title&quot;: &quot;ForgeBlog original vector illustration / abstract&quot;, &quot;width&quot;: 1000, &quot;height&quot;: 700, &quot;theme&quot;: &quot;editorial&quot;, &quot;locale&quot;: &quot;hu-HU&quot;, &quot;editable&quot;: true, &quot;rasterEmbedded&quot;: false, &quot;content&quot;: &quot;Fictional demo content; not a live product or measured service.&quot;, &quot;sources&quot;: []}</metadata>
+<defs><clipPath id="as-art-clip-0001"><rect x="0" y="0" width="1000" height="700" rx="0"/></clipPath><linearGradient id="as-gradient-0003" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#DCE7D2"/><stop offset="1.000" stop-color="#BBCDB1"/></linearGradient><linearGradient id="as-gradient-0004" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#F8F0D6"/><stop offset="0.500" stop-color="#DED1AC"/><stop offset="1.000" stop-color="#A6AB88"/></linearGradient><linearGradient id="as-gradient-0005" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#57866B"/><stop offset="0.500" stop-color="#234C39"/><stop offset="1.000" stop-color="#153A2B"/></linearGradient><linearGradient id="as-gradient-0006" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#F39C76"/><stop offset="0.500" stop-color="#D65B3D"/><stop offset="1.000" stop-color="#9C382E"/></linearGradient><radialGradient id="as-gradient-0007" cx="35%" cy="25%" r="80%"><stop offset="0.000" stop-color="#FFF7DA"/><stop offset="0.500" stop-color="#E7D495"/><stop offset="1.000" stop-color="#B2B086"/></radialGradient></defs>
+<rect x="0" y="0" width="1000" height="700" rx="0" fill="#F7F5EF"/>
+<g id="as-illustration-abstract-0002" inkscape:groupmode="layer" inkscape:label="Illustration abstract" data-component="HeroMedia">
+<g clip-path="url(#as-art-clip-0001)"><g transform="translate(0,0) scale(1.0,1.0)">
+<rect x="0" y="0" width="1000" height="700" rx="0" fill="url(#as-gradient-0003)"/>
+<circle cx="802" cy="108" r="184" fill="#F0EFCB" opacity=".6"/>
+<path d="M-60 680 C150 170 550 590 1050 90" fill="none" stroke="#91AA8D" stroke-width="1.1" opacity=".32"/>
+<path d="M-48 680 C162 182 570 582 1050 108" fill="none" stroke="#91AA8D" stroke-width="1.1" opacity=".32"/>
+<path d="M-36 680 C174 194 590 574 1050 126" fill="none" stroke="#91AA8D" stroke-width="1.1" opacity=".32"/>
+<path d="M-24 680 C186 206 610 566 1050 144" fill="none" stroke="#91AA8D" stroke-width="1.1" opacity=".32"/>
+<path d="M-12 680 C198 218 630 558 1050 162" fill="none" stroke="#91AA8D" stroke-width="1.1" opacity=".32"/>
+<path d="M0 680 C210 230 650 550 1050 180" fill="none" stroke="#91AA8D" stroke-width="1.1" opacity=".32"/>
+<path d="M12 680 C222 242 670 542 1050 198" fill="none" stroke="#91AA8D" stroke-width="1.1" opacity=".32"/>
+<path d="M24 680 C234 254 690 534 1050 216" fill="none" stroke="#91AA8D" stroke-width="1.1" opacity=".32"/>
+<path d="M36 680 C246 266 710 526 1050 234" fill="none" stroke="#91AA8D" stroke-width="1.1" opacity=".32"/>
+<path d="M48 680 C258 278 730 518 1050 252" fill="none" stroke="#91AA8D" stroke-width="1.1" opacity=".32"/>
+<path d="M60 680 C270 290 750 510 1050 270" fill="none" stroke="#91AA8D" stroke-width="1.1" opacity=".32"/>
+<path d="M72 680 C282 302 770 502 1050 288" fill="none" stroke="#91AA8D" stroke-width="1.1" opacity=".32"/>
+<path d="M84 680 C294 314 790 494 1050 306" fill="none" stroke="#91AA8D" stroke-width="1.1" opacity=".32"/>
+<path d="M96 680 C306 326 810 486 1050 324" fill="none" stroke="#91AA8D" stroke-width="1.1" opacity=".32"/>
+<ellipse cx="540" cy="603" rx="302" ry="36" fill="#719077" opacity=".18"/>
+<path d="M236 597V299C236 128 419 72 538 120C617 151 648 219 648 309V597H526V314C526 258 501 223 450 223C397 223 363 258 363 314V597Z" fill="url(#as-gradient-0004)" />
+<path d="M363 598V320C363 245 401 213 451 213C403 200 312 235 312 318V598Z" fill="url(#as-gradient-0005)" />
+<path d="M530 598V322C530 245 588 181 664 181C767 181 822 251 822 346V598H707V349C707 316 690 297 665 297C637 297 626 317 626 349V598Z" fill="url(#as-gradient-0006)" />
+<path d="M627 597V346C627 315 640 291 668 291C640 278 583 302 583 348V597Z" fill="#9C432F" />
+<circle cx="200" cy="477" r="69" fill="url(#as-gradient-0007)" />
+<rect x="92" y="617" width="167" height="2" rx="0" fill="#496550" opacity="0.35"/>
+<rect x="825" y="46" width="115" height="2" rx="0" fill="#496550" opacity="0.35"/>
+</g></g>
+</g>
+</svg>

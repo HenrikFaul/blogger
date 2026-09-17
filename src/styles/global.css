@@ -6359,3 +6359,93 @@ button:disabled {
     font-size: 2.35rem;
   }
 }
+
+
+/* ============================================================================
+   Editorial home (ForgeBlog Studio v2 — handoff/01-editorial-home.json)
+   Serif hero + post grid on the warm paper canvas.
+   ============================================================================ */
+.editorial-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 56px;
+  align-items: center;
+  padding: 72px 0 56px;
+}
+.eyebrow-mono {
+  font-family: "DejaVu Sans Mono", Consolas, ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.editorial-hero-copy h1 {
+  font-size: clamp(3.375rem, 6.7vw, 7.125rem);
+  line-height: 1.02;
+  margin: 20px 0 0;
+  letter-spacing: -0.02em;
+}
+.editorial-hero-copy h1 em {
+  font-style: italic;
+  color: var(--primary);
+}
+.editorial-lede {
+  margin-top: 26px;
+  max-width: 46ch;
+  font-size: 19px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+.editorial-hero .hero-actions {
+  margin-top: 32px;
+}
+.editorial-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 40px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.editorial-author .avatar {
+  border-radius: 50%;
+}
+.editorial-author strong {
+  color: var(--ink);
+}
+.editorial-hero-media {
+  margin: 0;
+}
+.editorial-hero-media img {
+  width: 100%;
+  height: auto;
+}
+.editorial-posts {
+  padding: 24px 0 72px;
+}
+.editorial-posts .post-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+@media (max-width: 960px) {
+  .editorial-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+    padding-top: 48px;
+  }
+  .editorial-hero-media {
+    order: -1;
+  }
+  .editorial-posts .post-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .editorial-hero-copy h1 {
+    font-size: 2.9rem;
+  }
+  .editorial-posts .post-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

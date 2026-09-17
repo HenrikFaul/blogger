@@ -1,8 +1,8 @@
 {
   "id": "forgeblog-demo",
-  "name": "ForgeBlog",
+  "name": "folio.",
   "siteUrl": "",
-  "description": "Történetek egy lassabb, tudatosabb és inspirálóbb mindennaphoz. Utazás, alkotás, technológia és a figyelem művészete.",
+  "description": "Írások alkotásról, technológiáról és az apró részletekről, amelyek új nézőpontot adnak.",
   "language": "hu",
   "timeZone": "Europe/Budapest",
   "theme": "minimal-editorial",
@@ -10,15 +10,15 @@
   "demoContent": true,
   "logo": {
     "src": "/logo.svg",
-    "alt": "ForgeBlog"
+    "alt": "folio."
   },
   "favicon": "/favicon.svg",
   "social": {},
   "contact": {},
   "seo": {
-    "defaultTitleTemplate": "%s · ForgeBlog",
-    "defaultDescription": "Egy kicsit kevesebb zaj. Egy kicsit több felfedezés. Válogatott történetek a ForgeBlog magazinban.",
-    "defaultOgImage": "/media/demo/coast.jpg",
+    "defaultTitleTemplate": "%s · folio.",
+    "defaultDescription": "Nóra személyes folyóirata. Írások alkotásról, technológiáról és az apró részletekről, amelyek új nézőpontot adnak.",
+    "defaultOgImage": "/media/illustrations/abstract.svg",
     "noindexDrafts": true
   },
   "content": {
@@ -34,60 +34,43 @@
     "analyticsEnabled": false
   },
   "announcement": {
-    "enabled": true,
-    "text": "Elkészült a ForgeBlog 2.0 — több téma, több szabadság, ugyanaz az egyszerű folyamat.",
-    "linkLabel": "Nézd meg, mi az új",
-    "href": "/about/"
+    "enabled": false,
+    "text": ""
   },
   "home": {
-    "eyebrow": "ÍRJ · COMMITOLJ · PUBLIKÁLJ",
-    "headline": "Szebb módja",
-    "headlineAccent": "a publikálásnak.",
-    "lede": "A ForgeBlog egy statikus, white-label blogmotor modern alkotóknak. Markdownban írsz, GitHubon tárolsz, Vercelen telepítesz — és a tiéd lesz.",
-    "primaryCtaLabel": "Kezdd el ingyen",
+    "eyebrow": "JEGYZETEK EGY KÍVÁNCSI ÉLETHEZ",
+    "headline": "A gondolatnak",
+    "headlineAccent": "tér kell.",
+    "lede": "Írások alkotásról, technológiáról és az apró részletekről, amelyek új nézőpontot adnak.",
+    "primaryCtaLabel": "Fedezd fel az írásokat",
     "primaryCtaHref": "/posts/",
-    "secondaryCtaLabel": "Témák megtekintése",
-    "secondaryCtaHref": "/categories/",
-    "assurances": [
-      "Nincs backend",
-      "A tiéd, testre szabható",
-      "Alkotóknak készült"
-    ],
-    "quote": "„Egy egyszerű blog is mindent megváltoztathat.”",
-    "quoteAttribution": "FORGEBLOG",
-    "stats": [
-      {
-        "value": "10K+",
-        "label": "Alkotó világszerte"
-      },
-      {
-        "value": "99,9%",
-        "label": "Elérhetőség Vercelen"
-      },
-      {
-        "value": "100%",
-        "label": "Nyílt forráskód"
-      },
-      {
-        "value": "4,9/5",
-        "label": "A közösségtől"
-      }
-    ]
+    "secondaryCtaLabel": "Vagy indulj a legfrissebbel",
+    "secondaryCtaHref": "/posts/",
+    "assurances": [],
+    "quote": "",
+    "quoteAttribution": "",
+    "stats": []
   },
   "navigation": {
     "header": [
       {
-        "label": "Funkciók",
+        "label": "Főoldal",
+        "href": "/"
+      },
+      {
+        "label": "Írások",
+        "href": "/posts/"
+      },
+      {
+        "label": "Sorozatok",
+        "href": "/series/"
+      },
+      {
+        "label": "Rólam",
         "href": "/about/"
-      },
-      {
-        "label": "Témák",
-        "href": "/categories/"
-      },
-      {
-        "label": "Bemutató",
-        "href": "/projects/"
-      },
+      }
+    ],
+    "footer": [
       {
         "label": "Archívum",
         "href": "/archive/"
@@ -97,35 +80,17 @@
         "href": "/series/"
       },
       {
-        "label": "Történetek",
-        "href": "/posts/"
-      }
-    ],
-    "footer": [
-      {
-        "label": "Archívum",
-        "href": "/archive/"
-      },
-      {
-        "label": "Projektek",
-        "href": "/projects/"
-      },
-      {
         "label": "RSS",
         "href": "/rss.xml"
       },
       {
         "label": "Adatvédelem",
         "href": "/privacy/"
-      },
-      {
-        "label": "Felhasználási feltételek",
-        "href": "/terms/"
       }
     ]
   },
   "legal": {
-    "copyrightHolder": "ForgeBlog",
+    "copyrightHolder": "folio.",
     "copyrightYearStart": 2026
   }
 }

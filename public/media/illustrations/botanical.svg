@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1000" height="700" viewBox="0 0 1000 700" role="img" aria-labelledby="doc-title doc-desc" xml:lang="hu">
+<title id="doc-title">ForgeBlog original vector illustration / botanical</title>
+<desc id="doc-desc">ForgeBlog v2: szerkeszthető SVG felületterv. Minden szöveg valódi text elem, az illusztrációk is vektorosak. Mintaadatok, nem működő alkalmazás.</desc>
+<metadata id="design-metadata">{&quot;name&quot;: &quot;asset-botanical&quot;, &quot;title&quot;: &quot;ForgeBlog original vector illustration / botanical&quot;, &quot;width&quot;: 1000, &quot;height&quot;: 700, &quot;theme&quot;: &quot;editorial&quot;, &quot;locale&quot;: &quot;hu-HU&quot;, &quot;editable&quot;: true, &quot;rasterEmbedded&quot;: false, &quot;content&quot;: &quot;Fictional demo content; not a live product or measured service.&quot;, &quot;sources&quot;: []}</metadata>
+<defs><clipPath id="as-art-clip-0001"><rect x="0" y="0" width="1000" height="700" rx="0"/></clipPath><linearGradient id="as-gradient-0003" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#E6E3CC"/><stop offset="1.000" stop-color="#CED9BF"/></linearGradient><linearGradient id="as-gradient-0004" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#E8B18D"/><stop offset="0.500" stop-color="#C37D59"/><stop offset="1.000" stop-color="#84543D"/></linearGradient><linearGradient id="as-gradient-0005" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#839965"/><stop offset="0.500" stop-color="#3E6347"/><stop offset="1.000" stop-color="#294D3A"/></linearGradient><linearGradient id="as-gradient-0006" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#839965"/><stop offset="0.500" stop-color="#3E6347"/><stop offset="1.000" stop-color="#294D3A"/></linearGradient><linearGradient id="as-gradient-0007" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#839965"/><stop offset="0.500" stop-color="#3E6347"/><stop offset="1.000" stop-color="#294D3A"/></linearGradient><linearGradient id="as-gradient-0008" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#839965"/><stop offset="0.500" stop-color="#3E6347"/><stop offset="1.000" stop-color="#294D3A"/></linearGradient><linearGradient id="as-gradient-0009" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#839965"/><stop offset="0.500" stop-color="#3E6347"/><stop offset="1.000" stop-color="#294D3A"/></linearGradient><linearGradient id="as-gradient-0010" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#839965"/><stop offset="0.500" stop-color="#3E6347"/><stop offset="1.000" stop-color="#294D3A"/></linearGradient><linearGradient id="as-gradient-0011" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#839965"/><stop offset="0.500" stop-color="#3E6347"/><stop offset="1.000" stop-color="#294D3A"/></linearGradient><linearGradient id="as-gradient-0012" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#839965"/><stop offset="0.500" stop-color="#3E6347"/><stop offset="1.000" stop-color="#294D3A"/></linearGradient><linearGradient id="as-gradient-0013" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#839965"/><stop offset="0.500" stop-color="#3E6347"/><stop offset="1.000" stop-color="#294D3A"/></linearGradient><linearGradient id="as-gradient-0014" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#839965"/><stop offset="0.500" stop-color="#3E6347"/><stop offset="1.000" stop-color="#294D3A"/></linearGradient><linearGradient id="as-gradient-0015" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#839965"/><stop offset="0.500" stop-color="#3E6347"/><stop offset="1.000" stop-color="#294D3A"/></linearGradient><linearGradient id="as-gradient-0016" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#839965"/><stop offset="0.500" stop-color="#3E6347"/><stop offset="1.000" stop-color="#294D3A"/></linearGradient><linearGradient id="as-gradient-0017" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#839965"/><stop offset="0.500" stop-color="#3E6347"/><stop offset="1.000" stop-color="#294D3A"/></linearGradient><linearGradient id="as-gradient-0018" x1="0" y1="0" x2="1" y2="1"><stop offset="0.000" stop-color="#839965"/><stop offset="0.500" stop-color="#3E6347"/><stop offset="1.000" stop-color="#294D3A"/></linearGradient></defs>
+<rect x="0" y="0" width="1000" height="700" rx="0" fill="#F7F5EF"/>
+<g id="as-illustration-botanical-0002" inkscape:groupmode="layer" inkscape:label="Illustration botanical" data-component="HeroMedia">
+<g clip-path="url(#as-art-clip-0001)"><g transform="translate(0,0) scale(1.0,1.0)">
+<rect x="0" y="0" width="1000" height="700" rx="0" fill="url(#as-gradient-0003)"/>
+<circle cx="722" cy="187" r="175" fill="#F1EDD6" />
+<ellipse cx="480" cy="653" rx="255" ry="26" fill="#A4AF91" opacity=".45"/>
+<path d="M390 486C322 521 323 643 459 654C595 664 635 550 553 486Z" fill="url(#as-gradient-0004)" />
+<path d="M472 490C460 364 513 190 661 76 M472 429C440 314 322 171 213 105 M482 354C555 286 657 256 782 259" fill="none" stroke="#596F45" stroke-width="8" />
+<g transform="translate(248,137) rotate(-38)">
+<path d="M0 62C-98 15-49-63 0-68C52-22 49 32 0 62Z" fill="url(#as-gradient-0005)" />
+<path d="M0 58V-61 M0 20l-29-30 M0 1l28-27" fill="none" stroke="#A8BA8B" stroke-width="1.6" opacity=".8"/>
+</g>
+<g transform="translate(306,198) rotate(53)">
+<path d="M0 62C-98 15-49-63 0-68C52-22 49 32 0 62Z" fill="url(#as-gradient-0006)" />
+<path d="M0 58V-61 M0 20l-29-30 M0 1l28-27" fill="none" stroke="#A8BA8B" stroke-width="1.6" opacity=".8"/>
+</g>
+<g transform="translate(315,130) rotate(-43)">
+<path d="M0 62C-98 15-49-63 0-68C52-22 49 32 0 62Z" fill="url(#as-gradient-0007)" />
+<path d="M0 58V-61 M0 20l-29-30 M0 1l28-27" fill="none" stroke="#A8BA8B" stroke-width="1.6" opacity=".8"/>
+</g>
+<g transform="translate(392,248) rotate(-33)">
+<path d="M0 62C-98 15-49-63 0-68C52-22 49 32 0 62Z" fill="url(#as-gradient-0008)" />
+<path d="M0 58V-61 M0 20l-29-30 M0 1l28-27" fill="none" stroke="#A8BA8B" stroke-width="1.6" opacity=".8"/>
+</g>
+<g transform="translate(422,193) rotate(49)">
+<path d="M0 62C-98 15-49-63 0-68C52-22 49 32 0 62Z" fill="url(#as-gradient-0009)" />
+<path d="M0 58V-61 M0 20l-29-30 M0 1l28-27" fill="none" stroke="#A8BA8B" stroke-width="1.6" opacity=".8"/>
+</g>
+<g transform="translate(501,309) rotate(34)">
+<path d="M0 62C-98 15-49-63 0-68C52-22 49 32 0 62Z" fill="url(#as-gradient-0010)" />
+<path d="M0 58V-61 M0 20l-29-30 M0 1l28-27" fill="none" stroke="#A8BA8B" stroke-width="1.6" opacity=".8"/>
+</g>
+<g transform="translate(570,216) rotate(51)">
+<path d="M0 62C-98 15-49-63 0-68C52-22 49 32 0 62Z" fill="url(#as-gradient-0011)" />
+<path d="M0 58V-61 M0 20l-29-30 M0 1l28-27" fill="none" stroke="#A8BA8B" stroke-width="1.6" opacity=".8"/>
+</g>
+<g transform="translate(631,122) rotate(33)">
+<path d="M0 62C-98 15-49-63 0-68C52-22 49 32 0 62Z" fill="url(#as-gradient-0012)" />
+<path d="M0 58V-61 M0 20l-29-30 M0 1l28-27" fill="none" stroke="#A8BA8B" stroke-width="1.6" opacity=".8"/>
+</g>
+<g transform="translate(600,297) rotate(-57)">
+<path d="M0 62C-98 15-49-63 0-68C52-22 49 32 0 62Z" fill="url(#as-gradient-0013)" />
+<path d="M0 58V-61 M0 20l-29-30 M0 1l28-27" fill="none" stroke="#A8BA8B" stroke-width="1.6" opacity=".8"/>
+</g>
+<g transform="translate(692,253) rotate(-61)">
+<path d="M0 62C-98 15-49-63 0-68C52-22 49 32 0 62Z" fill="url(#as-gradient-0014)" />
+<path d="M0 58V-61 M0 20l-29-30 M0 1l28-27" fill="none" stroke="#A8BA8B" stroke-width="1.6" opacity=".8"/>
+</g>
+<g transform="translate(765,228) rotate(45)">
+<path d="M0 62C-98 15-49-63 0-68C52-22 49 32 0 62Z" fill="url(#as-gradient-0015)" />
+<path d="M0 58V-61 M0 20l-29-30 M0 1l28-27" fill="none" stroke="#A8BA8B" stroke-width="1.6" opacity=".8"/>
+</g>
+<g transform="translate(530,394) rotate(53)">
+<path d="M0 62C-98 15-49-63 0-68C52-22 49 32 0 62Z" fill="url(#as-gradient-0016)" />
+<path d="M0 58V-61 M0 20l-29-30 M0 1l28-27" fill="none" stroke="#A8BA8B" stroke-width="1.6" opacity=".8"/>
+</g>
+<g transform="translate(417,347) rotate(-41)">
+<path d="M0 62C-98 15-49-63 0-68C52-22 49 32 0 62Z" fill="url(#as-gradient-0017)" />
+<path d="M0 58V-61 M0 20l-29-30 M0 1l28-27" fill="none" stroke="#A8BA8B" stroke-width="1.6" opacity=".8"/>
+</g>
+<g transform="translate(352,298) rotate(58)">
+<path d="M0 62C-98 15-49-63 0-68C52-22 49 32 0 62Z" fill="url(#as-gradient-0018)" />
+<path d="M0 58V-61 M0 20l-29-30 M0 1l28-27" fill="none" stroke="#A8BA8B" stroke-width="1.6" opacity=".8"/>
+</g>
+</g></g>
+</g>
+</svg>
