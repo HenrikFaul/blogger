@@ -1,0 +1,4 @@
+:root {
+  --theme-bg: #1c1c28; --theme-text: #e2e2e8; --theme-primary: #00f0ff; --theme-muted: #28293d; --theme-border: #555770;
+  --font-sans: 'Inter', sans-serif;
+}

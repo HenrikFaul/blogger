@@ -1,0 +1,6 @@
+---
+import PostCard from './content/PostCard.astro';
+import type {CardPost} from '../lib/content';
+interface Props {post:CardPost;priority?:boolean;}
+---
+<PostCard {...Astro.props}/>

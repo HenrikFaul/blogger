@@ -1,0 +1,4 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';import Icon from '../components/ui/Icon.astro';
+---
+<BaseLayout title="Ezt az oldalt nem találjuk" noindex><div class="container"><section class="empty-state" style="margin-top:65px;border-style:solid;padding-block:75px"><div class="empty-icon"><Icon name="leaf" size={28}/></div><p class="eyebrow">404 · EGY KIS KITÉRŐ</p><h1 style="font-size:clamp(34px,5vw,52px);margin:20px 0">Ez az ösvény most nem vezet sehová.</h1><p>Lehet, hogy az oldal elköltözött, vagy elírás került a címbe. A történetek azért megvárnak.</p><a class="btn btn-primary" href="/posts/">Vissza a történetekhez<Icon name="arrow" size={15}/></a></section></div></BaseLayout>

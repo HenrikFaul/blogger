@@ -1,0 +1,34 @@
+---
+/**
+ * Dark "A gallery of beautiful ideas." band plus the flexible/white-label panel from the
+ * design plan. Images are the instance's own real media, arranged as a gallery mosaic.
+ */
+import Icon from '../ui/Icon.astro';
+interface Props {images:{src:string;alt:string;width?:number;height?:number}[];}
+const {images}=Astro.props;
+const mosaic=images.slice(0,4);
+---
+<section class="gallery-band" aria-labelledby="gallery-band-heading">
+ <div class="gallery-band-inner">
+  <div class="gallery-lead">
+   {mosaic[0]&&<img class="gallery-lead-photo" src={mosaic[0].src} alt={mosaic[0].alt} width={mosaic[0].width||900} height={mosaic[0].height||640} loading="lazy" decoding="async"/>}
+   <div class="gallery-lead-overlay">
+    <h2 id="gallery-band-heading">Szép ötletek<br/>gyűjteménye.</h2>
+    <p>Nézd meg, mit alkotnak a ForgeBlog használói.</p>
+    <a class="btn btn-on-dark" href="/projects/">Fedezd fel a bemutatót<Icon name="arrow" size={15}/></a>
+   </div>
+  </div>
+  <div class="gallery-grid">
+   {mosaic.slice(1).map(img=><img src={img.src} alt={img.alt} width={img.width||420} height={img.height||320} loading="lazy" decoding="async"/>)}
+   {mosaic.length<2&&<span class="mosaic-placeholder" aria-hidden="true"/>}
+  </div>
+  <div class="gallery-fold">
+   <h3>Tedd a magadévá.</h3>
+   <p>Válassz elegáns, modern témát, vagy alkosd meg a sajátodat.</p>
+   <a class="btn" href="/categories/">Témák böngészése<Icon name="arrow" size={15}/></a>
+   <div class="gallery-fold-tiles" aria-hidden="true">
+    {images.slice(0,3).map(img=><span style={`background-image:url('${img.src}')`}/>)}
+   </div>
+  </div>
+ </div>
+</section>

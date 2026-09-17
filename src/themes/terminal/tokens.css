@@ -1,0 +1,4 @@
+:root {
+  --theme-bg: #000000; --theme-text: #00ff00; --theme-primary: #00ff00; --theme-muted: #111111; --theme-border: #004400;
+  --font-sans: 'Fira Code', monospace;
+}

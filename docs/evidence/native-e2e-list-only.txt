@@ -1,0 +1,52 @@
+Listing tests:
+  [chromium] › creator.spec.ts:24:1 › Title edit/autosave/reload retains exactly one immutable draft
+  [chromium] › creator.spec.ts:47:1 › Idle editor does not keep writing revisions
+  [chromium] › creator.spec.ts:62:1 › Manual checkpoint, ZIP export and native download
+  [chromium] › creator.spec.ts:80:1 › Corrupt storage displays recovery state and remains unchanged
+  [chromium] › creator.spec.ts:91:1 › An unconfigured backend never claims a published article
+  [chromium] › creator.spec.ts:104:1 › 26 themes available and applying one persists the actual public preference
+  [chromium] › creator.spec.ts:128:1 › Native IndexedDB media import, deduplication and alt metadata
+  [chromium] › creator.spec.ts:142:1 › Editing controls remain mounted when preview is toggled
+  [chromium] › creator.spec.ts:162:1 › @a11y creator dashboard
+  [chromium] › public.spec.ts:13:3 › Public route / has readable content and no overflow
+  [chromium] › public.spec.ts:13:3 › Public route /posts/ has readable content and no overflow
+  [chromium] › public.spec.ts:13:3 › Public route /categories/ has readable content and no overflow
+  [chromium] › public.spec.ts:13:3 › Public route /archive/ has readable content and no overflow
+  [chromium] › public.spec.ts:13:3 › Public route /series/ has readable content and no overflow
+  [chromium] › public.spec.ts:13:3 › Public route /about/ has readable content and no overflow
+  [chromium] › public.spec.ts:13:3 › Public route /projects/ has readable content and no overflow
+  [chromium] › public.spec.ts:13:3 › Public route /posts/a-part-ahol-nem-kell-sietni/ has readable content and no overflow
+  [chromium] › public.spec.ts:30:1 › Search finds accent-insensitive results and excludes draft
+  [chromium] › public.spec.ts:44:1 › Archive filters, clears and sorts real articles
+  [chromium] › public.spec.ts:60:1 › Reading and navigation remain available without JavaScript
+  [chromium] › public.spec.ts:70:1 › Theme switch survives native page reload
+  [chromium] › public.spec.ts:77:1 › Public gallery opens and closes with keyboard
+  [chromium] › public.spec.ts:86:3 › @a11y default theme /
+  [chromium] › public.spec.ts:86:3 › @a11y default theme /posts/
+  [chromium] › public.spec.ts:86:3 › @a11y default theme /posts/a-part-ahol-nem-kell-sietni/
+  [mobile-chromium] › creator.spec.ts:24:1 › Title edit/autosave/reload retains exactly one immutable draft
+  [mobile-chromium] › creator.spec.ts:47:1 › Idle editor does not keep writing revisions
+  [mobile-chromium] › creator.spec.ts:62:1 › Manual checkpoint, ZIP export and native download
+  [mobile-chromium] › creator.spec.ts:80:1 › Corrupt storage displays recovery state and remains unchanged
+  [mobile-chromium] › creator.spec.ts:91:1 › An unconfigured backend never claims a published article
+  [mobile-chromium] › creator.spec.ts:104:1 › 26 themes available and applying one persists the actual public preference
+  [mobile-chromium] › creator.spec.ts:128:1 › Native IndexedDB media import, deduplication and alt metadata
+  [mobile-chromium] › creator.spec.ts:142:1 › Editing controls remain mounted when preview is toggled
+  [mobile-chromium] › creator.spec.ts:162:1 › @a11y creator dashboard
+  [mobile-chromium] › public.spec.ts:13:3 › Public route / has readable content and no overflow
+  [mobile-chromium] › public.spec.ts:13:3 › Public route /posts/ has readable content and no overflow
+  [mobile-chromium] › public.spec.ts:13:3 › Public route /categories/ has readable content and no overflow
+  [mobile-chromium] › public.spec.ts:13:3 › Public route /archive/ has readable content and no overflow
+  [mobile-chromium] › public.spec.ts:13:3 › Public route /series/ has readable content and no overflow
+  [mobile-chromium] › public.spec.ts:13:3 › Public route /about/ has readable content and no overflow
+  [mobile-chromium] › public.spec.ts:13:3 › Public route /projects/ has readable content and no overflow
+  [mobile-chromium] › public.spec.ts:13:3 › Public route /posts/a-part-ahol-nem-kell-sietni/ has readable content and no overflow
+  [mobile-chromium] › public.spec.ts:30:1 › Search finds accent-insensitive results and excludes draft
+  [mobile-chromium] › public.spec.ts:44:1 › Archive filters, clears and sorts real articles
+  [mobile-chromium] › public.spec.ts:60:1 › Reading and navigation remain available without JavaScript
+  [mobile-chromium] › public.spec.ts:70:1 › Theme switch survives native page reload
+  [mobile-chromium] › public.spec.ts:77:1 › Public gallery opens and closes with keyboard
+  [mobile-chromium] › public.spec.ts:86:3 › @a11y default theme /
+  [mobile-chromium] › public.spec.ts:86:3 › @a11y default theme /posts/
+  [mobile-chromium] › public.spec.ts:86:3 › @a11y default theme /posts/a-part-ahol-nem-kell-sietni/
+Total: 50 tests in 2 files

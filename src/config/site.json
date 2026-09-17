@@ -1,0 +1,131 @@
+{
+  "id": "forgeblog-demo",
+  "name": "ForgeBlog",
+  "siteUrl": "",
+  "description": "Történetek egy lassabb, tudatosabb és inspirálóbb mindennaphoz. Utazás, alkotás, technológia és a figyelem művészete.",
+  "language": "hu",
+  "timeZone": "Europe/Budapest",
+  "theme": "minimal-editorial",
+  "defaultMode": "light",
+  "demoContent": true,
+  "logo": {
+    "src": "/logo.svg",
+    "alt": "ForgeBlog"
+  },
+  "favicon": "/favicon.svg",
+  "social": {},
+  "contact": {},
+  "seo": {
+    "defaultTitleTemplate": "%s · ForgeBlog",
+    "defaultDescription": "Egy kicsit kevesebb zaj. Egy kicsit több felfedezés. Válogatott történetek a ForgeBlog magazinban.",
+    "defaultOgImage": "/media/demo/coast.jpg",
+    "noindexDrafts": true
+  },
+  "content": {
+    "postsPerPage": 9,
+    "showReadingTime": true,
+    "showLastUpdated": true,
+    "defaultAuthor": "nora"
+  },
+  "features": {
+    "searchEnabled": true,
+    "newsletterEnabled": false,
+    "commentsEnabled": false,
+    "analyticsEnabled": false
+  },
+  "announcement": {
+    "enabled": true,
+    "text": "Elkészült a ForgeBlog 2.0 — több téma, több szabadság, ugyanaz az egyszerű folyamat.",
+    "linkLabel": "Nézd meg, mi az új",
+    "href": "/about/"
+  },
+  "home": {
+    "eyebrow": "ÍRJ · COMMITOLJ · PUBLIKÁLJ",
+    "headline": "Szebb módja",
+    "headlineAccent": "a publikálásnak.",
+    "lede": "A ForgeBlog egy statikus, white-label blogmotor modern alkotóknak. Markdownban írsz, GitHubon tárolsz, Vercelen telepítesz — és a tiéd lesz.",
+    "primaryCtaLabel": "Kezdd el ingyen",
+    "primaryCtaHref": "/posts/",
+    "secondaryCtaLabel": "Témák megtekintése",
+    "secondaryCtaHref": "/categories/",
+    "assurances": [
+      "Nincs backend",
+      "A tiéd, testre szabható",
+      "Alkotóknak készült"
+    ],
+    "quote": "„Egy egyszerű blog is mindent megváltoztathat.”",
+    "quoteAttribution": "FORGEBLOG",
+    "stats": [
+      {
+        "value": "10K+",
+        "label": "Alkotó világszerte"
+      },
+      {
+        "value": "99,9%",
+        "label": "Elérhetőség Vercelen"
+      },
+      {
+        "value": "100%",
+        "label": "Nyílt forráskód"
+      },
+      {
+        "value": "4,9/5",
+        "label": "A közösségtől"
+      }
+    ]
+  },
+  "navigation": {
+    "header": [
+      {
+        "label": "Funkciók",
+        "href": "/about/"
+      },
+      {
+        "label": "Témák",
+        "href": "/categories/"
+      },
+      {
+        "label": "Bemutató",
+        "href": "/projects/"
+      },
+      {
+        "label": "Archívum",
+        "href": "/archive/"
+      },
+      {
+        "label": "Sorozatok",
+        "href": "/series/"
+      },
+      {
+        "label": "Történetek",
+        "href": "/posts/"
+      }
+    ],
+    "footer": [
+      {
+        "label": "Archívum",
+        "href": "/archive/"
+      },
+      {
+        "label": "Projektek",
+        "href": "/projects/"
+      },
+      {
+        "label": "RSS",
+        "href": "/rss.xml"
+      },
+      {
+        "label": "Adatvédelem",
+        "href": "/privacy/"
+      },
+      {
+        "label": "Felhasználási feltételek",
+        "href": "/terms/"
+      }
+    ]
+  },
+  "legal": {
+    "copyrightHolder": "ForgeBlog",
+    "copyrightYearStart": 2026
+  }
+}

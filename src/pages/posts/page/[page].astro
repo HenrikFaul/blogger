@@ -1,0 +1,8 @@
+---
+import ArchiveLayout from '../../../layouts/ArchiveLayout.astro';
+import {getCardPosts} from '../../../lib/content';
+import {siteConfig} from '../../../config/site.config';
+export async function getStaticPaths(){const posts=await getCardPosts();const count=Math.ceil(posts.length/siteConfig.content.postsPerPage);return Array.from({length:Math.max(0,count-1)},(_,i)=>({params:{page:String(i+2)},props:{posts,page:i+2}}));}
+const {posts,page}=Astro.props;
+---
+<ArchiveLayout title={`Minden történet · ${page}. oldal`} description="További gondolatok a magazin archívumából." posts={posts} page={page} paginate categoryFilter/>

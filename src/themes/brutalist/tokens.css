@@ -1,0 +1,4 @@
+:root {
+  --theme-bg: #ffffff; --theme-text: #0000ff; --theme-primary: #ff0000; --theme-muted: #ffff00; --theme-border: #000000;
+  --font-sans: 'Courier New', Courier, monospace;
+}

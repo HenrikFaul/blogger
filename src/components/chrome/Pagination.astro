@@ -1,0 +1,6 @@
+---
+interface Props {currentPage:number;totalPages:number;baseUrl?:string;}
+const {currentPage,totalPages,baseUrl='/posts/'}=Astro.props;
+const href=(page:number)=>page===1?baseUrl:`${baseUrl}page/${page}/`;
+---
+{totalPages>1&&<nav class="pagination" aria-label="Lapozás" data-pagination>{currentPage>1&&<a href={href(currentPage-1)} aria-label="Előző oldal">←</a>}{Array.from({length:totalPages},(_,i)=>i+1).map(page=><a href={href(page)} aria-current={page===currentPage?'page':undefined} aria-label={`${page}. oldal`}>{page}</a>)}{currentPage<totalPages&&<a href={href(currentPage+1)} aria-label="Következő oldal">→</a>}</nav>}

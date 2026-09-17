@@ -1,0 +1,2088 @@
+{
+  "scope": "Five base text/background token pairs, light and dark; not a full visual WCAG audit.",
+  "comparisons": 260,
+  "passed": 260,
+  "failed": 0,
+  "results": [
+    {
+      "theme": "academic-paper",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 14.367,
+      "passed": true
+    },
+    {
+      "theme": "academic-paper",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "academic-paper",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.7463,
+      "passed": true
+    },
+    {
+      "theme": "academic-paper",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "academic-paper",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 8.8135,
+      "passed": true
+    },
+    {
+      "theme": "academic-paper",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "academic-paper",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "academic-paper",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "academic-paper",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "academic-paper",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    },
+    {
+      "theme": "ai-lab",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.1932,
+      "passed": true
+    },
+    {
+      "theme": "ai-lab",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "ai-lab",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.2769,
+      "passed": true
+    },
+    {
+      "theme": "ai-lab",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "ai-lab",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 6.9199,
+      "passed": true
+    },
+    {
+      "theme": "ai-lab",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "ai-lab",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "ai-lab",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "ai-lab",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "ai-lab",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    },
+    {
+      "theme": "art-gallery",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.4668,
+      "passed": true
+    },
+    {
+      "theme": "art-gallery",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "art-gallery",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.3863,
+      "passed": true
+    },
+    {
+      "theme": "art-gallery",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "art-gallery",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 6.494,
+      "passed": true
+    },
+    {
+      "theme": "art-gallery",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "art-gallery",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "art-gallery",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "art-gallery",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "art-gallery",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    },
+    {
+      "theme": "brutalist",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 12.7745,
+      "passed": true
+    },
+    {
+      "theme": "brutalist",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "brutalist",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.1094,
+      "passed": true
+    },
+    {
+      "theme": "brutalist",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "brutalist",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 16.2933,
+      "passed": true
+    },
+    {
+      "theme": "brutalist",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "brutalist",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "brutalist",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "brutalist",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "brutalist",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    },
+    {
+      "theme": "corporate-authority",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.7293,
+      "passed": true
+    },
+    {
+      "theme": "corporate-authority",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "corporate-authority",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.4913,
+      "passed": true
+    },
+    {
+      "theme": "corporate-authority",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "corporate-authority",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 7.6717,
+      "passed": true
+    },
+    {
+      "theme": "corporate-authority",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "corporate-authority",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "corporate-authority",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "corporate-authority",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "corporate-authority",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    },
+    {
+      "theme": "cyber-neon",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.4417,
+      "passed": true
+    },
+    {
+      "theme": "cyber-neon",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "cyber-neon",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.3762,
+      "passed": true
+    },
+    {
+      "theme": "cyber-neon",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "cyber-neon",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 7.9599,
+      "passed": true
+    },
+    {
+      "theme": "cyber-neon",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.9588,
+      "passed": true
+    },
+    {
+      "theme": "cyber-neon",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "cyber-neon",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.6622,
+      "passed": true
+    },
+    {
+      "theme": "cyber-neon",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "cyber-neon",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 11.9189,
+      "passed": true
+    },
+    {
+      "theme": "developer-console",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.4417,
+      "passed": true
+    },
+    {
+      "theme": "developer-console",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "developer-console",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.3762,
+      "passed": true
+    },
+    {
+      "theme": "developer-console",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "developer-console",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 7.9599,
+      "passed": true
+    },
+    {
+      "theme": "developer-console",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.7425,
+      "passed": true
+    },
+    {
+      "theme": "developer-console",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "developer-console",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.5312,
+      "passed": true
+    },
+    {
+      "theme": "developer-console",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "developer-console",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 10.8383,
+      "passed": true
+    },
+    {
+      "theme": "family-storybook",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.6398,
+      "passed": true
+    },
+    {
+      "theme": "family-storybook",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "family-storybook",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.4555,
+      "passed": true
+    },
+    {
+      "theme": "family-storybook",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "family-storybook",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 5.7764,
+      "passed": true
+    },
+    {
+      "theme": "family-storybook",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "family-storybook",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "family-storybook",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "family-storybook",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "family-storybook",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    },
+    {
+      "theme": "food-journal",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.6119,
+      "passed": true
+    },
+    {
+      "theme": "food-journal",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "food-journal",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.4443,
+      "passed": true
+    },
+    {
+      "theme": "food-journal",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "food-journal",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 6.2376,
+      "passed": true
+    },
+    {
+      "theme": "food-journal",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "food-journal",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "food-journal",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "food-journal",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "food-journal",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    },
+    {
+      "theme": "gaming-arena",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.4417,
+      "passed": true
+    },
+    {
+      "theme": "gaming-arena",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "gaming-arena",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.3762,
+      "passed": true
+    },
+    {
+      "theme": "gaming-arena",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "gaming-arena",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 7.9599,
+      "passed": true
+    },
+    {
+      "theme": "gaming-arena",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.3851,
+      "passed": true
+    },
+    {
+      "theme": "gaming-arena",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "gaming-arena",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3149,
+      "passed": true
+    },
+    {
+      "theme": "gaming-arena",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "gaming-arena",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.9399,
+      "passed": true
+    },
+    {
+      "theme": "glass-future",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.1599,
+      "passed": true
+    },
+    {
+      "theme": "glass-future",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "glass-future",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.2635,
+      "passed": true
+    },
+    {
+      "theme": "glass-future",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "glass-future",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 6.7976,
+      "passed": true
+    },
+    {
+      "theme": "glass-future",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "glass-future",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "glass-future",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "glass-future",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "glass-future",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    },
+    {
+      "theme": "holographic",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.0947,
+      "passed": true
+    },
+    {
+      "theme": "holographic",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "holographic",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.2375,
+      "passed": true
+    },
+    {
+      "theme": "holographic",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "holographic",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 7.1522,
+      "passed": true
+    },
+    {
+      "theme": "holographic",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "holographic",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "holographic",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "holographic",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "holographic",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    },
+    {
+      "theme": "industrial-workshop",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.0995,
+      "passed": true
+    },
+    {
+      "theme": "industrial-workshop",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "industrial-workshop",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.2394,
+      "passed": true
+    },
+    {
+      "theme": "industrial-workshop",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "industrial-workshop",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 6.5245,
+      "passed": true
+    },
+    {
+      "theme": "industrial-workshop",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "industrial-workshop",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "industrial-workshop",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "industrial-workshop",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "industrial-workshop",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    },
+    {
+      "theme": "luxury-fashion",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.6778,
+      "passed": true
+    },
+    {
+      "theme": "luxury-fashion",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "luxury-fashion",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.4707,
+      "passed": true
+    },
+    {
+      "theme": "luxury-fashion",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "luxury-fashion",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 6.8911,
+      "passed": true
+    },
+    {
+      "theme": "luxury-fashion",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "luxury-fashion",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "luxury-fashion",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "luxury-fashion",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "luxury-fashion",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    },
+    {
+      "theme": "magazine-newsroom",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.6689,
+      "passed": true
+    },
+    {
+      "theme": "magazine-newsroom",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "magazine-newsroom",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.4671,
+      "passed": true
+    },
+    {
+      "theme": "magazine-newsroom",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "magazine-newsroom",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 6.9647,
+      "passed": true
+    },
+    {
+      "theme": "magazine-newsroom",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "magazine-newsroom",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "magazine-newsroom",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "magazine-newsroom",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "magazine-newsroom",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    },
+    {
+      "theme": "minimal-dark",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.4417,
+      "passed": true
+    },
+    {
+      "theme": "minimal-dark",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "minimal-dark",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.3762,
+      "passed": true
+    },
+    {
+      "theme": "minimal-dark",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "minimal-dark",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 7.9599,
+      "passed": true
+    },
+    {
+      "theme": "minimal-dark",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.7081,
+      "passed": true
+    },
+    {
+      "theme": "minimal-dark",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "minimal-dark",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.5104,
+      "passed": true
+    },
+    {
+      "theme": "minimal-dark",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "minimal-dark",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 10.0689,
+      "passed": true
+    },
+    {
+      "theme": "minimal-editorial",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.8906,
+      "passed": true
+    },
+    {
+      "theme": "minimal-editorial",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "minimal-editorial",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.5558,
+      "passed": true
+    },
+    {
+      "theme": "minimal-editorial",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "minimal-editorial",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.2474,
+      "passed": true
+    },
+    {
+      "theme": "minimal-editorial",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "minimal-editorial",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "minimal-editorial",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "minimal-editorial",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "minimal-editorial",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    },
+    {
+      "theme": "music-night",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.4417,
+      "passed": true
+    },
+    {
+      "theme": "music-night",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "music-night",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.3762,
+      "passed": true
+    },
+    {
+      "theme": "music-night",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "music-night",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 7.9599,
+      "passed": true
+    },
+    {
+      "theme": "music-night",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.7713,
+      "passed": true
+    },
+    {
+      "theme": "music-night",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "music-night",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.5487,
+      "passed": true
+    },
+    {
+      "theme": "music-night",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "music-night",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.1821,
+      "passed": true
+    },
+    {
+      "theme": "nature-organic",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.4008,
+      "passed": true
+    },
+    {
+      "theme": "nature-organic",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "nature-organic",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.3599,
+      "passed": true
+    },
+    {
+      "theme": "nature-organic",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "nature-organic",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 6.0188,
+      "passed": true
+    },
+    {
+      "theme": "nature-organic",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "nature-organic",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "nature-organic",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "nature-organic",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "nature-organic",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    },
+    {
+      "theme": "outdoor-expedition",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.1334,
+      "passed": true
+    },
+    {
+      "theme": "outdoor-expedition",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "outdoor-expedition",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.2529,
+      "passed": true
+    },
+    {
+      "theme": "outdoor-expedition",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "outdoor-expedition",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 7.3435,
+      "passed": true
+    },
+    {
+      "theme": "outdoor-expedition",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "outdoor-expedition",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "outdoor-expedition",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "outdoor-expedition",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "outdoor-expedition",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    },
+    {
+      "theme": "photo-portfolio",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.4417,
+      "passed": true
+    },
+    {
+      "theme": "photo-portfolio",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "photo-portfolio",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.3762,
+      "passed": true
+    },
+    {
+      "theme": "photo-portfolio",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "photo-portfolio",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 7.9599,
+      "passed": true
+    },
+    {
+      "theme": "photo-portfolio",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.49,
+      "passed": true
+    },
+    {
+      "theme": "photo-portfolio",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "photo-portfolio",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3784,
+      "passed": true
+    },
+    {
+      "theme": "photo-portfolio",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "photo-portfolio",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 12.2592,
+      "passed": true
+    },
+    {
+      "theme": "recipe-studio",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.8065,
+      "passed": true
+    },
+    {
+      "theme": "recipe-studio",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "recipe-studio",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.5221,
+      "passed": true
+    },
+    {
+      "theme": "recipe-studio",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "recipe-studio",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 5.4037,
+      "passed": true
+    },
+    {
+      "theme": "recipe-studio",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "recipe-studio",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "recipe-studio",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "recipe-studio",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "recipe-studio",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    },
+    {
+      "theme": "retro-eighties",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.0571,
+      "passed": true
+    },
+    {
+      "theme": "retro-eighties",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "retro-eighties",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.2224,
+      "passed": true
+    },
+    {
+      "theme": "retro-eighties",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "retro-eighties",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 6.3122,
+      "passed": true
+    },
+    {
+      "theme": "retro-eighties",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "retro-eighties",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "retro-eighties",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "retro-eighties",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "retro-eighties",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    },
+    {
+      "theme": "soft-journal",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.4004,
+      "passed": true
+    },
+    {
+      "theme": "soft-journal",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "soft-journal",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.3597,
+      "passed": true
+    },
+    {
+      "theme": "soft-journal",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "soft-journal",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 6.1912,
+      "passed": true
+    },
+    {
+      "theme": "soft-journal",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "soft-journal",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "soft-journal",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "soft-journal",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "soft-journal",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    },
+    {
+      "theme": "swiss-grid",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.6266,
+      "passed": true
+    },
+    {
+      "theme": "swiss-grid",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "swiss-grid",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.4502,
+      "passed": true
+    },
+    {
+      "theme": "swiss-grid",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "swiss-grid",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 5.8859,
+      "passed": true
+    },
+    {
+      "theme": "swiss-grid",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "swiss-grid",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "swiss-grid",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "swiss-grid",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "swiss-grid",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    },
+    {
+      "theme": "travel-atlas",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 13.1994,
+      "passed": true
+    },
+    {
+      "theme": "travel-atlas",
+      "mode": "light",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 14.4987,
+      "passed": true
+    },
+    {
+      "theme": "travel-atlas",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 5.2793,
+      "passed": true
+    },
+    {
+      "theme": "travel-atlas",
+      "mode": "light",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 5.799,
+      "passed": true
+    },
+    {
+      "theme": "travel-atlas",
+      "mode": "light",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 7.0574,
+      "passed": true
+    },
+    {
+      "theme": "travel-atlas",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "page",
+      "ratio": 15.419,
+      "passed": true
+    },
+    {
+      "theme": "travel-atlas",
+      "mode": "dark",
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.6983,
+      "passed": true
+    },
+    {
+      "theme": "travel-atlas",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "page",
+      "ratio": 9.3354,
+      "passed": true
+    },
+    {
+      "theme": "travel-atlas",
+      "mode": "dark",
+      "foreground": "muted",
+      "background": "surface",
+      "ratio": 8.2936,
+      "passed": true
+    },
+    {
+      "theme": "travel-atlas",
+      "mode": "dark",
+      "foreground": "primary",
+      "background": "on-primary",
+      "ratio": 9.7088,
+      "passed": true
+    }
+  ]
+}

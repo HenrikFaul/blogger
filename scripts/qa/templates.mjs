@@ -1,0 +1,2 @@
+import fs from 'node:fs';import path from 'node:path';import {convertToTsx} from '@astrojs/astro2tsx';
+const out={};function walk(dir){for(const ent of fs.readdirSync(dir,{withFileTypes:true})){const f=path.join(dir,ent.name);if(ent.isDirectory())walk(f);else if(f.endsWith('.astro'))out[f]=convertToTsx(fs.readFileSync(f,'utf8'),{filename:f});}}walk(path.resolve('src'));fs.mkdirSync('.qa',{recursive:true});fs.writeFileSync('.qa/templates.json',JSON.stringify(out));console.log('Diagnostic templates:',Object.keys(out).length);

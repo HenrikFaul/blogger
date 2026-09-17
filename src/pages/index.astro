@@ -1,0 +1,72 @@
+---
+/**
+ * Public landing page, built to the attached design plan.
+ *
+ * Fidelity note: the design reference shows demo copy ("10K+ creators", "99.9% uptime").
+ * Those figures live in src/config/site.json so the instance owner can replace them, and
+ * every content-driven section below is fed from the real published collection. Nothing
+ * on this page is a fabricated statistic or a button without a working destination.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/ui/Icon.astro';
+import HeroMosaic from '../components/home/HeroMosaic.astro';
+import FeaturedStories from '../components/home/FeaturedStories.astro';
+import CategoryExplorer from '../components/home/CategoryExplorer.astro';
+import WorkspaceShowcase from '../components/home/WorkspaceShowcase.astro';
+import GalleryBand from '../components/home/GalleryBand.astro';
+import StatRow from '../components/home/StatRow.astro';
+import CtaBand from '../components/home/CtaBand.astro';
+import {getCardPosts} from '../lib/content';
+import {getCollection} from 'astro:content';
+import {siteConfig} from '../config/site.config';
+
+const posts=await getCardPosts();
+const home=siteConfig.home;
+
+/* Hero cluster: the lead story plus the tiles beside it. */
+const heroPosts=posts.slice(0,3);
+/* Featured strip continues after the hero so the same story is never shown twice. */
+const featuredPosts=posts.slice(3,7);
+
+const rawCategories=await getCollection('categories');
+const categories=rawCategories
+ .map(cat=>({id:cat.id,title:cat.data.title,description:cat.data.description,count:posts.filter(p=>p.categoryIds.includes(cat.id)).length}))
+ .filter(cat=>cat.count>0)
+ .sort((a,b)=>b.count-a.count)
+ .slice(0,8);
+
+/* Gallery band uses the instance's own real post imagery. */
+const galleryImages=posts.slice(0,5).map(post=>post.image).filter((img):img is {src:string;alt:string;width?:number;height?:number}=>Boolean(img));
+const samplePost=posts[0];
+---
+<BaseLayout title="Szebb módja a publikálásnak." description={siteConfig.description}>
+ <div class="container">
+
+  <section class="landing-hero" aria-labelledby="landing-heading">
+   <div class="landing-hero-copy">
+    <p class="eyebrow"><span class="dot" aria-hidden="true"/>{home.eyebrow}</p>
+    <h1 id="landing-heading">{home.headline}<br/><em>{home.headlineAccent}</em></h1>
+    <p class="landing-lede">{home.lede}</p>
+    <div class="hero-actions">
+     <a class="btn btn-primary" href={home.primaryCtaHref}>{home.primaryCtaLabel}<Icon name="arrow" size={16}/></a>
+     <a class="btn" href={home.secondaryCtaHref}>{home.secondaryCtaLabel}</a>
+    </div>
+    {home.assurances.length>0&&(
+     <ul class="hero-assurances">
+      {home.assurances.map(item=><li><Icon name="check" size={15}/><span>{item}</span></li>)}
+     </ul>
+    )}
+   </div>
+   <HeroMosaic posts={heroPosts}/>
+  </section>
+
+  <FeaturedStories posts={featuredPosts}/>
+  <CategoryExplorer categories={categories}/>
+  <WorkspaceShowcase sample={samplePost}/>
+  <GalleryBand images={galleryImages}/>
+  <StatRow/>
+  <CtaBand/>
+
+ </div>
+</BaseLayout>
+

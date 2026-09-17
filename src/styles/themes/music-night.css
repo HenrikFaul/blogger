@@ -1,0 +1,31 @@
+/* Generated from the canonical, versioned theme registry. No remote font requests. */
+[data-theme="music-night"] {
+  --heading-font: Arial, Helvetica, sans-serif;
+  --corner: 12px;
+}
+[data-theme="music-night"][data-mode="light"] {
+  --page: #f5f7f2;
+  --surface: #ffffff;
+  --surface-soft: #f0f2ec;
+  --ink: #202c25;
+  --muted: #5e685f;
+  --line: #dce2d9;
+  --primary: #315942;
+  --on-primary: #ffffff;
+  --accent-soft: #eaf0e6;
+  --danger: #a32932;
+  --shadow: 0 8px 32px #1f302409;
+}
+[data-theme="music-night"][data-mode="dark"] {
+  --page: #20141d;
+  --surface: #1b2720;
+  --surface-soft: #243127;
+  --ink: #edf3e9;
+  --muted: #b5c1b5;
+  --line: #3e5043;
+  --primary: #e6b6cd;
+  --on-primary: #15241b;
+  --accent-soft: #2b3e2d;
+  --danger: #ffafb0;
+  --shadow: 0 8px 32px #00000020;
+}

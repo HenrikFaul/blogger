@@ -1,0 +1,16 @@
+---
+import {siteConfig,siteEnvironment} from '../../config/site.config';
+import {jsonForHtml,safeImageUrl} from '../../lib/safety';
+interface Props{title:string;description?:string;image?:string;canonical?:string;type?:'website'|'article';publishedAt?:Date|string;updatedAt?:Date|string;author?:string;noindex?:boolean;}
+const {title,description=siteConfig.seo.defaultDescription||siteConfig.description,image=siteConfig.seo.defaultOgImage,canonical,type='website',publishedAt,updatedAt,author,noindex=false}=Astro.props;
+const fullTitle=title===siteConfig.name?title:siteConfig.seo.defaultTitleTemplate.replace('%s',title);
+const canonicalUrl=canonical||new URL(Astro.url.pathname,siteConfig.siteUrl).href;
+const safeImage=image&&safeImageUrl(image);const imageUrl=safeImage?new URL(safeImage,siteConfig.siteUrl).href:undefined;
+const robots=noindex||siteEnvironment.noindex?'noindex, nofollow':'index, follow, max-image-preview:large';
+const schema=type==='article'?{'@context':'https://schema.org','@type':'BlogPosting',headline:title,description,url:canonicalUrl,mainEntityOfPage:canonicalUrl,image:imageUrl,datePublished:publishedAt?new Date(publishedAt).toISOString():undefined,dateModified:updatedAt?new Date(updatedAt).toISOString():publishedAt?new Date(publishedAt).toISOString():undefined,author:author?{'@type':'Person',name:author}:undefined,publisher:{'@type':'Organization',name:siteConfig.name,logo:{'@type':'ImageObject',url:new URL(siteConfig.logo.src,siteConfig.siteUrl).href}}}:{'@context':'https://schema.org','@type':'WebSite',name:siteConfig.name,url:siteConfig.siteUrl,description:siteConfig.description,inLanguage:siteConfig.language};
+---
+<title>{fullTitle}</title><meta name="description" content={description}/><meta name="robots" content={robots}/><link rel="canonical" href={canonicalUrl}/>
+<meta property="og:type" content={type}/><meta property="og:site_name" content={siteConfig.name}/><meta property="og:title" content={fullTitle}/><meta property="og:description" content={description}/><meta property="og:url" content={canonicalUrl}/><meta property="og:locale" content="hu_HU"/>
+{imageUrl&&<meta property="og:image" content={imageUrl}/>}<meta name="twitter:card" content={imageUrl?'summary_large_image':'summary'}/><meta name="twitter:title" content={fullTitle}/><meta name="twitter:description" content={description}/>{imageUrl&&<meta name="twitter:image" content={imageUrl}/>}
+{publishedAt&&<meta property="article:published_time" content={new Date(publishedAt).toISOString()}/>} {updatedAt&&<meta property="article:modified_time" content={new Date(updatedAt).toISOString()}/>}
+<script type="application/ld+json" is:inline set:html={jsonForHtml(schema)}/>

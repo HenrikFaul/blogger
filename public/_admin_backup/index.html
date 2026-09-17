@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>ForgeBlog | Creator Workspace</title>
+  
+  <!-- Custom CSS for the CMS to match the ForgeBlog premium feel -->
+  <style>
+    [data-slate-editor] {
+      -webkit-user-modify: read-write !important;
+      font-family: 'Inter', sans-serif !important;
+      line-height: 1.7 !important;
+      font-size: 18px !important;
+      padding: 2rem !important;
+    }
+  </style>
+</head>
+<body>
+  <!-- Include the script that builds the page and powers Decap CMS -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  
+  <script>
+    // Customize preview pane here later if needed
+    CMS.registerPreviewStyle("/styles/global.css");
+  </script>
+</body>
+</html>

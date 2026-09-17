@@ -1,0 +1,6 @@
+---
+import ArchiveLayout from '../../layouts/ArchiveLayout.astro';import {getCollection} from 'astro:content';import {getCardPosts,getPublishedPosts} from '../../lib/content';
+export async function getStaticPaths(){const series=await getCollection('series');const posts=await getPublishedPosts();const cards=await getCardPosts();return series.map(s=>({params:{slug:s.id},props:{series:s,posts:posts.filter(p=>p.data.series===s.id).sort((a,b)=>(a.data.seriesOrder||0)-(b.data.seriesOrder||0)).map(p=>cards.find(c=>c.id===p.id)!)}}));}
+const {series,posts}=Astro.props;
+---
+<ArchiveLayout title={series.data.title} description={series.data.description} eyebrow="CIKKSOROZAT" posts={posts}/>

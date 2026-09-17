@@ -1,0 +1,566 @@
+
+> project4-blogspot@0.2.0 test:unit
+> node --import ./scripts/test/register.mjs --test tests/*.test.mjs
+
+TAP version 13
+# Subtest: URL allowlist rejects "javascript:alert(1)"
+ok 1 - URL allowlist rejects "javascript:alert(1)"
+  ---
+  duration_ms: 1.075326
+  type: 'test'
+  ...
+# Subtest: URL allowlist rejects "data:text/html,<script>x</script>"
+ok 2 - URL allowlist rejects "data:text/html,<script>x</script>"
+  ---
+  duration_ms: 0.227794
+  type: 'test'
+  ...
+# Subtest: URL allowlist rejects "//evil.test"
+ok 3 - URL allowlist rejects "//evil.test"
+  ---
+  duration_ms: 0.093001
+  type: 'test'
+  ...
+# Subtest: URL allowlist rejects "/\\\\evil.test"
+ok 4 - URL allowlist rejects "/\\\\evil.test"
+  ---
+  duration_ms: 0.09914
+  type: 'test'
+  ...
+# Subtest: URL allowlist rejects "/%2f%2fevil.test"
+ok 5 - URL allowlist rejects "/%2f%2fevil.test"
+  ---
+  duration_ms: 0.118539
+  type: 'test'
+  ...
+# Subtest: URL allowlist rejects "https://user:password@example.test"
+ok 6 - URL allowlist rejects "https://user:password@example.test"
+  ---
+  duration_ms: 0.068985
+  type: 'test'
+  ...
+# Subtest: URL allowlist rejects "https://a.test/\\nb"
+ok 7 - URL allowlist rejects "https://a.test/\\nb"
+  ---
+  duration_ms: 0.112781
+  type: 'test'
+  ...
+# Subtest: URL allowlist rejects "file:///etc/passwd"
+ok 8 - URL allowlist rejects "file:///etc/passwd"
+  ---
+  duration_ms: 0.072219
+  type: 'test'
+  ...
+# Subtest: Safe local / HTTP(S) / anchor links and normalized URLs
+ok 9 - Safe local / HTTP(S) / anchor links and normalized URLs
+  ---
+  duration_ms: 0.327345
+  type: 'test'
+  ...
+# Subtest: Hungarian slug/search normalization, bounded URL length
+ok 10 - Hungarian slug/search normalization, bounded URL length
+  ---
+  duration_ms: 0.534328
+  type: 'test'
+  ...
+# Subtest: XML and script-context JSON are escaped
+ok 11 - XML and script-context JSON are escaped
+  ---
+  duration_ms: 0.249177
+  type: 'test'
+  ...
+# Subtest: Valid publication coerces date; draft remains default
+ok 12 - Valid publication coerces date; draft remains default
+  ---
+  duration_ms: 3.604963
+  type: 'test'
+  ...
+# Subtest: Publication schema rejects missing date
+ok 13 - Publication schema rejects missing date
+  ---
+  duration_ms: 0.394237
+  type: 'test'
+  ...
+# Subtest: Publication schema rejects unsafe slug
+ok 14 - Publication schema rejects unsafe slug
+  ---
+  duration_ms: 0.368828
+  type: 'test'
+  ...
+# Subtest: Publication schema rejects blank title
+ok 15 - Publication schema rejects blank title
+  ---
+  duration_ms: 0.218781
+  type: 'test'
+  ...
+# Subtest: Publication schema rejects short excerpt
+ok 16 - Publication schema rejects short excerpt
+  ---
+  duration_ms: 0.146321
+  type: 'test'
+  ...
+# Subtest: Publication schema rejects unknown theme
+ok 17 - Publication schema rejects unknown theme
+  ---
+  duration_ms: 0.159321
+  type: 'test'
+  ...
+# Subtest: Publication schema rejects empty categories
+ok 18 - Publication schema rejects empty categories
+  ---
+  duration_ms: 0.274716
+  type: 'test'
+  ...
+# Subtest: Publication schema rejects invalid date
+ok 19 - Publication schema rejects invalid date
+  ---
+  duration_ms: 0.147924
+  type: 'test'
+  ...
+# Subtest: Images need meaningful alt or explicit decoration
+ok 20 - Images need meaningful alt or explicit decoration
+  ---
+  duration_ms: 0.950508
+  type: 'test'
+  ...
+# Subtest: Draft/review/future/invalid content never becomes public
+ok 21 - Draft/review/future/invalid content never becomes public
+  ---
+  duration_ms: 0.148885
+  type: 'test'
+  ...
+# Subtest: Public IDs and reading time are deterministic
+ok 22 - Public IDs and reading time are deterministic
+  ---
+  duration_ms: 0.29107
+  type: 'test'
+  ...
+# Subtest: Duplicate slug and broken author/category/series/related refs fail
+ok 23 - Duplicate slug and broken author/category/series/related refs fail
+  ---
+  duration_ms: 5.124802
+  type: 'test'
+  ...
+# Subtest: Central config validates current site, rejects fake feature and locale claims
+ok 24 - Central config validates current site, rejects fake feature and locale claims
+  ---
+  duration_ms: 6.416046
+  type: 'test'
+  ...
+# Subtest: Canonical domain / preview noindex / production missing domain guards
+ok 25 - Canonical domain / preview noindex / production missing domain guards
+  ---
+  duration_ms: 0.669893
+  type: 'test'
+  ...
+# Subtest: Every included content file validates against the actual shared schema
+ok 26 - Every included content file validates against the actual shared schema
+  ---
+  duration_ms: 11.048863
+  type: 'test'
+  ...
+# Subtest: 26 distinct theme definitions, six families, real light/dark token sheets
+ok 27 - 26 distinct theme definitions, six families, real light/dark token sheets
+  ---
+  duration_ms: 3.790344
+  type: 'test'
+  ...
+# Subtest: MDX export defaults to draft and preserves Unicode frontmatter safely
+ok 28 - MDX export defaults to draft and preserves Unicode frontmatter safely
+  ---
+  duration_ms: 6.965647
+  type: 'test'
+  ...
+# Subtest: User prose cannot inject executable MDX or imports
+ok 29 - User prose cannot inject executable MDX or imports
+  ---
+  duration_ms: 0.21119
+  type: 'test'
+  ...
+# Subtest: Code block fence expands around literal backticks
+ok 30 - Code block fence expands around literal backticks
+  ---
+  duration_ms: 0.318141
+  type: 'test'
+  ...
+# Subtest: Gallery export uses the canonical Astro gallery and JSON-safe props
+ok 31 - Gallery export uses the canonical Astro gallery and JSON-safe props
+  ---
+  duration_ms: 0.713068
+  type: 'test'
+  ...
+# Subtest: Decorative image export never announces its stale alt
+ok 32 - Decorative image export never announces its stale alt
+  ---
+  duration_ms: 0.426496
+  type: 'test'
+  ...
+# Subtest: Video exports trusted component, not a raw arbitrary iframe
+ok 33 - Video exports trusted component, not a raw arbitrary iframe
+  ---
+  duration_ms: 0.385783
+  type: 'test'
+  ...
+# Subtest: CRC32 implements the standard test vector
+ok 34 - CRC32 implements the standard test vector
+  ---
+  duration_ms: 0.288667
+  type: 'test'
+  ...
+# Subtest: ZIP rejects unsafe path /absolute.txt
+ok 35 - ZIP rejects unsafe path /absolute.txt
+  ---
+  duration_ms: 0.408348
+  type: 'test'
+  ...
+# Subtest: ZIP rejects unsafe path ../escape.txt
+ok 36 - ZIP rejects unsafe path ../escape.txt
+  ---
+  duration_ms: 0.295186
+  type: 'test'
+  ...
+# Subtest: ZIP rejects unsafe path a/../escape.txt
+ok 37 - ZIP rejects unsafe path a/../escape.txt
+  ---
+  duration_ms: 0.251881
+  type: 'test'
+  ...
+# Subtest: ZIP rejects unsafe path a\\escape.txt
+ok 38 - ZIP rejects unsafe path a\\escape.txt
+  ---
+  duration_ms: 0.074152
+  type: 'test'
+  ...
+# Subtest: ZIP rejects unsafe path a/./x
+ok 39 - ZIP rejects unsafe path a/./x
+  ---
+  duration_ms: 0.053211
+  type: 'test'
+  ...
+# Subtest: ZIP refuses duplicate names
+ok 40 - ZIP refuses duplicate names
+  ---
+  duration_ms: 0.216677
+  type: 'test'
+  ...
+# Subtest: ZIP contains standard signatures, UTF-8 flag and valid CRC data
+ok 41 - ZIP contains standard signatures, UTF-8 flag and valid CRC data
+  ---
+  duration_ms: 0.241505
+  type: 'test'
+  ...
+# Subtest: Actual JPEG/PNG/WebP/GIF signatures accepted; SVG and fake image rejected
+ok 42 - Actual JPEG/PNG/WebP/GIF signatures accepted; SVG and fake image rejected
+  ---
+  duration_ms: 0.196948
+  type: 'test'
+  ...
+# Subtest: ESM-looking user prose is escaped instead of becoming MDX code
+ok 43 - ESM-looking user prose is escaped instead of becoming MDX code
+  ---
+  duration_ms: 5.105993
+  type: 'test'
+  ...
+# Subtest: Git save atomically commits MDX+source on a per-draft branch; never reports published
+ok 44 - Git save atomically commits MDX+source on a per-draft branch; never reports published
+  ---
+  duration_ms: 37.32507
+  type: 'test'
+  ...
+# Subtest: Publication creates a PR, not a merge or deployment
+ok 45 - Publication creates a PR, not a merge or deployment
+  ---
+  duration_ms: 4.385023
+  type: 'test'
+  ...
+# Subtest: Successful commit remains acknowledged when PR creation fails
+ok 46 - Successful commit remains acknowledged when PR creation fails
+  ---
+  duration_ms: 6.507524
+  type: 'test'
+  ...
+# Subtest: Stale expected head causes 409 without writing blobs or force pushing
+ok 47 - Stale expected head causes 409 without writing blobs or force pushing
+  ---
+  duration_ms: 1.307648
+  type: 'test'
+  ...
+# Subtest: Existing draft is updated only at the exact expected head
+ok 48 - Existing draft is updated only at the exact expected head
+  ---
+  duration_ms: 2.820697
+  type: 'test'
+  ...
+# Subtest: Slug rename and existing target article are not silently overwritten
+ok 49 - Slug rename and existing target article are not silently overwritten
+  ---
+  duration_ms: 5.304754
+  type: 'test'
+  ...
+# Subtest: Permission and missing references fail before any new content commit
+ok 50 - Permission and missing references fail before any new content commit
+  ---
+  duration_ms: 1.098712
+  type: 'test'
+  ...
+# Subtest: Concurrent ref change is reported as conflict, never retried with force
+ok 51 - Concurrent ref change is reported as conflict, never retried with force
+  ---
+  duration_ms: 2.607755
+  type: 'test'
+  ...
+# Subtest: Missing uploaded image bytes block commit rather than producing broken media
+ok 52 - Missing uploaded image bytes block commit rather than producing broken media
+  ---
+  duration_ms: 3.078137
+  type: 'test'
+  ...
+# Subtest: Uploaded image hash, path, size and signature verified before commit
+ok 53 - Uploaded image hash, path, size and signature verified before commit
+  ---
+  duration_ms: 9.340819
+  type: 'test'
+  ...
+# Subtest: Encrypted sessions round-trip without exposing access token in cookie
+ok 54 - Encrypted sessions round-trip without exposing access token in cookie
+  ---
+  duration_ms: 2.530057
+  type: 'test'
+  ...
+# Subtest: Session tampering, wrong key, wrong origin/repository, expiry rejected
+ok 55 - Session tampering, wrong key, wrong origin/repository, expiry rejected
+  ---
+  duration_ms: 0.626998
+  type: 'test'
+  ...
+# Subtest: Constant-time equality handles unequal and empty values safely
+ok 56 - Constant-time equality handles unequal and empty values safely
+  ---
+  duration_ms: 0.174063
+  type: 'test'
+  ...
+# Subtest: PKCE S256 follows RFC 7636 vector and nonce is random
+ok 57 - PKCE S256 follows RFC 7636 vector and nonce is random
+  ---
+  duration_ms: 0.287966
+  type: 'test'
+  ...
+# Subtest: Cookie parser and exact origin do not accept lookalikes
+ok 58 - Cookie parser and exact origin do not accept lookalikes
+  ---
+  duration_ms: 0.254906
+  type: 'test'
+  ...
+# Subtest: Unconfigured API explicitly reports false, never fake authenticated
+ok 59 - Unconfigured API explicitly reports false, never fake authenticated
+  ---
+  duration_ms: 0.600118
+  type: 'test'
+  ...
+# Subtest: Git save without a session is denied
+ok 60 - Git save without a session is denied
+  ---
+  duration_ms: 0.296648
+  type: 'test'
+  ...
+# Subtest: OAuth redirect carries S256/state and secure HttpOnly cookie, no fake repo grant
+ok 61 - OAuth redirect carries S256/state and secure HttpOnly cookie, no fake repo grant
+  ---
+  duration_ms: 0.775854
+  type: 'test'
+  ...
+# Subtest: Session API returns CSRF but never provider access token
+ok 62 - Session API returns CSRF but never provider access token
+  ---
+  duration_ms: 0.602151
+  type: 'test'
+  ...
+# Subtest: Mutating API rejects cross-origin and missing CSRF before Git requests
+ok 63 - Mutating API rejects cross-origin and missing CSRF before Git requests
+  ---
+  duration_ms: 0.753159
+  type: 'test'
+  ...
+# Subtest: Mutating API rejects wrong content type and oversize payload
+ok 64 - Mutating API rejects wrong content type and oversize payload
+  ---
+  duration_ms: 1.955458
+  type: 'test'
+  ...
+# Subtest: Logout invalidates cookie explicitly
+ok 65 - Logout invalidates cookie explicitly
+  ---
+  duration_ms: 0.356479
+  type: 'test'
+  ...
+# Subtest: Upstream review generates an engine-only patch without changing working tree, index or branch
+ok 66 - Upstream review generates an engine-only patch without changing working tree, index or branch
+  ---
+  duration_ms: 130.240133
+  type: 'test'
+  ...
+# Subtest: Update script refuses an option-like or shell-shaped upstream ref
+ok 67 - Update script refuses an option-like or shell-shaped upstream ref
+  ---
+  duration_ms: 110.603349
+  type: 'test'
+  ...
+# Subtest: New drafts have immutable independent IDs even with identical titles
+ok 68 - New drafts have immutable independent IDs even with identical titles
+  ---
+  duration_ms: 3.891597
+  type: 'test'
+  ...
+# Subtest: Valid authored document can pass publication checks
+ok 69 - Valid authored document can pass publication checks
+  ---
+  duration_ms: 1.073313
+  type: 'test'
+  ...
+# Subtest: Local draft status cannot impersonate published
+ok 70 - Local draft status cannot impersonate published
+  ---
+  duration_ms: 0.320064
+  type: 'test'
+  ...
+# Subtest: All ten gallery layouts validate through one canonical enum
+ok 71 - All ten gallery layouts validate through one canonical enum
+  ---
+  duration_ms: 0.43632
+  type: 'test'
+  ...
+# Subtest: Imported document guard rejects {"type":"script","text":"alert(1)"}
+ok 72 - Imported document guard rejects {"type":"script","text":"alert(1)"}
+  ---
+  duration_ms: 0.120973
+  type: 'test'
+  ...
+# Subtest: Imported document guard rejects {"type":"heading","attrs":{"level":1}}
+ok 73 - Imported document guard rejects {"type":"heading","attrs":{"level":1}}
+  ---
+  duration_ms: 0.070006
+  type: 'test'
+  ...
+# Subtest: Imported document guard rejects {"type":"image","attrs":{"src":"javascript:alert(1)"}}
+ok 74 - Imported document guard rejects {"type":"image","attrs":{"src":"javascript:alert(1)"}}
+  ---
+  duration_ms: 0.1783
+  type: 'test'
+  ...
+# Subtest: Imported document guard rejects {"type":"text","text":"link","marks":[{"type":"link","attrs":{"href":"data:text/html,hello"}}]}
+ok 75 - Imported document guard rejects {"type":"text","text":"link","marks":[{"type":"link","attrs":{"href":"data:text/html,hello"}}]}
+  ---
+  duration_ms: 0.149095
+  type: 'test'
+  ...
+# Subtest: Imported document guard rejects {"type":"galleryBlock","attrs":{"layout":"random","images":[]}}
+ok 76 - Imported document guard rejects {"type":"galleryBlock","attrs":{"layout":"random","images":[]}}
+  ---
+  duration_ms: 0.237049
+  type: 'test'
+  ...
+# Subtest: Imported document guard rejects {"type":"image","attrs":{"src":"/media/uploads/untracked.jpg"}}
+ok 77 - Imported document guard rejects {"type":"image","attrs":{"src":"/media/uploads/untracked.jpg"}}
+  ---
+  duration_ms: 0.340655
+  type: 'test'
+  ...
+# Subtest: Imported document guard rejects {"type":"embedBlock","attrs":{"url":"https://evil.test/video"}}
+ok 78 - Imported document guard rejects {"type":"embedBlock","attrs":{"url":"https://evil.test/video"}}
+  ---
+  duration_ms: 0.221565
+  type: 'test'
+  ...
+# Subtest: Document traversal has size and depth limits
+ok 79 - Document traversal has size and depth limits
+  ---
+  duration_ms: 6.562747
+  type: 'test'
+  ...
+# Subtest: Media metadata limits and unsafe src are enforced
+ok 80 - Media metadata limits and unsafe src are enforced
+  ---
+  duration_ms: 0.333996
+  type: 'test'
+  ...
+# Subtest: Publication check catches missing alt, duplicate slug and comparison count
+ok 81 - Publication check catches missing alt, duplicate slug and comparison count
+  ---
+  duration_ms: 0.372434
+  type: 'test'
+  ...
+# Subtest: Asset collection deduplicates hero + inline + gallery by immutable asset ID
+ok 82 - Asset collection deduplicates hero + inline + gallery by immutable asset ID
+  ---
+  duration_ms: 0.175876
+  type: 'test'
+  ...
+# Subtest: Video providers allowlisted; credentials, custom ports and lookalike hosts fail
+ok 83 - Video providers allowlisted; credentials, custom ports and lookalike hosts fail
+  ---
+  duration_ms: 0.192021
+  type: 'test'
+  ...
+# Subtest: Snapshot restore is a new independent draft, never an overwrite
+ok 84 - Snapshot restore is a new independent draft, never an overwrite
+  ---
+  duration_ms: 0.430461
+  type: 'test'
+  ...
+# Subtest: Snapshots bounded to 20 and a safe serialized document size
+ok 85 - Snapshots bounded to 20 and a safe serialized document size
+  ---
+  duration_ms: 369.709292
+  type: 'test'
+  ...
+# Subtest: Storage save is CAS, increments once and reloads exactly one draft
+ok 86 - Storage save is CAS, increments once and reloads exactly one draft
+  ---
+  duration_ms: 0.6747
+  type: 'test'
+  ...
+# Subtest: Stale tab cannot overwrite a newer stored revision
+ok 87 - Stale tab cannot overwrite a newer stored revision
+  ---
+  duration_ms: 0.296258
+  type: 'test'
+  ...
+# Subtest: Invalid runtime/imported state never replaces good storage
+ok 88 - Invalid runtime/imported state never replaces good storage
+  ---
+  duration_ms: 0.230699
+  type: 'test'
+  ...
+# Subtest: Quota failure preserves previous bytes and unpersisted working document
+ok 89 - Quota failure preserves previous bytes and unpersisted working document
+  ---
+  duration_ms: 0.306473
+  type: 'test'
+  ...
+# Subtest: Corrupt storage fails closed without deleting or replacing the raw backup
+ok 90 - Corrupt storage fails closed without deleting or replacing the raw backup
+  ---
+  duration_ms: 0.140933
+  type: 'test'
+  ...
+# Subtest: Duplicate imported IDs, unexpected versions and oversize input rejected
+ok 91 - Duplicate imported IDs, unexpected versions and oversize input rejected
+  ---
+  duration_ms: 0.24456
+  type: 'test'
+  ...
+# Subtest: Legacy import is nondestructive and produces new IDs
+ok 92 - Legacy import is nondestructive and produces new IDs
+  ---
+  duration_ms: 0.176287
+  type: 'test'
+  ...
+1..92
+# tests 92
+# suites 0
+# pass 92
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2488.15294

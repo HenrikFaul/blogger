@@ -1,0 +1,2 @@
+PASS — 2026-09-17
+Node createZip export read independently with Python zipfile. Standard central directory, CRC32, Unicode path (próba/árvíztűrő.md), UTF-8 Hungarian text and binary bytes [0,255,1,128] match exactly. This is a ZIP-format validation, not a native browser download E2E result.

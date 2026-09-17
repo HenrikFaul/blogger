@@ -1,0 +1,14 @@
+{
+  "instanceName": "ForgeBlog Default",
+  "customDomain": "example.com",
+  "theme": "minimal-editorial",
+  "features": {
+    "search": true,
+    "rss": true,
+    "sitemap": true
+  },
+  "author": {
+    "name": "Admin",
+    "email": "admin@example.com"
+  }
+}

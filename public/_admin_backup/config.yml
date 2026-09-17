@@ -1,0 +1,66 @@
+backend:
+  name: github
+  repo: faulhenrik/project4-blogspot # Placeholder for actual repo
+  branch: main
+  commit_messages:
+    create: 'content: create {{collection}} "{{slug}}"'
+    update: 'content: update {{collection}} "{{slug}}"'
+    delete: 'content: delete {{collection}} "{{slug}}"'
+    uploadMedia: 'media: upload "{{path}}"'
+    deleteMedia: 'media: delete "{{path}}"'
+
+media_folder: "public/images"
+public_folder: "/images"
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "posts"
+    label: "Bejegyzések"
+    folder: "src/content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Cím", name: "title", widget: "string"}
+      - {label: "Összefoglaló", name: "excerpt", widget: "text"}
+      - {label: "Szerző", name: "author", widget: "string"}
+      - {label: "Publikálás Dátuma", name: "publishedAt", widget: "datetime"}
+      - {label: "Státusz", name: "status", widget: "select", options: ["draft", "review", "published", "archived"], default: "draft"}
+      - {label: "Kategóriák", name: "categories", widget: "list", default: ["Általános"]}
+      - {label: "Címkék", name: "tags", widget: "list", required: false}
+      
+      - label: "Kiemelt Kép (Hero)"
+        name: "heroImage"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Kép", name: "src", widget: "image"}
+          - {label: "Alternatív szöveg (Alt)", name: "alt", widget: "string"}
+          - {label: "Dekoratív (Nincs szükség alt-ra)", name: "decorative", widget: "boolean", default: false}
+          - {label: "Képaláírás", name: "caption", widget: "string", required: false}
+          - {label: "Kredit", name: "credit", widget: "string", required: false}
+          
+      - {label: "Hero Megjelenés", name: "heroTreatment", widget: "select", options: ["standard", "full-bleed", "split", "hidden"], default: "standard"}
+      - {label: "Kiemelt (Featured)", name: "featured", widget: "boolean", default: false}
+      - {label: "Rögzített (Pinned)", name: "pinned", widget: "boolean", default: false}
+      
+      - label: "SEO"
+        name: "seo"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Meta Cím", name: "title", widget: "string", required: false}
+          - {label: "Meta Leírás", name: "description", widget: "text", required: false}
+          - {label: "Canonical URL", name: "canonicalUrl", widget: "string", required: false}
+          - {label: "NoIndex", name: "noindex", widget: "boolean", default: false}
+          
+      - {label: "Tartalom", name: "body", widget: "markdown"}
+
+  - name: "pages"
+    label: "Oldalak"
+    folder: "src/content/pages"
+    create: true
+    fields:
+      - {label: "Cím", name: "title", widget: "string"}
+      - {label: "Leírás", name: "description", widget: "text", required: false}
+      - {label: "Tartalom", name: "body", widget: "markdown"}

@@ -1,0 +1,7 @@
+---
+// Compatibility entry point. The canonical gallery owns layout and keyboard interaction.
+import Gallery from '../media/Gallery.astro';
+interface Props { images: {src:string;alt:string;caption?:string;credit?:string}[]; }
+const {images}=Astro.props;
+---
+<Gallery images={images} layout="stacked" captions="below"/>

@@ -1,0 +1,20 @@
+---
+import {siteConfig} from '../../config/site.config';
+import Icon from '../ui/Icon.astro';
+const path=Astro.url.pathname.replace(/\/$/,'')||'/';
+---
+<header class="site-header">
+ <div class="container header-row">
+  <a class="brand" href="/" aria-label={`${siteConfig.name} – kezdőlap`}><img src={siteConfig.logo.src} alt="" width="35" height="35"/>{siteConfig.name}</a>
+  <nav class="site-nav" aria-label="Fő navigáció">{siteConfig.navigation.header.map(item=><a href={item.href} aria-current={(item.href.replace(/\/$/,'')||'/')===path?'page':undefined}>{item.label}</a>)}</nav>
+  <div class="header-tools">
+   {siteConfig.features.searchEnabled && <button class="icon-btn search-trigger js-only" type="button" data-open-search aria-label="Keresés a történetek között"><Icon name="search"/><span class="kbd" aria-hidden="true">⌘ K</span></button>}
+   <button class="icon-btn js-only" type="button" data-toggle-mode aria-label="Váltás sötét megjelenésre"><Icon name="moon"/><span class="sr-only">Megjelenés váltása</span></button>
+   <a class="header-text-link" href="/about/">Bejelentkezés</a>
+   <a href="/creator/" class="btn btn-primary btn-small">Kezdés<Icon name="arrow" size={14}/></a>
+   <button class="icon-btn menu-trigger js-only" type="button" data-toggle-menu aria-label="Menü megnyitása" aria-controls="mobile-navigation" aria-expanded="false"><Icon name="menu"/></button>
+  </div>
+ </div>
+ <nav id="mobile-navigation" class="mobile-navigation container" aria-label="Mobil navigáció" hidden>{siteConfig.navigation.header.map(item=><a href={item.href}>{item.label}</a>)}<a href="/creator/">Alkotói munkatér</a><a href="/search/">Keresés</a></nav>
+ <noscript><nav class="container inline-stack" aria-label="Navigáció JavaScript nélkül" style="padding-bottom:16px">{siteConfig.navigation.header.map(item=><a href={item.href}>{item.label}</a>)}<a href="/search/">Keresés / archívum</a><a href="/creator/">Munkatér</a></nav></noscript>
+</header>

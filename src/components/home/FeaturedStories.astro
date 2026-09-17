@@ -1,0 +1,36 @@
+---
+/**
+ * "Featured stories" horizontal row from the design plan. Each card is a real published
+ * post with its image, category label, title, excerpt and author/date byline.
+ */
+import Icon from '../ui/Icon.astro';
+import {formatDate} from '../../lib/content';
+import type {CardPost} from '../../lib/content';
+import {siteConfig} from '../../config/site.config';
+interface Props {posts:CardPost[];}
+const {posts}=Astro.props;
+---
+{posts.length>0&&(
+ <section class="featured-row" aria-labelledby="featured-stories-heading">
+  <div class="section-head">
+   <h2 id="featured-stories-heading">Kiemelt történetek</h2>
+   <a class="text-link" href="/posts/">Minden történet<Icon name="arrow" size={15}/></a>
+  </div>
+  <ul class="featured-list">
+   {posts.map(post=>(
+    <li class="featured-item">
+     <a class="featured-thumb" href={`/posts/${post.slug}/`} aria-label={post.title}>
+      {post.image?<img src={post.image.src} alt={post.image.alt} width={post.image.width||640} height={post.image.height||460} loading="lazy" decoding="async"/>:<span class="mosaic-placeholder" aria-hidden="true"/>}
+     </a>
+     <div class="featured-body">
+      <a class="category-label" href={`/category/${post.categoryId}/`}>{post.category}</a>
+      <h3><a href={`/posts/${post.slug}/`}>{post.title}</a></h3>
+      <p>{post.excerpt}</p>
+      <div class="byline"><img class="avatar" src={post.authorAvatar||'/media/nora.svg'} alt="" width="26" height="26" loading="lazy"/><a href={`/authors/${post.authorId}/`}>{post.author}</a><span aria-hidden="true">·</span><time datetime={post.date}>{formatDate(post.date)}</time>{siteConfig.content.showReadingTime&&<><span aria-hidden="true">·</span><span>{post.readingTime} perc</span></>}</div>
+      <a class="featured-arrow" href={`/posts/${post.slug}/`} aria-label={`${post.title} elolvasása`}><Icon name="arrow" size={15}/></a>
+     </div>
+    </li>
+   ))}
+  </ul>
+ </section>
+)}

@@ -1,0 +1,19 @@
+# Optional deployment trigger; rename into .github/workflows/ only after configuring it.
+# GitHub scheduling is best-effort, not a guaranteed exact publication time.
+name: Optional scheduled rebuild
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+permissions: {}
+jobs:
+  rebuild:
+    if: ${{ vars.FORGEBLOG_SCHEDULE_ENABLED == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request configured deployment
+        env:
+          DEPLOY_HOOK: ${{ secrets.FORGEBLOG_DEPLOY_HOOK }}
+        run: |
+          test -n "$DEPLOY_HOOK"
+          curl --fail --silent --show-error --max-time 30 --request POST "$DEPLOY_HOOK"

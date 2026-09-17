@@ -1,0 +1,26 @@
+---
+title: "Adatkezelés a bemutató oldalon"
+description: "Mit tárol a felület, hol maradnak a vázlatok, és mihez kapcsolódik a böngésző."
+---
+
+## Az oldal jelenlegi beállítása
+
+Ez egy bemutató példány, nem egy megnevezett éles szolgáltató végleges adatkezelési tájékoztatója. Valódi indulás előtt az üzemeltető adatait, a tárhelyszolgáltatóval kapcsolatos információkat, a tényleges adatfolyamokat és az alkalmazandó tájékoztatást ki kell egészíteni és ellenőrizni.
+
+## A böngészőben tárolt adatok
+
+A megjelenési választást a böngésző helyi tárhelye tárolja. A Creator Workspace a helyi vázlatokat és beállításokat ugyancsak ezen a készüléken tárolja. A feltöltött képek az IndexedDB-ben maradnak, amíg exportálod vagy egy külön engedélyezett Git-művelettel továbbítod őket.
+
+A helyi adatok nem szinkronizálódnak automatikusan más eszközre. A böngészőadatok törlése a helyi vázlatokat és képeket is eltávolíthatja. A munkatérből készíthető export; a helyi tárhely törlése előtt ezt érdemes ellenőrizni.
+
+## Harmadik fél tartalma
+
+Külső videólejátszó csak az adott tartalom betöltésére szolgáló gomb megnyomása után jelenik meg. A betöltés ekkor kapcsolatot hoz létre a megnevezett videószolgáltatóval. Ez nem jelenti azt, hogy a bemutató oldal a szolgáltató minden adatkezelését kontrollálja.
+
+## Opcionális Git-kapcsolat
+
+Ha az üzemeltető beállítja a GitHub-kapcsolatot, a szerkesztő külön bejelentkezés után kezdeményezhet tárolóműveleteket. A token nem a böngésző helyi tárhelyére kerül; a munkamenetet titkosított, HttpOnly cookie védi. A létrejövő commitok és kérelmek a konfigurált GitHub-tárolóban maradnak.
+
+## Nincs bekapcsolt követés
+
+Ebben a kiadásban nincs alkalmazásszintű látogatottságmérés, reklámkövető, kommentfiók vagy hírlevél-feliratkozás. Az éles tárhely ettől függetlenül kezelhet technikai hozzáférési naplókat; ennek részleteit az üzemeltetőnek kell megadnia.

@@ -1,0 +1,9 @@
+---
+import Icon from '../ui/Icon.astro';
+---
+<dialog id="site-search" class="search-dialog" aria-labelledby="search-dialog-title">
+ <h2 id="search-dialog-title" class="sr-only">Keresés a magazinban</h2>
+ <div class="search-dialog-head"><Icon name="search"/><label for="global-search-input" class="sr-only">Keresőkifejezés</label><input id="global-search-input" type="search" placeholder="Mit fedeznél fel ma?" autocomplete="off" autofocus/><button class="icon-btn" data-close-search aria-label="Kereső bezárása" type="button"><Icon name="close"/></button></div>
+ <div id="global-search-results" class="search-dialog-results"><p class="search-help">Kezdj el gépelni. Címre, témára és szövegre is kereshetsz.</p></div>
+ <div class="search-dialog-footer"><span id="search-result-count" role="status" aria-live="polite">A kereső csak a nyilvános cikkekben keres.</span><span class="keyboard-hint"><kbd class="kbd">Esc</kbd> bezárás</span><a href="/search/" class="text-link">Teljes kereső</a></div>
+</dialog>

@@ -1,0 +1,7 @@
+---
+import Gallery from '../media/Gallery.astro';
+interface Props {beforeImage:{src:string;alt:string};afterImage:{src:string;alt:string};caption?:string;}
+const {beforeImage,afterImage,caption}=Astro.props;
+---
+<Gallery images={[beforeImage,afterImage]} layout="comparison" captions="below"/>
+{caption&&<p class="form-hint">{caption}</p>}

@@ -1,0 +1,16 @@
+---
+import type {CardPost} from '../../lib/content';
+import {formatDate} from '../../lib/content';
+import {normalizeSearch} from '../../lib/safety';
+import Icon from '../ui/Icon.astro';
+import {siteConfig} from '../../config/site.config';
+interface Props {post:CardPost;featured?:boolean;hidden?:boolean;index?:number;}
+const {post,featured=false,hidden=false,index=0}=Astro.props;
+---
+<article class="post-card" data-post-card data-category={post.categoryIds.join(' ')} data-date={post.date} data-title={post.title} data-index={index} data-search={normalizeSearch([post.title,post.excerpt,post.category,...post.tags].join(' '))} hidden={hidden}>
+ <a class="post-card-media" href={`/posts/${post.slug}/`} aria-label={post.title}>{post.image?<img src={post.image.src} alt={post.image.alt} width={post.image.width||600} height={post.image.height||400} loading="lazy" decoding="async"/>:<img src="/media/demo/digital-garden.svg" alt="" width="1200" height="800" loading="lazy"/>}{featured&&<span class="featured-badge" title="Szerkesztői ajánló"><Icon name="bookmark" size={13}/></span>}</a>
+ <a class="category-label" href={`/category/${post.categoryId}/`}>{post.category}</a>
+ <h3><a href={`/posts/${post.slug}/`}>{post.title}</a></h3><p>{post.excerpt}</p>
+ <div class="byline"><img class="avatar" src={post.authorAvatar||'/media/nora.svg'} alt="" width="24" height="24" loading="lazy"/><a href={`/authors/${post.authorId}/`}>{post.author}</a></div>
+ <div class="card-date"><time datetime={post.date}>{formatDate(post.date)}</time>{siteConfig.content.showReadingTime&&<><span aria-hidden="true">·</span><span>{post.readingTime} perc olvasás</span></>}</div>
+</article>

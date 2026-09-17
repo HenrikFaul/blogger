@@ -1,0 +1,24 @@
+# Követelmények és tényleges állapot
+
+Forrás: a csatolt `implementation plans.zip` implementation planjai és tíz requirements dokumentuma. Az eredeti szövegek a `reference/` alatt változatlanok; az ottani kipipált tételek nem helyettesítik a jelen kiadás ellenőrzését. A requirements sorozatban nem szerepelt külön 06-os dokumentum. A későbbi kiegészítéseknél az egységes architektúra, adatmegőrzés és valós működés kapott elsőbbséget a pusztán látványos, de nem működő prototípuselemmel szemben.
+
+**Jelölés:** Megvalósítva = kódút létezik; Részben = a határ fel van tüntetve; Külső ellenőrzés kell = a kód megvan, de a valós környezetben nem igazolt. Egyik sem egyenlő általános production-ready minősítéssel.
+
+| Követelménycsoport | Állapot és megvalósítás | Nyitott határ / bizonyíték |
+|---|---|---|
+| 01 + addendum: statikus, Git-first, külön instance | Astro statikus olvasás, opcionális Vercel API, nincs DB; közös site.json, séma, content-schemas | Natív build és telepítés külső ellenőrzésre vár; ARCHITECTURE |
+| 02: nyilvános élmény | Új home/cikk/lista/téma/szerző/címke/sorozat/archívum/projekt/jogi/404 útvonalak, keresőindex, progresszív olvasás | Alaptéma DOM/React diag és forrásellenőrzés sikeres; natív no-JS E2E előkészítve |
+| 03: témák és sablonok | 26 valódi tématoken-pár, hat layoutcsalád, kereshető katalógus, tényleges helyi kipróbálás, configexport | Nem 26 teljesen önálló termék vagy vizuálisan jóváhagyott külön site. Teljes kontraszt- és minden állapotra kiterjedő manuális audit nincs |
+| 04: alkotói munkatér | Egységes Tiptap, metadata/SEO, blokkok/táblázat, három kezdősablon, média, előnézet, helyi history/backup/export | Meglévő tetszőleges MDX veszteségmentes rich-editor round-trip nincs. Publikált lista tudatosan readonly; Git history link nem interaktív teljes verziódiffer |
+| 04: mentés és publikálás | Stabil UUID, autosave/CAS, bounded snapshot, saját képek exportja; opcionális Git-commit és külön PR | Valós natív tárolópersistencia, többfüles Web Locks és OAuth E2E külső tesztet igényel; nem együttműködő szerkesztő |
+| 05: média és galéria | Saját képimport és deduplikáció, ALT/dekoratív/caption/credit/sorrend; 10 CSS/DOM galéria; nagyító/összehasonlítás; YT/Vimeo click-to-load | A builder vegyes média lapja jelenleg képelőnézetet kezel; videó külön blokk. Publikus mixed Gallery helyi videót tud, teljes vegyes-video szerkesztés nincs. Spotify/SoundCloud/CodePen csak biztonságos külső link |
+| 07: multidomain/white label | Instance-szintű config, logó/domain/navigáció/szerzőadat, sémaellenőrzött configexport, külön telepítési modell | Nincs központi fleet/tenant admin, automatikus repólétrehozás vagy in-app domainkötés. A főoldal editorial szövege részben a page komponensben szerkesztendő |
+| 07: frissíthetőség | Read-only upstream patch-review, protected instance/content/media; tesztelt munkakönyvtár- és HEAD-megőrzés | Nem automatikus frissítő vagy konfliktusfeloldó; a patch alkalmazása emberi ellenőrzés |
+| 08: SEO, teljesítmény, hozzáférhetőség | Publikálási szűrés, valódi canonical-ellenőrzés, robots/RSS/sitemap-konfig, JSON-LD, dimenziózott helyi média, reduced motion/focus/print, reszponzív felületek | 8 diagnosztikai axe audit és 260 tokenpár-ellenőrzés nem teljes WCAG-megfelelőségi tanúsítás. Nincs production Lighthouse/Web Vitals eredmény; a demo fotók felbontása korlátozott |
+| 09: biztonság/adatvédelem/üzemeltetés | URL/MDX/import/path validáció, méretkorlátok, Origin/CSRF/PKCE/state, titkosított session, Git write check és non-force SHA; szolgáltatók default off | Nem független pentest; CSP inline engedményt tartalmaz; WAF/rate limit/riasztás/mentés üzemeltetői feladat. A jogi oldal bemutatósablon, nem megfelelőségi igazolás |
+| 10: QA és indulás | 92 logikai teszt, 42 diagnosztikai eset, 50 natív E2E teszt definíció, CI-konfiguráció, changelog, migration/runbook/evidence | Build/native E2E/élő login/deploy nem igazolt; éles indulási checklist még végrehajtandó |
+| Későbbi bővítések: növekedés, előfizetés, AI, analitika | Szándékosan nincs hamis működő gomb vagy beállítható, de nem bekötött szolgáltatás | Newsletter/comments/analytics sémában literal false; AI-generálás, előfizetéses backend és automatikus marketing nincs ebben a kiadásban |
+| Időzített publikálás | Jövőbeli dátum rejtve buildkor; opt-in scheduled rebuild workflow példa | Nem élő időzítő: új build nélkül nem változik a statikus oldal. A workflow nincs bekapcsolva; nem garantált percre pontos időzítés |
+
+## Kiadási kapu
+Saját gépen/CI-n tiszta `npm ci` → `npm run verify` → `npm run test:e2e`. Ezután elkülönített HTTPS-instance-en valós login/commit/PR/conflict/logout/deployment; képek/tartalom/jogi oldalak cseréje; valós domain és sitemap/robots/OG-ellenőrzés. A megvalósítatlan pontokat ezek sikere sem teszi automatikusan késszé.

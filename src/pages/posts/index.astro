@@ -1,0 +1,6 @@
+---
+import ArchiveLayout from '../../layouts/ArchiveLayout.astro';
+import {getCardPosts} from '../../lib/content';
+const posts=await getCardPosts();
+---
+<ArchiveLayout title="Minden történet" description="Egy hely a kíváncsiságnak. Utazás, alkotás, hétköznapi felfedezések — válogass kedvedre." posts={posts} paginate categoryFilter/>

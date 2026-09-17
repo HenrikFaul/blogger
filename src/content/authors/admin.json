@@ -1,0 +1,8 @@
+{
+  "name": "Admin User",
+  "bio": "Creator of ForgeBlog, passionate about fast web technologies.",
+  "socialLinks": {
+    "twitter": "https://twitter.com/example",
+    "github": "https://github.com/example"
+  }
+}

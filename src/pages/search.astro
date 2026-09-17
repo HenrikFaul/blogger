@@ -1,0 +1,5 @@
+---
+import ArchiveLayout from '../layouts/ArchiveLayout.astro';import {getCardPosts} from '../lib/content';
+const posts=await getCardPosts();
+---
+<ArchiveLayout title="Találj egy jó történetet" description="Kereshetsz címre, témára vagy egy gondolatra. JavaScript nélkül az összes történet és a kategóriaoldalak böngészhetők." eyebrow="KERESÉS" posts={posts} categoryFilter noindex/>

@@ -1,0 +1,10 @@
+---
+import {siteConfig} from '../../config/site.config';
+import Icon from '../ui/Icon.astro';
+---
+<footer class="site-footer">
+ <div class="container">
+  <div class="footer-top"><div><a href="/" class="brand"><img src={siteConfig.logo.src} alt="" width="32" height="32"/>{siteConfig.name}</a><p class="footer-description">Egy emberibb internet. Történetről történetre.</p></div><nav class="footer-links" aria-label="Lábléc">{siteConfig.navigation.footer.map(item=><a href={item.href}>{item.label}</a>)}</nav></div>
+  <div class="footer-bottom"><p>© {new Date().getFullYear()} {siteConfig.legal.copyrightHolder}. Figyelemmel szerkesztve.</p><p>{siteConfig.demoContent?'Bemutató magazin · mintatartalom és illusztratív képek.':'Statikus oldal. Követők és reklámok nélkül.'} <a href="/about/" aria-label="A magazinról"><Icon name="arrow" size={13}/></a></p></div>
+ </div>
+</footer>

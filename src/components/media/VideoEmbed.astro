@@ -1,0 +1,6 @@
+---
+import {embedUrl} from '../../lib/creator/model';
+interface Props {url:string;title?:string;}
+const {url,title='Videó'}=Astro.props;const src=embedUrl(url);
+---
+{src&&<figure class="embed-placeholder" data-embed data-embed-url={src} data-embed-title={title}><h3>{title}</h3><p>A lejátszó csak kattintás után kapcsolódik a külső videoszolgáltatóhoz.</p><button type="button" class="btn btn-outline js-only" data-load-embed={src} data-embed-title={title}>Videó betöltése</button><noscript><a href={url} target="_blank" rel="noopener noreferrer">Videó megnyitása a szolgáltatónál</a></noscript><p class="form-hint">A videó megnyitásával adat kerülhet a külső szolgáltatóhoz.</p></figure>}

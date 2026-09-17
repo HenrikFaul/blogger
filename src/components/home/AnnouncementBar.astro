@@ -1,0 +1,18 @@
+---
+/**
+ * Top announcement strip from the design plan ("ForgeBlog 2.0 is here").
+ * Dismissal is a local preference only; the public page still renders it without JavaScript.
+ * Content comes from siteConfig so an instance can retarget it without editing markup.
+ */
+import Icon from '../ui/Icon.astro';
+import {siteConfig} from '../../config/site.config';
+const announcement=siteConfig.announcement;
+---
+{announcement?.enabled&&(
+ <div class="announcement" data-announcement>
+  <div class="container announcement-row">
+   <p class="announcement-text"><Icon name="sparkles" size={15}/><span>{announcement.text}</span>{announcement.href&&<a class="announcement-link" href={announcement.href}>{announcement.linkLabel||'Tovább'}<Icon name="arrow" size={13}/></a>}</p>
+   <button class="announcement-close js-only" type="button" data-dismiss-announcement aria-label="Bejelentés elrejtése"><Icon name="close" size={15}/></button>
+  </div>
+ </div>
+)}

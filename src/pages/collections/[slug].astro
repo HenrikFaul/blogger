@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const series = await getCollection('series');
+  return series.map(s => ({
+    params: { slug: s.id }
+  }));
+}
+
+const { slug } = Astro.params;
+const targetUrl = `/series/${slug}/`;
+---
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8">
+    <title>Átirányítás...</title>
+    <meta http-equiv="refresh" content={`0;url=${targetUrl}`} />
+    <link rel="canonical" href={targetUrl} />
+  </head>
+  <body>
+    <p>Átirányítás a <a href={targetUrl}>/series/{slug}/</a> oldalra...</p>
+  </body>
+</html>

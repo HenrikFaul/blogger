@@ -1,0 +1,100 @@
+---
+interface Props {
+  title: string;
+  excerpt: string;
+  publishedAt: Date;
+  author: string;
+  categories: string[];
+  heroImage?: {
+    src: string;
+    alt: string;
+    caption?: string;
+    credit?: string;
+  };
+  heroTreatment?: 'standard' | 'full-bleed' | 'split' | 'hidden';
+}
+
+const { title, excerpt, publishedAt, author, categories, heroImage, heroTreatment = 'standard' } = Astro.props;
+
+const formattedDate = publishedAt.toLocaleDateString('hu-HU', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+---
+
+<header class={`mb-12 md:mb-20 ${heroTreatment === 'full-bleed' ? 'w-full' : 'max-w-reading mx-auto'}`}>
+  {heroTreatment === 'full-bleed' && heroImage && (
+    <div class="w-full h-[60vh] md:h-[70vh] min-h-[400px] relative mb-12 overflow-hidden bg-surface-raised">
+      <img 
+        src={heroImage.src} 
+        alt={heroImage.alt} 
+        class="w-full h-full object-cover absolute inset-0"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+      
+      <div class="absolute bottom-0 left-0 w-full px-gutter pb-12 pt-24 max-w-wide mx-auto flex flex-col justify-end">
+        {categories.length > 0 && (
+          <span class="text-sm font-bold uppercase tracking-widest text-primary mb-4 block">
+            {categories[0]}
+          </span>
+        )}
+        <h1 class="text-4xl md:text-5xl lg:text-hero font-heading font-bold text-foreground leading-tight mb-6">
+          {title}
+        </h1>
+        <p class="text-lg md:text-xl text-foreground-muted max-w-reading leading-relaxed mb-6">
+          {excerpt}
+        </p>
+        <div class="flex items-center text-sm text-foreground-muted gap-4">
+          <span class="font-medium text-foreground">{author}</span>
+          <span class="w-1 h-1 rounded-full bg-border-strong"></span>
+          <span>{formattedDate}</span>
+        </div>
+      </div>
+    </div>
+  )}
+
+  {heroTreatment !== 'full-bleed' && (
+    <div class="flex flex-col mb-10 pt-10">
+      {categories.length > 0 && (
+        <span class="text-sm font-bold uppercase tracking-widest text-primary mb-4 block">
+          {categories[0]}
+        </span>
+      )}
+      <h1 class="text-4xl md:text-5xl lg:text-hero font-heading font-bold text-foreground leading-tight mb-6">
+        {title}
+      </h1>
+      <p class="text-lg md:text-xl text-foreground-muted leading-relaxed mb-8">
+        {excerpt}
+      </p>
+      
+      <div class="flex items-center text-sm text-foreground-muted gap-4 border-b border-border pb-8">
+        <div class="w-10 h-10 rounded-full bg-surface-raised border border-border flex items-center justify-center overflow-hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-foreground-muted"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-medium text-foreground">{author}</span>
+          <span>{formattedDate}</span>
+        </div>
+      </div>
+    </div>
+  )}
+
+  {heroTreatment === 'standard' && heroImage && (
+    <figure class="w-full mb-12">
+      <div class="aspect-video w-full rounded-xl overflow-hidden bg-surface-raised border border-border">
+        <img 
+          src={heroImage.src} 
+          alt={heroImage.alt} 
+          class="w-full h-full object-cover"
+        />
+      </div>
+      {(heroImage.caption || heroImage.credit) && (
+        <figcaption class="mt-4 text-sm text-foreground-muted text-center flex flex-col gap-1">
+          {heroImage.caption && <span>{heroImage.caption}</span>}
+          {heroImage.credit && <span class="italic text-xs opacity-75">Fotó: {heroImage.credit}</span>}
+        </figcaption>
+      )}
+    </figure>
+  )}
+</header>

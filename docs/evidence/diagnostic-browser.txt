@@ -1,0 +1,43 @@
+PASS home/1440: DOM, media and overflow
+PASS home/1440: axe WCAG A/AA
+PASS home/1440: live search, accent handling, Escape
+PASS home/390: DOM, media and overflow
+PASS home/390: axe WCAG A/AA
+PASS home/390: live search, accent handling, Escape
+PASS home/390: mobile menu keyboard dismissal
+PASS stories/1440: DOM, media and overflow
+PASS stories/1440: filtering/no-results/reset/sorting
+PASS stories/390: DOM, media and overflow
+PASS stories/390: filtering/no-results/reset/sorting
+PASS categories/1440: DOM, media and overflow
+PASS categories/390: DOM, media and overflow
+PASS article/1440: DOM, media and overflow
+PASS article/1440: axe WCAG A/AA
+PASS article/390: DOM, media and overflow
+PASS article/390: axe WCAG A/AA
+PASS gallery-article/1440: DOM, media and overflow
+PASS gallery/1440: keyboard lightbox
+PASS gallery-article/390: DOM, media and overflow
+PASS gallery/390: keyboard lightbox
+PASS archive/1440: DOM, media and overflow
+PASS archive/390: DOM, media and overflow
+PASS series/1440: DOM, media and overflow
+PASS series/390: DOM, media and overflow
+PASS creator/1440: DOM, media and overflow
+PASS creator/1440: axe WCAG A/AA
+PASS creator/390: DOM, media and overflow
+PASS creator/390: axe WCAG A/AA
+PASS Creator: create, title/metadata edit, autosave to fixture
+PASS Creator: no autosave feedback loop
+PASS Creator: hero + gallery insertion at caret with editor mounted
+PASS Creator: split/device preview without losing editor instance
+PASS Creator/editor: axe WCAG A/AA
+PASS Creator: checkpoint restored as new draft; original remains
+PASS Creator: missing backend never claims successful publication
+PASS Creator: all 26 themes, real filter/apply/dark preview
+PASS Creator: all ten real gallery preview variants
+PASS Creator/media: axe WCAG A/AA
+PASS Creator: invalid production config blocked
+PASS Creator: no React/DOM runtime errors
+PASS Creator/390: writing/settings/preview tabs and no overflow
+TOTAL 42 PASS 42 FAIL 0

@@ -1,0 +1,21 @@
+Error: Cannot find native binding. npm has a bug related to optional dependencies (https://github.com/npm/cli/issues/4828). Please try `npm i` again after removing both package-lock.json and node_modules directory.
+    at file:///mnt/data/work/project4%20blogspot/node_modules/rolldown/dist/shared/binding-BbrDfv1x.mjs:602:34
+    at file:///mnt/data/work/project4%20blogspot/node_modules/rolldown/dist/shared/binding-BbrDfv1x.mjs:9:49
+    ... 4 lines matching cause stack trace ...
+    at async cli (file:///mnt/data/work/project4%20blogspot/node_modules/astro/dist/cli/index.js:220:5) {
+  cause: Error: Cannot find module '@rolldown/binding-wasm32-wasi'
+  Require stack:
+  - /mnt/data/work/project4 blogspot/node_modules/rolldown/dist/shared/binding-BbrDfv1x.mjs
+      at file:///mnt/data/work/project4%20blogspot/node_modules/rolldown/dist/shared/binding-BbrDfv1x.mjs:497:18
+      ... 8 lines matching cause stack trace ...
+      at async cli (file:///mnt/data/work/project4%20blogspot/node_modules/astro/dist/cli/index.js:220:5) {
+    cause: Error: Cannot find module './rolldown-binding.wasi.cjs'
+    Require stack:
+    - /mnt/data/work/project4 blogspot/node_modules/rolldown/dist/shared/binding-BbrDfv1x.mjs
+        at file:///mnt/data/work/project4%20blogspot/node_modules/rolldown/dist/shared/binding-BbrDfv1x.mjs:497:18
+        ... 8 lines matching cause stack trace ...
+        at async cli (file:///mnt/data/work/project4%20blogspot/node_modules/astro/dist/cli/index.js:220:5) {
+      cause: [Error]
+    }
+  }
+}

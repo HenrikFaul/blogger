@@ -1,0 +1,43 @@
+---
+/**
+ * "Your workspace, simplified." section from the design plan. The file-tree panel mirrors the
+ * real repository layout and the editor panel shows a real published story, so the marketing
+ * surface stays truthful to what the product actually does.
+ */
+import Icon from '../ui/Icon.astro';
+import type {CardPost} from '../../lib/content';
+interface Props {sample?:CardPost;}
+const {sample}=Astro.props;
+const tree=[
+ {icon:'folder' as const,name:'content',depth:0},
+ {icon:'file' as const,name:'posts',depth:1},
+ {icon:'image' as const,name:'images',depth:1},
+ {icon:'file' as const,name:'about.md',depth:0},
+ {icon:'settings' as const,name:'config.yml',depth:0},
+];
+const capabilities=['A szövegírásra figyelhetsz','Verziókövetve, biztonságban','Vercelen villámgyors'];
+---
+<section class="workspace-showcase" aria-labelledby="workspace-heading">
+ <div class="workspace-copy">
+  <h2 id="workspace-heading">A munkatered,<br/>leegyszerűsítve.</h2>
+  <p>Markdownban írsz, Git-tel kezelsz és egyetlen telepítéssel publikálsz.</p>
+  <ul class="workspace-points">
+   {capabilities.map(item=><li><Icon name="check" size={16}/><span>{item}</span></li>)}
+  </ul>
+  <a class="btn btn-primary" href="/creator/">Nézd meg, hogyan működik<Icon name="arrow" size={15}/></a>
+ </div>
+ <div class="workspace-mock" aria-hidden="true">
+  <div class="mock-tree">
+   <p class="mock-title"><Icon name="leaf" size={14}/>{sample?'Saját blog':'Saját blog'}</p>
+   <ul>{tree.map(node=><li style={`--depth:${node.depth}`}><Icon name={node.icon} size={14}/>{node.name}</li>)}</ul>
+  </div>
+  <div class="mock-editor">
+   <div class="mock-tabs"><span class="is-active">Írás</span><span>Előnézet</span></div>
+   <div class="mock-body">
+    {sample?(<><p class="mock-heading"># {sample.title}</p><p class="mock-line">{sample.excerpt}</p></>):(<><p class="mock-heading"># Egy világosabb web</p><p class="mock-line">A kis ötletek nagy változást hozhatnak.</p></>)}
+    {sample?.image&&<img src={sample.image.src} alt="" width="520" height="260" loading="lazy" decoding="async"/>}
+   </div>
+   <span class="mock-bar" role="presentation"/>
+  </div>
+ </div>
+</section>

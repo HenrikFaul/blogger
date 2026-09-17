@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.astro/
+.qa/
+.env
+.env.*
+!.env.example
+.vercel/
+playwright-report/
+test-results/
+.upstream-review/
+coverage/
+.DS_Store
+Thumbs.db
+*.log

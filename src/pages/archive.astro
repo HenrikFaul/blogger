@@ -1,0 +1,5 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';import {getCardPosts,formatDate} from '../lib/content';
+const posts=await getCardPosts();const months=new Map<string,typeof posts>();for(const post of posts){const key=new Intl.DateTimeFormat('hu-HU',{year:'numeric',month:'long',timeZone:'Europe/Budapest'}).format(new Date(post.date));months.set(key,[...(months.get(key)||[]),post]);}
+---
+<BaseLayout title="Archívum" description="A magazin összes nyilvános története időrendben."><div class="container"><section class="page-heading"><div><p class="eyebrow">VISSZALAPOZÓ</p><h1>Minden történetnek van ideje.</h1><p>A magazin teljes archívuma, hónapok szerint.</p></div></section>{[...months].map(([month,items])=><section class="archive-month"><h2>{month}</h2><ul>{items.map(post=><li><time datetime={post.date}>{formatDate(post.date)}</time><a href={`/posts/${post.slug}/`}>{post.title}</a></li>)}</ul></section>)}</div></BaseLayout>

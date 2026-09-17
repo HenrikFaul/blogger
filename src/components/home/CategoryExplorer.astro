@@ -1,0 +1,30 @@
+---
+/**
+ * "Explore by category" chip row from the design plan. Counts are the real number of
+ * published posts per category, computed from the same collection as every other view.
+ * Categories with no published post are omitted rather than showing a zero.
+ */
+import Icon from '../ui/Icon.astro';
+import type {IconName} from '../../lib/icons';
+interface Props {categories:{id:string;title:string;description?:string;count:number}[];}
+const {categories}=Astro.props;
+const icons:Record<string,IconName>={utazas:'mountain',gasztronomia:'coffee',technologia:'code',eletmod:'leaf',alkotas:'edit',fotografia:'image'};
+---
+{categories.length>0&&(
+ <nav class="category-explorer" aria-labelledby="category-explorer-heading">
+  <div class="section-head">
+   <h2 id="category-explorer-heading">Fedezd fel téma szerint</h2>
+   <a class="text-link" href="/categories/">Minden téma<Icon name="arrow" size={15}/></a>
+  </div>
+  <ul class="category-chips">
+   {categories.map(cat=>(
+    <li>
+     <a class="category-chip" href={`/category/${cat.id}/`} title={cat.description}>
+      <span class="category-chip-icon"><Icon name={icons[cat.id]||'leaf'} size={19}/></span>
+      <span class="category-chip-label">{cat.title}</span>
+     </a>
+    </li>
+   ))}
+  </ul>
+ </nav>
+)}

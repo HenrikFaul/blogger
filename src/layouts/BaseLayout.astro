@@ -1,0 +1,19 @@
+---
+import '../styles/global.css';
+import {siteConfig} from '../config/site.config';
+import {getTheme,themeRegistry} from '../themes/registry';
+import AnnouncementBar from '../components/home/AnnouncementBar.astro';
+import SiteHeader from '../components/chrome/SiteHeader.astro';
+import SiteFooter from '../components/chrome/SiteFooter.astro';
+import SearchDialog from '../components/chrome/SearchDialog.astro';
+import SeoHead from '../components/seo/SeoHead.astro';
+interface Props {title?:string;description?:string;image?:string;canonical?:string;type?:'website'|'article';publishedAt?:Date|string;updatedAt?:Date|string;author?:string;noindex?:boolean;themeOverride?:string;}
+const {title=siteConfig.name,themeOverride,...seo}=Astro.props;
+const theme=getTheme(themeOverride||siteConfig.theme);
+const themeMap=Object.fromEntries(themeRegistry.map(t=>[t.key,{layout:t.layoutVariant,mode:t.defaultMode}]));
+---
+<!doctype html>
+<html lang={siteConfig.language} data-theme={theme.key} data-mode={themeOverride?theme.defaultMode:siteConfig.defaultMode} data-layout={theme.layoutVariant} data-default-theme={siteConfig.theme} data-themes={JSON.stringify(themeMap)} data-article-theme={themeOverride?true:undefined}>
+ <head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="color-scheme" content="light dark"/><link rel="icon" type="image/svg+xml" href={siteConfig.favicon}/><link rel="alternate" type="application/rss+xml" title={`${siteConfig.name} RSS`} href="/rss.xml"/><script is:inline src="/scripts/theme-init.js"></script><SeoHead title={title} {...seo}/><script is:inline src="/scripts/site.js" defer></script></head>
+ <body><a href="#main-content" class="skip-link">Ugrás a tartalomhoz</a><AnnouncementBar/><SiteHeader/><main id="main-content" tabindex="-1"><slot/></main><SiteFooter/>{siteConfig.features.searchEnabled&&<SearchDialog/>}<div id="public-toast" class="toast" role="status" hidden></div></body>
+</html>

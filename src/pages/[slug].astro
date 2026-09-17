@@ -1,0 +1,6 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';import {getCollection,render} from 'astro:content';
+export async function getStaticPaths(){return (await getCollection('pages')).map(page=>({params:{slug:page.id},props:{page}}));}
+const {page}=Astro.props;const {Content}=await render(page);
+---
+<BaseLayout title={page.data.seo?.title||page.data.title} description={page.data.seo?.description||page.data.description} canonical={page.data.seo?.canonicalUrl} noindex={page.data.seo?.noindex}><div class="container"><article class="prose-page"><h1>{page.data.title}</h1>{page.data.description&&<p class="dek">{page.data.description}</p>}<div class="article-prose"><Content/></div></article></div></BaseLayout>

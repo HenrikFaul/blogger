@@ -1,0 +1,8 @@
+- `[x]` Themes Generation & Wiring
+  - `[x]` Write Node script to generate CSS files for missing themes
+  - `[x]` Run the generation script
+  - `[x]` Update global.css to @import all generated themes
+  - `[x]` Clean up obsolete generation scripts / folders
+- `[x]` Verification
+  - `[x]` Build check and visual test
+- `[x]` Walkthrough update

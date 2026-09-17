@@ -1,0 +1,18 @@
+---
+import WorkspaceApp from '../../components/creator/WorkspaceApp';
+import '../../styles/global.css';
+import {siteConfig} from '../../config/site.config';
+import instanceConfig from '../../config/site.json';
+import demo from '../../config/demo-media.json';
+import {getCollection} from 'astro:content';
+import {getCardPosts} from '../../lib/content';
+const [publicPosts,authors,categories]=await Promise.all([getCardPosts(),getCollection('authors'),getCollection('categories')]);
+const alts:Record<string,string>={'coast':'Sziklás tengeröböl naplementében','alpine':'Hegyi tó az alpesi csúcsok előtt','workspace':'Világos íróasztal zöld szobanövényekkel','olive':'Olajbogyók egy zöld olajfaágon','old-town':'Keskeny utca egy mediterrán városban','breakfast':'Terített reggelizőasztal kávéval és péksüteménnyel','sea-cave':'Kék tengervíz sziklás barlangban','sunset-peaks':'Hegycsúcs a naplemente meleg fényében','ceramics':'Kézzel készített kerámiatárgyak','harbor':'Mediterrán kikötő a vízparton','forest':'Csendes erdei ösvény','architecture':'Fényes építészeti részlet'};
+const demoAssets=demo.map(a=>({...a,alt:alts[a.id.replace('demo-','')]||'Bemutatókép',decorative:false,caption:'',credit:'Bemutatókép a mellékelt designreferenciából.',type:'image/jpeg'}));
+const posts=publicPosts.map(({body,...post})=>post);
+---
+<!doctype html>
+<html lang="hu" data-workspace data-theme="minimal-editorial" data-mode="light" data-layout="reading-first">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="robots" content="noindex,nofollow"/><meta name="referrer" content="strict-origin-when-cross-origin"/><meta name="color-scheme" content="light"/><title>Alkotói munkatér · {siteConfig.name}</title><link rel="icon" type="image/svg+xml" href="/favicon.svg"/></head>
+<body><a class="skip-link" href="#workspace-content">Ugrás a munkaterületre</a><WorkspaceApp client:only="react" site={{name:siteConfig.name,theme:siteConfig.theme,defaultAuthor:siteConfig.content.defaultAuthor,siteUrl:siteConfig.siteUrl}} instanceConfig={instanceConfig} posts={posts} authors={authors.map(a=>({id:a.id,name:a.data.name,avatar:a.data.avatar}))} categories={categories.map(c=>({id:c.id,name:c.data.title}))} demoAssets={demoAssets}/><noscript><main class="container" style="padding-block:80px"><h1>Az alkotói munkatérhez JavaScript szükséges.</h1><p>A nyilvános magazin JavaScript nélkül is olvasható. A tartalmat közvetlenül a repositoryban, Markdown/MDX fájlokként is szerkesztheted.</p><a href="/">Vissza a magazinhoz</a></main></noscript></body>
+</html>

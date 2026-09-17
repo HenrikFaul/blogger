@@ -1,0 +1,6 @@
+---
+import ArchiveLayout from '../../layouts/ArchiveLayout.astro';import {getCollection} from 'astro:content';import {getCardPosts} from '../../lib/content';
+export async function getStaticPaths(){const categories=await getCollection('categories');const posts=await getCardPosts();return categories.map(category=>({params:{slug:category.id},props:{category,posts:posts.filter(p=>p.categoryIds.includes(category.id))}}));}
+const {category,posts}=Astro.props;
+---
+<ArchiveLayout title={category.data.title} description={category.data.description||'Történetek ebben a témában.'} eyebrow="TÉMÁK / FELFEDEZÉS" posts={posts}/>
