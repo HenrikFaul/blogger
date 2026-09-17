@@ -1,7 +1,7 @@
 {
   "id": "forgeblog-demo",
   "name": "folio.",
-  "siteUrl": "",
+  "siteUrl": "https://blogger-phi-black.vercel.app",
   "description": "Írások alkotásról, technológiáról és az apró részletekről, amelyek új nézőpontot adnak.",
   "language": "hu",
   "timeZone": "Europe/Budapest",
