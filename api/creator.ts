@@ -16,7 +16,7 @@ import {
   type GitConfig,
   type GitSession,
 } from "../src/server/github.js";
-import instance from "../src/config/site.json";
+import instance from "../src/config/site.json" with { type: "json" };
 import type { Draft, ImageAsset } from "../src/lib/creator/model.js";
 type Request = IncomingMessage & {
   query?: Record<string, string | string[] | undefined>;
