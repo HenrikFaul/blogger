@@ -189,9 +189,9 @@ test("Every included content file validates against the actual shared schema", (
     }
   }
 });
-test("26 distinct theme definitions, six families, real light/dark token sheets", () => {
-  assert.equal(themeRegistry.length, 26);
-  assert.equal(new Set(themeRegistry.map((t) => t.key)).size, 26);
+test("41 distinct theme definitions, six families, real light/dark token sheets", () => {
+  assert.equal(themeRegistry.length, 41);
+  assert.equal(new Set(themeRegistry.map((t) => t.key)).size, 41);
   assert.equal(new Set(themeRegistry.map((t) => t.layoutVariant)).size, 6);
   for (const theme of themeRegistry) {
     const css = fs.readFileSync(

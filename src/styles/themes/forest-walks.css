@@ -1,0 +1,4 @@
+/* Forest Walks — generated theme. No remote font requests. */
+[data-theme="forest-walks"] { --heading-font: "EB Garamond", Georgia, "Times New Roman", serif; --corner: 12px; }
+[data-theme="forest-walks"][data-mode="light"] { --page: #f4f1ea; --surface: #fffdf7; --surface-soft: #e8e3d6; --ink: #1f2a22; --muted: #5c6657; --line: #d8d4c4; --primary: #2f5233; --on-primary: #ffffff; --accent-soft: #e3e8d8; --danger: #a53535; --shadow: 0 12px 36px rgb(32 39 32 / 0.07); }
+[data-theme="forest-walks"][data-mode="dark"] { --page: #141b16; --surface: #1d261f; --surface-soft: #27332b; --ink: #e8efe2; --muted: #a8b4a0; --line: #33423a; --primary: #9fcaa0; --on-primary: #16211a; --accent-soft: #2b3a2c; --danger: #ffb4ac; --shadow: 0 12px 36px #00000020; }

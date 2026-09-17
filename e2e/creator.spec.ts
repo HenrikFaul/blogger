@@ -101,12 +101,12 @@ test("An unconfigured backend never claims a published article", async ({
     page.getByText("Előbb kösd össze a repositoryval."),
   ).toBeVisible();
 });
-test("26 themes available and applying one persists the actual public preference", async ({
+test("41 themes available and applying one persists the actual public preference", async ({
   page,
 }) => {
   await page.goto("/creator/");
   await nav(page, "Megjelenés");
-  await expect(page.locator(".theme-card")).toHaveCount(26);
+  await expect(page.locator(".theme-card")).toHaveCount(41);
   await page.getByLabel("Témák keresése").fill("Swiss");
   await expect(page.locator(".theme-card")).toHaveCount(1);
   await page.getByRole("button", { name: /Kipróbálom/ }).click();

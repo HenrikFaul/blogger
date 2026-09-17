@@ -1,0 +1,4 @@
+/* Terracotta Sunset — generated theme. No remote font requests. */
+[data-theme="terracotta-sunset"] { --heading-font: "EB Garamond", Georgia, "Times New Roman", serif; --corner: 12px; }
+[data-theme="terracotta-sunset"][data-mode="light"] { --page: #faf1e9; --surface: #fffdf9; --surface-soft: #f3e6db; --ink: #33241d; --muted: #7d6a5e; --line: #e8d5c5; --primary: #9e4a2c; --on-primary: #ffffff; --accent-soft: #f5e2d5; --danger: #a53535; --shadow: 0 12px 36px rgb(32 39 32 / 0.07); }
+[data-theme="terracotta-sunset"][data-mode="dark"] { --page: #1c1410; --surface: #261b15; --surface-soft: #352a22; --ink: #f4e7dd; --muted: #b9a291; --line: #3d2c22; --primary: #e08a63; --on-primary: #241309; --accent-soft: #3a291e; --danger: #ffb4ac; --shadow: 0 12px 36px #00000020; }

@@ -1,0 +1,4 @@
+/* Mono Terminal — generated theme. No remote font requests. */
+[data-theme="mono-terminal"] { --heading-font: "EB Garamond", Georgia, "Times New Roman", serif; --corner: 12px; }
+[data-theme="mono-terminal"][data-mode="light"] { --page: #f0f0f0; --surface: #ffffff; --surface-soft: #e3e3e3; --ink: #1a1a1a; --muted: #666666; --line: #cccccc; --primary: #0f7a3d; --on-primary: #ffffff; --accent-soft: #e3e3e3; --danger: #a53535; --shadow: 0 12px 36px rgb(32 39 32 / 0.07); }
+[data-theme="mono-terminal"][data-mode="dark"] { --page: #0d0d0d; --surface: #141414; --surface-soft: #1e1e1e; --ink: #e6e6e6; --muted: #8a8a8a; --line: #2a2a2a; --primary: #3ddc84; --on-primary: #0a140c; --accent-soft: #1e1e1e; --danger: #ffb4ac; --shadow: 0 12px 36px #00000020; }

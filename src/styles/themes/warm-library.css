@@ -1,0 +1,4 @@
+/* Warm Library — generated theme. No remote font requests. */
+[data-theme="warm-library"] { --heading-font: "EB Garamond", Georgia, "Times New Roman", serif; --corner: 12px; }
+[data-theme="warm-library"][data-mode="light"] { --page: #f7f3ec; --surface: #fffdf8; --surface-soft: #eee4d3; --ink: #2e2720; --muted: #6f6456; --line: #e0d6c6; --primary: #6b4f2a; --on-primary: #ffffff; --accent-soft: #eee4d3; --danger: #a53535; --shadow: 0 12px 36px rgb(32 39 32 / 0.07); }
+[data-theme="warm-library"][data-mode="dark"] { --page: #1a150f; --surface: #231d15; --surface-soft: #352b1a; --ink: #f3ebdd; --muted: #b5a68c; --line: #3a3020; --primary: #c9a56a; --on-primary: #1e160b; --accent-soft: #352b1a; --danger: #ffb4ac; --shadow: 0 12px 36px #00000020; }

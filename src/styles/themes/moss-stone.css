@@ -1,0 +1,4 @@
+/* Moss Stone — generated theme. No remote font requests. */
+[data-theme="moss-stone"] { --heading-font: "EB Garamond", Georgia, "Times New Roman", serif; --corner: 12px; }
+[data-theme="moss-stone"][data-mode="light"] { --page: #f4f5f1; --surface: #ffffff; --surface-soft: #e5e9df; --ink: #262b24; --muted: #666d60; --line: #d8dcd2; --primary: #5b6b4f; --on-primary: #ffffff; --accent-soft: #e5e9df; --danger: #a53535; --shadow: 0 12px 36px rgb(32 39 32 / 0.07); }
+[data-theme="moss-stone"][data-mode="dark"] { --page: #161a14; --surface: #1f241b; --surface-soft: #29301f; --ink: #edf0e6; --muted: #a8b09d; --line: #343c2e; --primary: #a5bb8f; --on-primary: #191f14; --accent-soft: #29301f; --danger: #ffb4ac; --shadow: 0 12px 36px #00000020; }

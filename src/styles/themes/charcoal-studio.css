@@ -1,0 +1,4 @@
+/* Charcoal Studio — generated theme. No remote font requests. */
+[data-theme="charcoal-studio"] { --heading-font: "EB Garamond", Georgia, "Times New Roman", serif; --corner: 12px; }
+[data-theme="charcoal-studio"][data-mode="light"] { --page: #f2f2f1; --surface: #ffffff; --surface-soft: #ecece9; --ink: #232323; --muted: #6b6b68; --line: #d9d9d6; --primary: #3a3a3a; --on-primary: #ffffff; --accent-soft: #ecece9; --danger: #a53535; --shadow: 0 12px 36px rgb(32 39 32 / 0.07); }
+[data-theme="charcoal-studio"][data-mode="dark"] { --page: #141414; --surface: #1c1c1c; --surface-soft: #262626; --ink: #ececec; --muted: #a0a0a0; --line: #303030; --primary: #e07b39; --on-primary: #1a1209; --accent-soft: #262626; --danger: #ffb4ac; --shadow: 0 12px 36px #00000020; }

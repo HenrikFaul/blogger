@@ -1,0 +1,4 @@
+/* Midnight Navy — generated theme. No remote font requests. */
+[data-theme="midnight-navy"] { --heading-font: "EB Garamond", Georgia, "Times New Roman", serif; --corner: 12px; }
+[data-theme="midnight-navy"][data-mode="light"] { --page: #eef1f5; --surface: #ffffff; --surface-soft: #dfe8f0; --ink: #16202e; --muted: #5a6577; --line: #d4dbe4; --primary: #1b3a5c; --on-primary: #ffffff; --accent-soft: #dfe8f0; --danger: #a53535; --shadow: 0 12px 36px rgb(32 39 32 / 0.07); }
+[data-theme="midnight-navy"][data-mode="dark"] { --page: #0c1219; --surface: #131c27; --surface-soft: #1e2c3e; --ink: #e6ecf3; --muted: #93a3b8; --line: #28374a; --primary: #c7a252; --on-primary: #141210; --accent-soft: #1e2c3e; --danger: #ffb4ac; --shadow: 0 12px 36px #00000020; }

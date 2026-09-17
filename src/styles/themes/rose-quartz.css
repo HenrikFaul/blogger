@@ -1,0 +1,4 @@
+/* Rose Quartz — generated theme. No remote font requests. */
+[data-theme="rose-quartz"] { --heading-font: "EB Garamond", Georgia, "Times New Roman", serif; --corner: 12px; }
+[data-theme="rose-quartz"][data-mode="light"] { --page: #fbf4f5; --surface: #fffdfd; --surface-soft: #f3e3e6; --ink: #33262a; --muted: #7d6a6e; --line: #e9d8da; --primary: #8a4c5e; --on-primary: #ffffff; --accent-soft: #f3e3e6; --danger: #a53535; --shadow: 0 12px 36px rgb(32 39 32 / 0.07); }
+[data-theme="rose-quartz"][data-mode="dark"] { --page: #1c1316; --surface: #251a1d; --surface-soft: #39262b; --ink: #f6e9eb; --muted: #bd9da2; --line: #3d2b2f; --primary: #d39aa8; --on-primary: #24131a; --accent-soft: #39262b; --danger: #ffb4ac; --shadow: 0 12px 36px #00000020; }

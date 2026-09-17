@@ -1,0 +1,4 @@
+/* Ocean Breeze — generated theme. No remote font requests. */
+[data-theme="ocean-breeze"] { --heading-font: "EB Garamond", Georgia, "Times New Roman", serif; --corner: 12px; }
+[data-theme="ocean-breeze"][data-mode="light"] { --page: #f2f7fa; --surface: #ffffff; --surface-soft: #e3edf2; --ink: #1c2b36; --muted: #5b6b78; --line: #d3e0e8; --primary: #1f6f8b; --on-primary: #ffffff; --accent-soft: #e0edf2; --danger: #a53535; --shadow: 0 12px 36px rgb(32 39 32 / 0.07); }
+[data-theme="ocean-breeze"][data-mode="dark"] { --page: #101820; --surface: #17232d; --surface-soft: #21323f; --ink: #e2eef4; --muted: #9fb3c0; --line: #2c3c49; --primary: #7ec3dc; --on-primary: #0f1a22; --accent-soft: #1e2f3a; --danger: #ffb4ac; --shadow: 0 12px 36px #00000020; }

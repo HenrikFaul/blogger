@@ -25,6 +25,22 @@
   - `src/content.config.test.ts`: a `postSchema` közvetlenül a `lib/content-schemas`-ból importálva (a `collections.posts.schema` unió-típusán nincs `parse`/`safeParse`).
   - `src/components/creator/CreatorApp.tsx`: törölve — nem használt, a fiktív Tailwind-felületre épülő örökölt komponens (a kanonikus belépő továbbra is `WorkspaceApp.tsx`).
 
+### Vercel deploy és szervermentes függvény
+- Node ESM javítások a `api/creator.ts` szervermentes függvényhez:
+  - TS2835: `.js` kiterjesztés a relatív importokon (`api/creator.ts`, `src/server/github.ts`, `src/lib/content-schemas.ts`, `src/lib/creator/*`).
+  - TS2339: `new Map<string, ImageAsset>` + tuple típus a `src/server/github.ts`-ben.
+  - TS1543: `import ... with { type: "json" }` a JSON importhoz.
+  - `scripts/test/loader.mjs`: `.js` → `.ts` leképezés (unit teszt regresszió ellen).
+- Vercel production deploy javítva: `site.json.siteUrl` = `https://blogger-nine-iota.vercel.app` (a `PUBLIC_SITE_URL` env var megbízhatatlan volt a git-integrációban).
+- GitHub OAuth előkészítés a publikáláshoz: `GITHUB_REPOSITORY=HenrikFaul/blogger`, `GITHUB_AUTH_MODE=oauth`, `SESSION_SECRET` generálva és beállítva (a `GITHUB_CLIENT_ID`/`GITHUB_CLIENT_SECRET` a felhasználó GitHub OAuth App-jából függ).
+- Részletes napló: `versioning/SESSION_LOG.md` és `versioning/VERSION_MANIFEST.md`.
+
+### Új témák és 4K médiatár
+- **15 új blog-template** (26 → 41 téma): Forest Walks, Ocean Breeze, Terracotta Sunset, Lavender Mist, Midnight Navy, Sage Garden, Rose Quartz, Charcoal Studio, Sky Paper, Golden Hour, Ink and Paper, Moss Stone, Coral Reef, Mono Terminal, Warm Library — mindegyik saját token-CSS-sel (világos+sötét), regiszter-bejegyzéssel és CSS-importtal.
+- **24 db 4K (3840×2160) kép** a Picsum/Unsplash ingyenes forrásból a `public/media/stock/`-ba.
+- Kontraszt-ellenőrzés: **410/410 pár ≥ 4,5:1** (5 téma primary színe sötétítve a WCAG-hez).
+- Generátor-szkriptek a `scripts/tools/` alatt (letöltés + témagenerálás).
+
 A részletes fájlszintű összehasonlítás: `docs/FILE_CHANGES.json`. A forrásellenőrzés és a diagnosztikai tesztek nem teszik igazolttá a production buildet vagy az éles OAuth-integrációt.
 
 ## 0.2.0 — 2026-09-17

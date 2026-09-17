@@ -1,0 +1,4 @@
+/* Golden Hour — generated theme. No remote font requests. */
+[data-theme="golden-hour"] { --heading-font: "EB Garamond", Georgia, "Times New Roman", serif; --corner: 12px; }
+[data-theme="golden-hour"][data-mode="light"] { --page: #faf4e8; --surface: #fffdf7; --surface-soft: #f3e6c8; --ink: #33281c; --muted: #6a5e49; --line: #e5d7ba; --primary: #7c5c1e; --on-primary: #ffffff; --accent-soft: #f3e6c8; --danger: #a53535; --shadow: 0 12px 36px rgb(32 39 32 / 0.07); }
+[data-theme="golden-hour"][data-mode="dark"] { --page: #1b150d; --surface: #251d12; --surface-soft: #372a19; --ink: #f6ecd7; --muted: #bcaa87; --line: #3c2f1d; --primary: #d6ad5e; --on-primary: #211707; --accent-soft: #372a19; --danger: #ffb4ac; --shadow: 0 12px 36px #00000020; }

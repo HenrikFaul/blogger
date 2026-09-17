@@ -1,0 +1,4 @@
+/* Sky Paper — generated theme. No remote font requests. */
+[data-theme="sky-paper"] { --heading-font: "EB Garamond", Georgia, "Times New Roman", serif; --corner: 12px; }
+[data-theme="sky-paper"][data-mode="light"] { --page: #f3f7fa; --surface: #ffffff; --surface-soft: #e2edf4; --ink: #22303c; --muted: #62727f; --line: #d7e2ea; --primary: #3a7ca5; --on-primary: #ffffff; --accent-soft: #e2edf4; --danger: #a53535; --shadow: 0 12px 36px rgb(32 39 32 / 0.07); }
+[data-theme="sky-paper"][data-mode="dark"] { --page: #0f171d; --surface: #16212a; --surface-soft: #1e2e3a; --ink: #e6eef4; --muted: #9db1be; --line: #2a3a47; --primary: #85b6d4; --on-primary: #0e1820; --accent-soft: #1e2e3a; --danger: #ffb4ac; --shadow: 0 12px 36px #00000020; }
