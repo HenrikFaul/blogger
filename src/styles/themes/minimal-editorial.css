@@ -1,32 +1,32 @@
-/* Generated from the canonical, versioned theme registry. No remote font requests.
-   Editorial palette aligns with ForgeBlog Studio v2 design tokens. */
+/* Generated from the canonical, versioned theme registry.
+   Editorial palette pixel-matched to ForgeBlog Studio v2 reference screenshots. */
 [data-theme="minimal-editorial"] {
   --heading-font: "EB Garamond", Georgia, "Times New Roman", serif;
   --corner: 10px;
 }
 [data-theme="minimal-editorial"][data-mode="light"] {
-  --page: #fafaf8;
+  --page: #ffffff;
   --surface: #ffffff;
-  --surface-soft: #f5f5f2;
-  --ink: #1e2a36;
-  --muted: #6b7b8d;
-  --line: #e8e6e1;
-  --primary: #1a3a4a;
+  --surface-soft: #f7f8f9;
+  --ink: #1a2b3b;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --primary: #1b3a4b;
   --on-primary: #ffffff;
-  --accent-soft: #f0f4f1;
-  --danger: #c53030;
-  --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  --accent-soft: #f0f7f4;
+  --danger: #dc2626;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 [data-theme="minimal-editorial"][data-mode="dark"] {
-  --page: #121a22;
-  --surface: #1a2430;
-  --surface-soft: #1f2b38;
-  --ink: #e8ecf0;
-  --muted: #8fa0b0;
-  --line: #2a3845;
+  --page: #0f1720;
+  --surface: #162030;
+  --surface-soft: #1c2838;
+  --ink: #e4e8ec;
+  --muted: #8a9bab;
+  --line: #263545;
   --primary: #6db5a0;
-  --on-primary: #121a22;
-  --accent-soft: #1c2e3a;
-  --danger: #ffb4ac;
-  --shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --on-primary: #0f1720;
+  --accent-soft: #1a2e3a;
+  --danger: #ff8a80;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
