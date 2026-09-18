@@ -1127,7 +1127,7 @@ function WorkspaceAppInner({
                   </div>
                   <div className="dashboard-hero-art">
                     <img
-                      src="/media/demo/workspace.jpg"
+                      src="/media/catalog/library-hero.jpg"
                       alt="Világos íróasztal zöld növényekkel"
                     />
                     <span className="art-label">
