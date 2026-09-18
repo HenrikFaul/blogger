@@ -38,18 +38,64 @@
     "text": ""
   },
   "home": {
-    "eyebrow": "JEGYZETEK EGY KÍVÁNCSI ÉLETHEZ",
-    "headline": "A gondolatnak",
-    "headlineAccent": "tér kell.",
-    "lede": "Írások alkotásról, technológiáról és az apró részletekről, amelyek új nézőpontot adnak.",
-    "primaryCtaLabel": "Fedezd fel az írásokat",
-    "primaryCtaHref": "/posts/",
-    "secondaryCtaLabel": "Vagy indulj a legfrissebbel",
-    "secondaryCtaHref": "/posts/",
-    "assurances": [],
-    "quote": "",
-    "quoteAttribution": "",
-    "stats": []
+    "eyebrow": "WRITE › COMMIT › PUBLISH",
+    "headline": "Egy szebb módja",
+    "headlineAccent": "a publikálásnak.",
+    "lede": "A folio. egy statikus-első, white-label blog motor modern alkotóknak. Írj Markdownban, publikálj Vercelen – és tedd teljesen a magadévá.",
+    "primaryCtaLabel": "Kezdés ingyenesen",
+    "primaryCtaHref": "/creator/",
+    "secondaryCtaLabel": "Témák megtekintése",
+    "secondaryCtaHref": "/themes/",
+    "assurances": [
+      "Nincs backend",
+      "Személyre szabható",
+      "Alkotóknak tervezve"
+    ],
+    "quote": "Egy egyszerű blog is megváltoztathat mindent.",
+    "quoteAttribution": "FORGEBLOG",
+    "stats": [
+      {
+        "value": "10K+",
+        "label": "Alkotók világszerte"
+      },
+      {
+        "value": "99.9%",
+        "label": "Rendelkezésre állás"
+      },
+      {
+        "value": "100%",
+        "label": "Nyílt forráskód"
+      },
+      {
+        "value": "4.9/5",
+        "label": "Közösségi értékelés"
+      }
+    ],
+    "bentoBoxes": [
+      {
+        "title": "Gyönyörű gondolatok galériája.",
+        "description": "Nézd meg, mit építenek más alkotók a motorral.",
+        "ctaLabel": "Galéria felfedezése",
+        "ctaHref": "/showcase/"
+      },
+      {
+        "title": "Egyszerűsített munkaterület.",
+        "description": "Írj Markdownban, kezeld Git-tel, és publikálj egyetlen gombnyomással.",
+        "features": [
+          "Fókuszált írás",
+          "Verziókövetett",
+          "Villámgyors Vercelen"
+        ],
+        "ctaLabel": "Nézd meg hogyan működik",
+        "ctaHref": "/docs/"
+      },
+      {
+        "title": "Tedd a magadévá.",
+        "description": "Válassz elegáns, modern témák közül, vagy készíts sajátot.",
+        "ctaLabel": "Témák böngészése",
+        "ctaHref": "/themes/"
+      }
+    ]
   },
   "navigation": {
     "header": [

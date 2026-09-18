@@ -78,6 +78,15 @@ export const InstanceConfigSchema = z.object({
       stats: z
         .array(z.object({ value: z.string(), label: z.string() }))
         .default([]),
+      bentoBoxes: z
+        .array(z.object({
+          title: z.string(),
+          description: z.string(),
+          features: z.array(z.string()).optional(),
+          ctaLabel: z.string().optional(),
+          ctaHref: z.string().optional()
+        }))
+        .default([]),
     })
     .default({
       eyebrow: "",
@@ -92,6 +101,7 @@ export const InstanceConfigSchema = z.object({
       quote: "",
       quoteAttribution: "",
       stats: [],
+      bentoBoxes: [],
     }),
   navigation: z.object({
     header: z.array(NavItemSchema),
