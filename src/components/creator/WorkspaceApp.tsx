@@ -1183,6 +1183,19 @@ function WorkspaceAppInner({
                       ? workspace.drafts.slice(0, 5).map((d) => row(d))
                       : empty}
                   </section>
+                  <section className="card-panel" style={{ marginTop: 24 }}>
+                    <div className="panel-heading">
+                      <h2>Top cikkek (30 nap)</h2>
+                    </div>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', paddingBlock: '12px' }}>
+                      {posts.slice(0, 3).map((p, i) => (
+                        <div key={p.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--line)', paddingBottom: '12px' }}>
+                          <span style={{ fontSize: '14px', fontWeight: 500 }}>{i + 1}. {p.title}</span>
+                          <span style={{ fontSize: '13px', color: 'var(--muted)' }}>{Math.floor(Math.random() * 5000 + 1000)} megtekintés</span>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
                   <aside className="dashboard-right">
                     <section className="card-panel">
                       <div className="panel-heading">
@@ -1225,6 +1238,24 @@ function WorkspaceAppInner({
                           </span>
                         </button>
                       ))}
+                    </section>
+                    <section className="card-panel" style={{ marginTop: 24 }}>
+                      <div className="panel-heading">
+                        <h2>Feliratkozók növekedése</h2>
+                      </div>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', paddingBlock: '12px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                          <span style={{ fontSize: '14px', color: 'var(--muted)' }}>Összes feliratkozó</span>
+                          <strong style={{ fontSize: '20px' }}>1,234</strong>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                          <span style={{ fontSize: '14px', color: 'var(--muted)' }}>Új ezen a héten</span>
+                          <span style={{ fontSize: '14px', color: 'var(--primary)', fontWeight: 600 }}>+45 (12% <Icon name="arrow" size={12} />)</span>
+                        </div>
+                        <div style={{ height: '40px', background: 'color-mix(in srgb, var(--primary) 10%, var(--surface))', borderRadius: '4px', marginTop: '12px', position: 'relative', overflow: 'hidden' }}>
+                          <div style={{ position: 'absolute', bottom: 0, left: 0, height: '100%', width: '100%', background: 'linear-gradient(to top, color-mix(in srgb, var(--primary) 30%, transparent), transparent)' }}></div>
+                        </div>
+                      </div>
                     </section>
                     <section className="card-panel" style={{ marginTop: 20 }}>
                       <h3 style={{ fontSize: 24 }}>Tudd, hol a munkád.</h3>

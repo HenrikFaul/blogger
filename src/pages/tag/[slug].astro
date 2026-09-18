@@ -3,4 +3,4 @@ import ArchiveLayout from '../../layouts/ArchiveLayout.astro';import {getCardPos
 export async function getStaticPaths(){const posts=await getCardPosts();const tags=[...new Map(posts.flatMap(p=>p.tags).map(t=>[tagSlug(t),t])).entries()];return tags.map(([slug,tag])=>({params:{slug},props:{tag,posts:posts.filter(p=>p.tags.some(t=>tagSlug(t)===slug))}}));}
 const {tag,posts}=Astro.props;
 ---
-<ArchiveLayout title={`#${tag}`} description="Egy gondolat mentén válogatva. Kapcsolódó történetek a magazinból." eyebrow="CÍMKÉK" posts={posts}/>
+<ArchiveLayout title={`#${tag}`} description="Egy gondolat mentén válogatva. Kapcsolódó történetek a magazinból." eyebrow="CÍMKÉK" posts={posts} noindex/>

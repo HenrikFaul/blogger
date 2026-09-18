@@ -172,12 +172,23 @@
             Number(normalize(b.title).includes(value)) -
             Number(normalize(a.title).includes(value)),
         );
-      const visible = matched.slice(0, 15);
-      resultCount.textContent = `${matched.length} találat${matched.length > 15 ? " · az első 15 látható" : ""}`;
+      const visible = matched.slice(0, 5);
+      resultCount.textContent = `${matched.length} találat${matched.length > 5 ? " · az első 5 látható" : ""}`;
       if (!visible.length) {
-        searchMessage(
-          "Erre most nincs találat. Próbálj rövidebb vagy másik keresőkifejezést.",
-        );
+        results.innerHTML = `
+          <div class="search-empty-state">
+            <p class="search-help">Erre most nincs találat. Próbálj rövidebb vagy másik keresőkifejezést.</p>
+            <div class="search-suggestions">
+              <p>Nézd meg ezeket:</p>
+              <div class="search-tags" style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
+                <a href="/category/technologia/" class="badge">Technológia</a>
+                <a href="/category/eletmod/" class="badge">Életmód</a>
+                <a href="/category/alkotas/" class="badge">Alkotás</a>
+                <a href="/archive/" class="badge">Összes történet</a>
+              </div>
+            </div>
+          </div>
+        `;
         return;
       }
       results.replaceChildren(
@@ -622,4 +633,26 @@
       }, 2000);
     });
   });
+  // Back to top button logic
+  const backToTopBtn = $("#back-to-top");
+  if (backToTopBtn) {
+    let ticking = false;
+    addEventListener("scroll", () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          if (window.scrollY > document.documentElement.scrollHeight * 0.2) {
+            backToTopBtn.classList.add("visible");
+          } else {
+            backToTopBtn.classList.remove("visible");
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+    
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 })();

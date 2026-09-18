@@ -1,0 +1,73 @@
+---
+import Icon from '../ui/Icon.astro';
+---
+<div class="paywall-container">
+  <div class="paywall-content card-panel">
+    <div class="paywall-icon">
+      <Icon name="lock" size={24} />
+    </div>
+    <p class="eyebrow">PRÉMIUM TARTALOM</p>
+    <h2>Iratkozz fel a további olvasáshoz!</h2>
+    <p>A cikk hátralévő része csak prémium tagok számára elérhető. Csatlakozz hozzánk és férj hozzá az összes exkluzív tartalomhoz!</p>
+    <div class="paywall-actions">
+      <a href="/creator" class="btn btn-primary">Prémium ($9/hó) <Icon name="arrow" size={14} /></a>
+      <a href="/creator" class="btn">Ingyenes feliratkozás</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .paywall-container {
+    position: relative;
+    margin-top: -60px; /* Overlaps with text */
+    padding-top: 100px;
+    background: linear-gradient(to bottom, transparent, var(--background) 40%);
+    z-index: 10;
+  }
+  .paywall-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 2px solid color-mix(in srgb, var(--primary) 20%, var(--line));
+    background: var(--surface);
+    box-shadow: 0 12px 24px color-mix(in srgb, var(--ink) 5%, transparent);
+  }
+  .paywall-icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--primary) 10%, var(--surface));
+    color: var(--primary);
+    margin-bottom: 16px;
+  }
+  .paywall-content h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+  .paywall-content p:not(.eyebrow) {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+  .paywall-actions {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 480px) {
+    .paywall-actions {
+      flex-direction: column;
+    }
+    .paywall-actions .btn {
+      width: 100%;
+    }
+  }
+</style>

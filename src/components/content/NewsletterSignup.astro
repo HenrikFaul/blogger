@@ -1,0 +1,81 @@
+---
+import Icon from '../ui/Icon.astro';
+---
+<section class="newsletter-signup card-panel">
+  <div class="newsletter-content">
+    <Icon name="mail" size={24} />
+    <h2>Tetszett a cikk? Iratkozz fel!</h2>
+    <p>Kapj értesítést az új történetekről, amint megjelennek. Nincs spam, csak minőségi tartalom.</p>
+    <form class="newsletter-form" onsubmit="event.preventDefault(); this.innerHTML = '<p class=\'success-message\'>Köszönjük a feliratkozást!</p>';">
+      <div class="input-group">
+        <label for="email-input" class="sr-only">Email cím</label>
+        <input type="email" id="email-input" name="email" placeholder="Az email címed..." required />
+        <button type="submit" class="btn btn-primary">Feliratkozás</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<style>
+  .newsletter-signup {
+    margin-block: 48px;
+    background: linear-gradient(to right, var(--surface), var(--surface-soft));
+    border-color: var(--line);
+  }
+  .newsletter-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .newsletter-content > :global(svg) {
+    color: var(--primary);
+    margin-bottom: 16px;
+  }
+  .newsletter-content h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    letter-spacing: -0.015em;
+  }
+  .newsletter-content p {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 24px;
+  }
+  .newsletter-form {
+    width: 100%;
+  }
+  .input-group {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+  }
+  .input-group input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 16px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--ink);
+    font-family: inherit;
+    font-size: 14px;
+  }
+  .input-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 20%, transparent);
+  }
+  @media (max-width: 480px) {
+    .input-group {
+      flex-direction: column;
+    }
+  }
+  .success-message {
+    color: var(--primary);
+    font-weight: 600;
+    padding-block: 12px;
+  }
+</style>

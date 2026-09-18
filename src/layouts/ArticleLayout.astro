@@ -1,6 +1,6 @@
 ---
 import {siteConfig} from '../config/site.config';
-import BaseLayout from './BaseLayout.astro';import Icon from '../components/ui/Icon.astro';import Gallery from '../components/media/Gallery.astro';
+import BaseLayout from './BaseLayout.astro';import Icon from '../components/ui/Icon.astro';import Gallery from '../components/media/Gallery.astro';import NewsletterSignup from '../components/content/NewsletterSignup.astro';
 import {getCollection,type CollectionEntry} from 'astro:content';import {getCardPosts,getPublishedPosts,getSlug,formatDate,readingMinutes} from '../lib/content';import {tagSlug} from '../lib/public-content';
 interface Props {post:CollectionEntry<'posts'>|CollectionEntry<'projects'>;headings?:{depth:number;slug:string;text:string}[];isProject?:boolean;}
 const {post,headings=[],isProject=false}=Astro.props;const data=post.data;const slug=getSlug(post);
@@ -24,6 +24,7 @@ const breadcrumbs=[
   <div class="article-layout">
    {toc.length>0?<details class="article-toc" open><summary>A TÖRTÉNETBEN</summary><nav aria-label="Tartalomjegyzék">{toc.map(h=><a href={`#${h.slug}`} class={`depth-${h.depth}`} data-toc-link>{h.text}</a>)}</nav></details>:<aside class="article-toc"><a class="text-link" href="/posts/"><Icon name="arrow-left" size={14}/>Minden történet</a></aside>}
    <div class="reading-body"><div class="article-prose" data-article-prose><slot/></div>{data.gallery&&<Gallery images={data.gallery} layout="editorial-grid" columns={3} captions="below"/>}
+   <NewsletterSignup />
    {series&&<nav class="series-nav" aria-label="A sorozat részei"><p class="eyebrow">EZ EGY NAGYOBB TÖRTÉNET RÉSZE</p><h2><a href={`/series/${series.id}/`}>{series.data.title}</a></h2><ol>{seriesPosts.map(p=><li><a href={`/posts/${getSlug(p)}/`} aria-current={getSlug(p)===slug?'page':undefined}>{p.data.title}</a></li>)}</ol></nav>}
    {data.tags.length>0&&<nav class="article-tags" aria-label="Kapcsolódó címkék">{data.tags.map(tag=><a class="pill quiet" href={`/tag/${tagSlug(tag)}/`}>#{tag}</a>)}</nav>}
    <div class="article-actions"><button type="button" class="btn btn-small js-only" data-copy-url><Icon name="link" size={14}/>Link másolása</button><button type="button" class="btn btn-small js-only" data-print><Icon name="file" size={14}/>Nyomtatás</button><a href="/posts/" class="btn btn-small">További történetek<Icon name="arrow" size={14}/></a></div>
@@ -31,4 +32,18 @@ const breadcrumbs=[
    <aside class="article-aside" aria-label="A szerző és további történetek"><section class="author-note"><img class="avatar" src={author?.data.avatar||'/media/nora.svg'} alt="" width="46" height="46" loading="lazy"/><p class="eyebrow" style="font-size:9px">A TÖRTÉNET MÖGÖTT</p><h2>{author?.data.name||data.author}</h2><p>{author?.data.bio}</p><a class="text-link" href={`/authors/${data.author}/`}>A szerző történetei<Icon name="arrow" size={13}/></a></section><section class="article-related"><h2 class="sidebar-heading">EZEK IS ÉRDEKELHETNEK</h2>{related.map(p=><a href={`/posts/${p.slug}/`}><h3>{p.title}</h3><p>{p.category}{siteConfig.content.showReadingTime&&` · ${p.readingTime} perc`}</p></a>)}</section></aside>
   </div>
  </article>
+ <script>
+  function updateProgress() {
+    const article = document.querySelector('[data-reading-article]');
+    const progress = document.querySelector('[data-reading-progress]');
+    if (!article || !progress) return;
+    const rect = article.getBoundingClientRect();
+    const scrollProgress = window.scrollY - (rect.top + window.scrollY) + window.innerHeight;
+    const percentage = Math.min(100, Math.max(0, (scrollProgress / rect.height) * 100));
+    progress.style.width = percentage + '%';
+  }
+  window.addEventListener('scroll', updateProgress, {passive: true});
+  window.addEventListener('resize', updateProgress, {passive: true});
+  document.addEventListener('astro:page-load', updateProgress);
+ </script>
 </BaseLayout>
