@@ -1,5 +1,13 @@
 # Változásjegyzék
 
+## 0.4.0 — 2026-09-18
+
+### Prémium UI/UX Frissítés és Nagyfelbontású Képarchívum
+- **Képkatalógus Csere:** 240+ darab, kiváló minőségű Full HD (1920x1080) képet töltöttünk le az Unsplash-ről, 80 különböző témakörhöz (pl. Minimalist Workspace, Cyberpunk City, stb.). A fájlok helytakarékos WebP formátumban kerültek a repository-ba (`public/media/catalog/`), a régi homályos/alacsony felbontású `.jpg` és `.webp` képek pedig végleges törlésre kerültek (`public/media/demo/`).
+- **Katalógus Rendszer:** Új `src/config/demo-media.json` katalógus jött létre, metaadatokkal és dinamikus alt/címke lekérdezéssel a könnyebb válogatáshoz.
+- **Tartalomszerkesztő (Content Editor) Upgrade:** A `DraftEditor` és `BlockEditor` felülete modern, prémium "Glassmorphism" dizájnt kapott. A felső sáv (topbar) és eszköztár lebegő, áttetsző üveghatású; a folyamatjelző "pill" designra váltott színátmenetes effektekkel. Az írófelület letisztult Notion/Medium stílust tükröz, fókuszált árnyékolással, a készülékelőnézet pedig elegáns animált sziluettekkel dolgozik.
+- **Hibajavítás (404):** A dinamikus `Astro.redirect` a `/collections/[slug]` oldalak esetében okozott fejlesztői módos 404-es hibát elhárítottuk.
+
 ## 0.3.0 — 2026-09-17
 
 ### A Studio v2 szerinti szerkesztőségi főoldal

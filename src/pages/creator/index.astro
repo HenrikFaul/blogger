@@ -7,8 +7,7 @@ import demo from '../../config/demo-media.json';
 import {getCollection} from 'astro:content';
 import {getCardPosts} from '../../lib/content';
 const [publicPosts,authors,categories]=await Promise.all([getCardPosts(),getCollection('authors'),getCollection('categories')]);
-const alts:Record<string,string>={'coast':'Sziklás tengeröböl naplementében','alpine':'Hegyi tó az alpesi csúcsok előtt','workspace':'Világos íróasztal zöld szobanövényekkel','olive':'Olajbogyók egy zöld olajfaágon','old-town':'Keskeny utca egy mediterrán városban','breakfast':'Terített reggelizőasztal kávéval és péksüteménnyel','sea-cave':'Kék tengervíz sziklás barlangban','sunset-peaks':'Hegycsúcs a naplemente meleg fényében','ceramics':'Kézzel készített kerámiatárgyak','harbor':'Mediterrán kikötő a vízparton','forest':'Csendes erdei ösvény','architecture':'Fényes építészeti részlet'};
-const demoAssets=demo.map(a=>({...a,alt:alts[a.id.replace('demo-','')]||'Bemutatókép',decorative:false,caption:'',credit:'Bemutatókép a mellékelt designreferenciából.',type:'image/jpeg'}));
+const demoAssets = demo.map(a => ({ ...a }));
 const posts=publicPosts.map(({body,...post})=>post);
 ---
 <!doctype html>
