@@ -1,4 +1,5 @@
-/* Synchronous, tiny, dependency-free pre-paint initialization. */
+/* Synchronous, tiny, dependency-free pre-paint initialization.
+   ForgeBlog defaults to light mode. Dark mode is opt-in via toggle only. */
 (() => {
   const root = document.documentElement;
   root.dataset.js = "true";
@@ -21,6 +22,10 @@
         root.dataset.mode = saved.mode;
     }
   } catch {
-    /* Reading remains available with blocked or corrupt browser storage. */
+    /* noop */
+  }
+  /* Always ensure a mode is set — default to light */
+  if (!root.dataset.mode || (root.dataset.mode !== "light" && root.dataset.mode !== "dark")) {
+    root.dataset.mode = "light";
   }
 })();
