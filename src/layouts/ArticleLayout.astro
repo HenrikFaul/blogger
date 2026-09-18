@@ -27,8 +27,13 @@ const breadcrumbs=[
    <NewsletterSignup />
    {series&&<nav class="series-nav" aria-label="A sorozat részei"><p class="eyebrow">EZ EGY NAGYOBB TÖRTÉNET RÉSZE</p><h2><a href={`/series/${series.id}/`}>{series.data.title}</a></h2><ol>{seriesPosts.map(p=><li><a href={`/posts/${getSlug(p)}/`} aria-current={getSlug(p)===slug?'page':undefined}>{p.data.title}</a></li>)}</ol></nav>}
    {data.tags.length>0&&<nav class="article-tags" aria-label="Kapcsolódó címkék">{data.tags.map(tag=><a class="pill quiet" href={`/tag/${tagSlug(tag)}/`}>#{tag}</a>)}</nav>}
-   <div class="article-actions"><button type="button" class="btn btn-small js-only" data-copy-url><Icon name="link" size={14}/>Link másolása</button><button type="button" class="btn btn-small js-only" data-print><Icon name="file" size={14}/>Nyomtatás</button><a href="/posts/" class="btn btn-small">További történetek<Icon name="arrow" size={14}/></a></div>
-   
+   <div class="article-actions">
+      <button type="button" class="btn btn-small js-only" data-copy-url><Icon name="link" size={14}/>Link másolása</button>
+      <button type="button" class="btn btn-small js-only" data-print><Icon name="file" size={14}/>Nyomtatás</button>
+      <a href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(new URL(`/${isProject?'projects':'posts'}/${slug}/`,baseUrl).href)}&text=${encodeURIComponent(data.title)}`} target="_blank" rel="noopener noreferrer" class="btn btn-small" style="background-color: #1DA1F2; color: white; border-color: #1DA1F2;">Twitter</a>
+      <a href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(new URL(`/${isProject?'projects':'posts'}/${slug}/`,baseUrl).href)}`} target="_blank" rel="noopener noreferrer" class="btn btn-small" style="background-color: #0A66C2; color: white; border-color: #0A66C2;">LinkedIn</a>
+      <a href="/posts/" class="btn btn-small" style="margin-left: auto;">További történetek<Icon name="arrow" size={14}/></a>
+   </div>
    <section class="author-bio card-panel" style="margin-top: 48px; padding: 32px; background: color-mix(in srgb, var(--primary) 3%, var(--surface)); border-radius: 16px; border: 1px solid var(--line); display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap;">
      <img class="avatar" src={author?.data.avatar||'/media/nora.svg'} alt="" width="80" height="80" loading="lazy" style="border-radius: 50%; object-fit: cover; border: 2px solid var(--surface); box-shadow: 0 4px 12px rgba(0,0,0,0.1);"/>
      <div style="flex: 1; min-width: 250px;">

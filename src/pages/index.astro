@@ -75,6 +75,29 @@ const categories = await getCollection('categories');
       </section>
     )}
 
+    <section class="home-resources" aria-label="Tanulási Központ" style="margin-bottom: 80px;">
+      <div style="margin-bottom: 32px; text-align: center;">
+        <h2 style="font-size: 32px; letter-spacing: -0.015em; line-height: 1.25;">Tanulási Központ / Resources</h2>
+        <p style="color: var(--muted); font-size: 17px; margin-top: 8px;">Hasznos útmutatók és eszközök a fejlődéshez.</p>
+      </div>
+      <div class="category-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+        <a href="/about" class="card-panel" style="display: flex; flex-direction: column; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; transition: transform 0.2s, border-color 0.2s;">
+          <div style="width: 40px; height: 40px; border-radius: 8px; background: color-mix(in srgb, var(--primary) 10%, var(--surface)); color: var(--primary); display: grid; place-items: center; margin-bottom: 16px;">
+            <Icon name="book" size={20} />
+          </div>
+          <h3 style="font-size: 20px; margin: 0 0 8px 0;">Hogyan indulj el?</h3>
+          <p style="color: var(--muted); font-size: 15px; margin: 0;">Átfogó útmutató kezdőknek a hatékony blogoláshoz és íráshoz.</p>
+        </a>
+        <a href="/archive" class="card-panel" style="display: flex; flex-direction: column; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; transition: transform 0.2s, border-color 0.2s;">
+          <div style="width: 40px; height: 40px; border-radius: 8px; background: color-mix(in srgb, var(--primary) 10%, var(--surface)); color: var(--primary); display: grid; place-items: center; margin-bottom: 16px;">
+            <Icon name="tag" size={20} />
+          </div>
+          <h3 style="font-size: 20px; margin: 0 0 8px 0;">Eszköztár & Sablonok</h3>
+          <p style="color: var(--muted); font-size: 15px; margin: 0;">Válogatott eszközök, melyeket nap mint nap használunk az alkotáshoz.</p>
+        </a>
+      </div>
+    </section>
+
     <section class="social-proof" style="margin-bottom: 80px; text-align: center; padding: 60px 24px; background: color-mix(in srgb, var(--primary) 5%, var(--surface)); border-radius: 16px;">
       <Icon name="quote" size={32} style="color: var(--primary); margin-bottom: 24px; opacity: 0.5;" />
       <blockquote style="font-size: 24px; font-style: italic; max-width: 700px; margin: 0 auto 24px; line-height: 1.4; color: var(--ink);">

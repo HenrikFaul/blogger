@@ -1252,8 +1252,17 @@ function WorkspaceAppInner({
                           <span style={{ fontSize: '14px', color: 'var(--muted)' }}>Új ezen a héten</span>
                           <span style={{ fontSize: '14px', color: 'var(--primary)', fontWeight: 600 }}>+45 (12% <Icon name="arrow" size={12} />)</span>
                         </div>
-                        <div style={{ height: '40px', background: 'color-mix(in srgb, var(--primary) 10%, var(--surface))', borderRadius: '4px', marginTop: '12px', position: 'relative', overflow: 'hidden' }}>
-                          <div style={{ position: 'absolute', bottom: 0, left: 0, height: '100%', width: '100%', background: 'linear-gradient(to top, color-mix(in srgb, var(--primary) 30%, transparent), transparent)' }}></div>
+                        
+                        <div style={{ display: 'flex', gap: '8px', marginBottom: '8px', marginTop: '16px' }}>
+                          <button className="btn btn-outline btn-sm" style={{flex: 1, padding: '4px 0', fontSize: '12px'}}>7 nap</button>
+                          <button className="btn btn-primary btn-sm" style={{flex: 1, padding: '4px 0', fontSize: '12px'}}>30 nap</button>
+                          <button className="btn btn-outline btn-sm" style={{flex: 1, padding: '4px 0', fontSize: '12px'}}>90 nap</button>
+                        </div>
+
+                        <div style={{ height: '100px', display: 'flex', alignItems: 'flex-end', gap: '4px', paddingTop: '16px', borderBottom: '1px solid var(--line)' }}>
+                          {[15, 22, 18, 30, 45, 38, 60].map((h, i) => (
+                            <div key={i} style={{ flex: 1, backgroundColor: 'color-mix(in srgb, var(--primary) 60%, var(--surface))', height: `${h}%`, borderRadius: '4px 4px 0 0', transition: 'height 0.3s' }} title={`${h} feliratkozó`} />
+                          ))}
                         </div>
                       </div>
                     </section>

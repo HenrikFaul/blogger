@@ -357,6 +357,32 @@ export function MetadataInspector({
               Szemléltető előnézet, nem ígéret a kereső találati oldalára. Az
               éles kanonikus domain a közös webhely-konfigurációból származik.
             </p>
+            
+            <div style={{ marginTop: 32, padding: 16, background: 'color-mix(in srgb, var(--primary) 5%, var(--surface))', borderRadius: 8, border: '1px solid var(--line)' }}>
+              <h4 style={{ margin: '0 0 16px 0', fontSize: 16 }}>SEO Checklist</h4>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '8px', fontSize: 14 }}>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '8px', color: (draft.seo.title || draft.title) ? 'var(--success, green)' : 'var(--muted)' }}>
+                  <Icon name={(draft.seo.title || draft.title) ? "check" : "circle"} size={16} /> 
+                  <span style={{color: 'var(--ink)'}}>Cím megadva</span>
+                </li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '8px', color: (draft.seo.title.length > 0 && draft.seo.title.length <= 60) ? 'var(--success, green)' : 'var(--muted)' }}>
+                  <Icon name={(draft.seo.title.length > 0 && draft.seo.title.length <= 60) ? "check" : "circle"} size={16} /> 
+                  <span style={{color: 'var(--ink)'}}>Meta title max 60 karakter</span>
+                </li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '8px', color: (draft.seo.description.length > 0 && draft.seo.description.length <= 160) ? 'var(--success, green)' : 'var(--muted)' }}>
+                  <Icon name={(draft.seo.description.length > 0 && draft.seo.description.length <= 160) ? "check" : "circle"} size={16} /> 
+                  <span style={{color: 'var(--ink)'}}>Meta description max 160 karakter</span>
+                </li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '8px', color: draft.slug ? 'var(--success, green)' : 'var(--muted)' }}>
+                  <Icon name={draft.slug ? "check" : "circle"} size={16} /> 
+                  <span style={{color: 'var(--ink)'}}>URL slug beállítva</span>
+                </li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '8px', color: draft.heroImage ? 'var(--success, green)' : 'var(--muted)' }}>
+                  <Icon name={draft.heroImage ? "check" : "circle"} size={16} /> 
+                  <span style={{color: 'var(--ink)'}}>Borítókép kiválasztva</span>
+                </li>
+              </ul>
+            </div>
           </>
         ) : (
           <>
