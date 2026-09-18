@@ -42,7 +42,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/coast.jpg",
+      image: "/media/catalog/6RqSDGaNJ5c.webp",
       alt: "Minimal Editorial előnézet",
       accentSwatches: ["#234f43", "#fbfaf7", "#c6b498"],
     },
@@ -76,7 +76,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "dark",
     preview: {
-      image: "/media/demo/coast.jpg",
+      image: "/media/catalog/6RqSDGaNJ5c.webp",
       alt: "Minimal Dark előnézet",
       accentSwatches: ["#bdd1c5", "#111a17", "#c6b498"],
     },
@@ -110,7 +110,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/architecture.jpg",
+      image: "/media/catalog/DaQR-GafxYw.webp",
       alt: "Swiss Grid előnézet",
       accentSwatches: ["#c12622", "#f8f8f5", "#c6b498"],
     },
@@ -144,7 +144,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/workspace.jpg",
+      image: "/media/catalog/6RqSDGaNJ5c.webp",
       alt: "Soft Journal előnézet",
       accentSwatches: ["#875448", "#fbf5ef", "#c6b498"],
     },
@@ -178,7 +178,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/architecture.jpg",
+      image: "/media/catalog/DaQR-GafxYw.webp",
       alt: "Brutalist előnézet",
       accentSwatches: ["#202020", "#f6f1d9", "#c6b498"],
     },
@@ -212,7 +212,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "dark",
     preview: {
-      image: "/media/demo/workspace.jpg",
+      image: "/media/catalog/6RqSDGaNJ5c.webp",
       alt: "Developer Console előnézet",
       accentSwatches: ["#aae1ae", "#101a16", "#c6b498"],
     },
@@ -246,7 +246,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "dark",
     preview: {
-      image: "/media/demo/harbor.jpg",
+      image: "/media/catalog/6RqSDGaNJ5c.webp",
       alt: "Cyber Neon előnézet",
       accentSwatches: ["#9fecdb", "#141620", "#c6b498"],
     },
@@ -280,7 +280,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/architecture.jpg",
+      image: "/media/catalog/DaQR-GafxYw.webp",
       alt: "Glass Future előnézet",
       accentSwatches: ["#405a91", "#f1f4fa", "#c6b498"],
     },
@@ -314,7 +314,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/sea-cave.jpg",
+      image: "/media/catalog/TjegK_z-0j8.webp",
       alt: "Holographic előnézet",
       accentSwatches: ["#6d478d", "#f8f1fb", "#c6b498"],
     },
@@ -348,7 +348,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/workspace.jpg",
+      image: "/media/catalog/6RqSDGaNJ5c.webp",
       alt: "AI Lab előnézet",
       accentSwatches: ["#375e78", "#f0f5f7", "#c6b498"],
     },
@@ -382,7 +382,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/coast.jpg",
+      image: "/media/catalog/6RqSDGaNJ5c.webp",
       alt: "Travel Atlas előnézet",
       accentSwatches: ["#315f6a", "#f7f4ed", "#c6b498"],
     },
@@ -416,7 +416,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/alpine.jpg",
+      image: "/media/catalog/7VotVatHM7Q.webp",
       alt: "Outdoor Expedition előnézet",
       accentSwatches: ["#485c36", "#f5f4eb", "#c6b498"],
     },
@@ -450,7 +450,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/breakfast.jpg",
+      image: "/media/catalog/TD4DBagg2wE.webp",
       alt: "Food Journal előnézet",
       accentSwatches: ["#914f31", "#fdf7ee", "#c6b498"],
     },
@@ -484,7 +484,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/breakfast.jpg",
+      image: "/media/catalog/TD4DBagg2wE.webp",
       alt: "Recipe Studio előnézet",
       accentSwatches: ["#577240", "#fafaf0", "#c6b498"],
     },
@@ -518,7 +518,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "dark",
     preview: {
-      image: "/media/demo/sunset-peaks.jpg",
+      image: "/media/catalog/7VotVatHM7Q.webp",
       alt: "Photo Portfolio előnézet",
       accentSwatches: ["#e6e0d0", "#181a19", "#c6b498"],
     },
@@ -552,7 +552,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/ceramics.jpg",
+      image: "/media/catalog/6RqSDGaNJ5c.webp",
       alt: "Art Gallery előnézet",
       accentSwatches: ["#705950", "#faf6f0", "#c6b498"],
     },
@@ -586,7 +586,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "dark",
     preview: {
-      image: "/media/demo/harbor.jpg",
+      image: "/media/catalog/6RqSDGaNJ5c.webp",
       alt: "Music Night előnézet",
       accentSwatches: ["#e6b6cd", "#20141d", "#c6b498"],
     },
@@ -620,7 +620,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "dark",
     preview: {
-      image: "/media/demo/forest.jpg",
+      image: "/media/catalog/AjJCGAIUcqo.webp",
       alt: "Gaming Arena előnézet",
       accentSwatches: ["#bad581", "#151c15", "#c6b498"],
     },
@@ -654,7 +654,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/architecture.jpg",
+      image: "/media/catalog/DaQR-GafxYw.webp",
       alt: "Corporate Authority előnézet",
       accentSwatches: ["#325771", "#f7f9fa", "#c6b498"],
     },
@@ -688,7 +688,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/workspace.jpg",
+      image: "/media/catalog/6RqSDGaNJ5c.webp",
       alt: "Industrial Workshop előnézet",
       accentSwatches: ["#865126", "#f6f3ee", "#c6b498"],
     },
@@ -722,7 +722,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/workspace.jpg",
+      image: "/media/catalog/6RqSDGaNJ5c.webp",
       alt: "Academic Paper előnézet",
       accentSwatches: ["#384b6a", "#fffefa", "#c6b498"],
     },
@@ -756,7 +756,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/old-town.jpg",
+      image: "/media/catalog/6RqSDGaNJ5c.webp",
       alt: "Magazine Newsroom előnézet",
       accentSwatches: ["#9c3737", "#faf8f4", "#c6b498"],
     },
@@ -790,7 +790,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/ceramics.jpg",
+      image: "/media/catalog/6RqSDGaNJ5c.webp",
       alt: "Luxury Fashion előnézet",
       accentSwatches: ["#6c5642", "#fbf8f2", "#c6b498"],
     },
@@ -824,7 +824,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/olive.jpg",
+      image: "/media/catalog/ApkZ5RTza5g.webp",
       alt: "Nature Organic előnézet",
       accentSwatches: ["#456c47", "#f5f7ed", "#c6b498"],
     },
@@ -858,7 +858,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/breakfast.jpg",
+      image: "/media/catalog/TD4DBagg2wE.webp",
       alt: "Family Storybook előnézet",
       accentSwatches: ["#865c47", "#fff7eb", "#c6b498"],
     },
@@ -892,7 +892,7 @@ export const themeRegistry: ThemeDefinition[] = [
     supportsUserModeToggle: true,
     defaultMode: "light",
     preview: {
-      image: "/media/demo/sunset-peaks.jpg",
+      image: "/media/catalog/7VotVatHM7Q.webp",
       alt: "Retro Eighties előnézet",
       accentSwatches: ["#805076", "#fbf2e3", "#c6b498"],
     },

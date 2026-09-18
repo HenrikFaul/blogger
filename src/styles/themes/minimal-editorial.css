@@ -2,31 +2,31 @@
    Editorial palette aligns with ForgeBlog Studio v2 design tokens. */
 [data-theme="minimal-editorial"] {
   --heading-font: "EB Garamond", Georgia, "Times New Roman", serif;
-  --corner: 12px;
+  --corner: 10px;
 }
 [data-theme="minimal-editorial"][data-mode="light"] {
-  --page: #ffffff;
+  --page: #fafaf8;
   --surface: #ffffff;
-  --surface-soft: #f8fafc;
-  --ink: #0f172a;
-  --muted: #64748b;
-  --line: #e2e8f0;
-  --primary: #0f5145;
+  --surface-soft: #f5f5f2;
+  --ink: #1e2a36;
+  --muted: #6b7b8d;
+  --line: #e8e6e1;
+  --primary: #1a3a4a;
   --on-primary: #ffffff;
-  --accent-soft: #ecfdf5;
-  --danger: #ef4444;
-  --shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  --accent-soft: #f0f4f1;
+  --danger: #c53030;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
 }
 [data-theme="minimal-editorial"][data-mode="dark"] {
-  --page: #151d1b;
-  --surface: #1e2b25;
-  --surface-soft: #24322a;
-  --ink: #ebf0df;
-  --muted: #abbaa9;
-  --line: #35483a;
-  --primary: #cadaa1;
-  --on-primary: #151d1b;
-  --accent-soft: #2b3d31;
+  --page: #121a22;
+  --surface: #1a2430;
+  --surface-soft: #1f2b38;
+  --ink: #e8ecf0;
+  --muted: #8fa0b0;
+  --line: #2a3845;
+  --primary: #6db5a0;
+  --on-primary: #121a22;
+  --accent-soft: #1c2e3a;
   --danger: #ffb4ac;
-  --shadow: 0 12px 36px #00000020;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
