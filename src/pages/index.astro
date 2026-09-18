@@ -24,6 +24,8 @@ const blogPosts = posts.slice(0, 20).map((p) => ({
 const authors = await getCollection('authors');
 const author = authors.find((a) => a.id === siteConfig.content.defaultAuthor);
 const authorName = author?.data.name || 'Nóra';
+import NewsletterSignup from '../components/content/NewsletterSignup.astro';
+const categories = await getCollection('categories');
 ---
 <BaseLayout title={siteConfig.name} description={home.lede} type="blog" blogPosts={blogPosts}>
   <div class="container">
@@ -48,12 +50,55 @@ const authorName = author?.data.name || 'Nóra';
     </section>
 
     {latest.length > 0 && (
-      <section class="editorial-posts" aria-label="Legfrissebb írások">
+      <section class="editorial-posts" aria-label="Legfrissebb írások" style="margin-bottom: 80px;">
         <div class="post-grid">{latest.map((post) => <PostCard post={post} />)}</div>
       </section>
     )}
 
+    {categories.length > 0 && (
+      <section class="home-categories" aria-label="Témák" style="margin-bottom: 80px;">
+        <div style="margin-bottom: 32px; text-align: center;">
+          <h2 style="font-size: 32px; letter-spacing: -0.015em; line-height: 1.25;">Felfedezés témák szerint</h2>
+          <p style="color: var(--muted); font-size: 17px; margin-top: 8px;">Válogass a legnépszerűbb kategóriákból, és találd meg, ami érdekel.</p>
+        </div>
+        <div class="category-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px;">
+          {categories.slice(0, 4).map((category) => (
+            <a href={`/category/${category.id}/`} class="card-panel" style="display: flex; flex-direction: column; align-items: center; padding: 24px; text-align: center; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; transition: transform 0.2s, border-color 0.2s;">
+              <div style="width: 48px; height: 48px; border-radius: 50%; background: color-mix(in srgb, var(--primary) 10%, var(--surface)); color: var(--primary); display: grid; place-items: center; margin-bottom: 16px;">
+                <Icon name="tag" size={24} />
+              </div>
+              <h3 style="font-size: 18px; margin: 0;">{category.data.title}</h3>
+              <p style="color: var(--muted); font-size: 14px; margin-top: 6px; margin-bottom: 0;">{category.data.description || 'Felfedezés'}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class="social-proof" style="margin-bottom: 80px; text-align: center; padding: 60px 24px; background: color-mix(in srgb, var(--primary) 5%, var(--surface)); border-radius: 16px;">
+      <Icon name="quote" size={32} style="color: var(--primary); margin-bottom: 24px; opacity: 0.5;" />
+      <blockquote style="font-size: 24px; font-style: italic; max-width: 700px; margin: 0 auto 24px; line-height: 1.4; color: var(--ink);">
+        "Egy tér, ahol a gondolatoknak van idejük megérni. Nem sietünk sehova, csak hagyjuk, hogy a szavak a helyükre kerüljenek."
+      </blockquote>
+      <div style="display: flex; align-items: center; justify-content: center; gap: 12px;">
+        <img class="avatar" src={author?.data.avatar || '/media/nora.svg'} alt="" width="48" height="48" style="border-radius: 50%; object-fit: cover;" loading="lazy"/>
+        <div style="text-align: left;">
+          <strong style="display: block; font-size: 16px;">{authorName}</strong>
+          <span style="color: var(--muted); font-size: 14px;">Alapító, Író</span>
+        </div>
+      </div>
+    </section>
+
+    <NewsletterSignup />
+
   </div>
 </BaseLayout>
+
+<style>
+  .category-grid a.card-panel:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+  }
+</style>
 
 

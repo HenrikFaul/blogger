@@ -9,13 +9,15 @@ interface Props{title:string;description:string;eyebrow?:string;posts:CardPost[]
 const {title,description,eyebrow='A MAGAZIN',posts,page=1,paginate=false,categoryFilter=false,noindex=false,type='website',person}=Astro.props;
 const perPage=paginate?siteConfig.content.postsPerPage:Math.max(1,posts.length);
 const totalPages=Math.ceil(posts.length/perPage);const categories=[...new Map(posts.flatMap(p=>p.categoryIds.map((id,i)=>[id,p.categoryNames[i]] as const))).entries()];
+const tags=[...new Set(posts.flatMap(p=>p.tags))].sort();
 ---
 <BaseLayout title={title} description={description} noindex={noindex} type={type} person={person}>
  <div class="container">
   <section class="page-heading"><div><p class="eyebrow">{eyebrow}</p><h1>{title}</h1><p>{description}</p></div><a class="text-link" href="/rss.xml"><Icon name="rss" size={15}/>Kövesd RSS-en</a></section>
   <section data-archive data-page={page} data-per-page={perPage} aria-label="Történetek">
    <div class="archive-tools js-only"><div class="search-field"><Icon name="search"/><label class="sr-only" for="archive-search">Keresés ebben a válogatásban</label><input id="archive-search" type="search" data-archive-query placeholder="Cím, téma vagy egy gondolat…"/></div>
-   {categoryFilter&&<><label class="sr-only" for="archive-category">Kategória</label><select id="archive-category" class="field-select" data-archive-category><option value="">Minden téma</option>{categories.map(([id,name])=><option value={id}>{name}</option>)}</select></>}
+   {categoryFilter&&<><label class="sr-only" for="archive-category">Kategória</label><select id="archive-category" class="field-select" data-archive-category><option value="">Minden téma</option>{categories.map(([id,name])=><option value={id}>{name}</option>)}</select>
+   <label class="sr-only" for="archive-tag">Címke</label><select id="archive-tag" class="field-select" data-archive-tag><option value="">Minden címke</option>{tags.map(t=><option value={t}>#{t}</option>)}</select></>}
    <label class="sr-only" for="archive-sort">Rendezés</label><select id="archive-sort" class="field-select" data-archive-sort><option value="latest">Legújabb elöl</option><option value="oldest">Legrégebbi elöl</option><option value="title">Cím szerint A–Z</option></select><span class="results-status" data-archive-count role="status" aria-live="polite">{posts.length} történet</span></div>
    {posts.length?<div class="post-grid" data-archive-grid>{posts.map((post,index)=><PostCard post={post} index={index} hidden={paginate&&(index<(page-1)*perPage||index>=page*perPage)}/>)}</div>:<div class="empty-state"><h2>Itt még csend van.</h2><p>Ebben a válogatásban még nincs nyilvános történet.</p><a class="btn" href="/posts/">Vissza a történetekhez</a></div>}
    <div class="empty-state" data-archive-empty hidden><h2>Erre most nincs találat.</h2><p>Próbálj másik szót, vagy nézd meg újra az összes történetet.</p><button class="btn" type="button" data-clear-archive>Szűrők törlése</button></div>

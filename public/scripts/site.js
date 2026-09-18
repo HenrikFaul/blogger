@@ -270,6 +270,7 @@
   $$("[data-archive]").forEach((archive) => {
     const input = $("[data-archive-query]", archive),
       category = $("[data-archive-category]", archive),
+      tag = $("[data-archive-tag]", archive),
       sort = $("[data-archive-sort]", archive),
       grid = $("[data-archive-grid]", archive),
       count = $("[data-archive-count]", archive),
@@ -286,17 +287,24 @@
       [...category.options].some((o) => o.value === params.get("category"))
     )
       category.value = params.get("category");
+    if (
+      tag &&
+      [...tag.options].some((o) => o.value === params.get("tag"))
+    )
+      tag.value = params.get("tag");
     if (sort && ["latest", "oldest", "title"].includes(params.get("sort")))
       sort.value = params.get("sort");
     const apply = (updateUrl = false) => {
       const terms = normalize(input.value).split(/\s+/).filter(Boolean),
         cat = category?.value || "",
+        tVal = tag?.value || "",
         order = sort?.value || "latest";
-      const active = terms.length > 0 || cat || order !== "latest";
+      const active = terms.length > 0 || cat || tVal || order !== "latest";
       const matched = cards
         .filter(
           (card) =>
             (!cat || card.dataset.category.split(" ").includes(cat)) &&
+            (!tVal || (card.dataset.tags || "").split(" ").includes(tVal)) &&
             terms.every((t) => card.dataset.search.includes(t)),
         )
         .sort((a, b) =>
@@ -323,6 +331,7 @@
         for (const [key, value] of [
           ["q", input.value.trim()],
           ["category", cat],
+          ["tag", tVal],
           ["sort", order === "latest" ? "" : order],
         ])
           value
@@ -337,10 +346,12 @@
     };
     input.addEventListener("input", () => apply(true));
     category?.addEventListener("change", () => apply(true));
+    tag?.addEventListener("change", () => apply(true));
     sort?.addEventListener("change", () => apply(true));
     $("[data-clear-archive]", archive)?.addEventListener("click", () => {
       input.value = "";
       if (category) category.value = "";
+      if (tag) tag.value = "";
       if (sort) sort.value = "latest";
       apply(true);
       input.focus();
