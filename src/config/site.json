@@ -45,7 +45,7 @@
     "primaryCtaLabel": "Kezdés ingyenesen",
     "primaryCtaHref": "/creator/",
     "secondaryCtaLabel": "Témák megtekintése",
-    "secondaryCtaHref": "/themes/",
+    "secondaryCtaHref": "/categories/",
     "assurances": [
       "Nincs backend",
       "Személyre szabható",
@@ -76,7 +76,7 @@
         "title": "Gyönyörű gondolatok galériája.",
         "description": "Nézd meg, mit építenek más alkotók a motorral.",
         "ctaLabel": "Galéria felfedezése",
-        "ctaHref": "/showcase/"
+        "ctaHref": "/posts/"
       },
       {
         "title": "Egyszerűsített munkaterület.",
@@ -87,13 +87,13 @@
           "Villámgyors Vercelen"
         ],
         "ctaLabel": "Nézd meg hogyan működik",
-        "ctaHref": "/docs/"
+        "ctaHref": "/about/"
       },
       {
         "title": "Tedd a magadévá.",
         "description": "Válassz elegáns, modern témák közül, vagy készíts sajátot.",
         "ctaLabel": "Témák böngészése",
-        "ctaHref": "/themes/"
+        "ctaHref": "/categories/"
       }
     ]
   },
